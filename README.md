@@ -14,7 +14,7 @@ Welcome to the Webex Labs Repository. Here you will find step-by-step guides on 
 | Lab ID |                         Lab Details                         | Dificulty | Estimated |
 |:------:|:-----------------------------------------------------------:|:---------:|:---------:|
 | Lab 1  |               [Fundamental Lab](/pages/Fundamental/)                |   EASY    |  1:30 min   |
-| Lab 2  |             [Advanced Lab](/pages/Advanced/)              |    MID    |  1:30 min   |
+| Lab 2  |             [Advanced Lab](/pages/Advanced/)              |    MID - HARD    |  1:30 min   |
 
 
 
