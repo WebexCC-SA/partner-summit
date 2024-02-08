@@ -2,7 +2,7 @@
 layout: home
 title: 'Webex CC Partner Summit'
 permalink: /
-cover: /assets/gitbook/images/Home.jpeg
+cover: partner-summit/assets/gitbook/images/Home.jpeg
 ---
 
 
@@ -18,5 +18,5 @@ Welcome to the Webex Labs Repository. Here you will find step-by-step guides on 
 
 
 
-<center><img src="/assets/gitbook/images/webex.png" width="100"></center>
+<center><img src="partner-summit/assets/gitbook/images/webex.png" width="100"></center>
 
