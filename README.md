@@ -2,7 +2,7 @@
 layout: home
 title: 'Webex CC Partner Summit'
 permalink: /
-cover: partner-summit/assets/gitbook/images/Home.jpeg
+cover: /partner-summit/assets/gitbook/images/Home.jpeg
 ---
 
 
@@ -13,10 +13,9 @@ Welcome to the Webex Labs Repository. Here you will find step-by-step guides on 
 
 | Lab ID |                         Lab Details                         | Dificulty | Estimated |
 |:------:|:-----------------------------------------------------------:|:---------:|:---------:|
-| Lab 1  |               [Fundamental Lab](/pages/Fundamental/)                |   EASY    |  1:30 min   |
-| Lab 2  |             [Advanced Lab](/pages/Advanced/)              |    MID - HARD    |  1:30 min   |
+| Lab 1  |               [Fundamental Lab](/partner-summit/pages/Fundamental/)                |   EASY    |  1:30 min   |
+| Lab 2  |             [Advanced Lab](/partner-summit/pages/Fundamental/)              |    MID - HARD    |  1:30 min   |
 
 
 
-<center><img src="partner-summit/assets/gitbook/images/webex.png" width="100"></center>
-
+<center><img src="/partner-summit/assets/gitbook/images/webex.png" width="100"></center>
