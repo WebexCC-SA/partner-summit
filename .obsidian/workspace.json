@@ -48,8 +48,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#APIs-on-Webex-Contact-Center",
-                "matchingCase": false,
+                "query": "",
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -73,8 +73,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -155,8 +154,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2672355a05b54dec",
+  "active": "c7612fa5af166412",
   "lastOpenFiles": [
+    "assets/images/API",
     "assets/images/EM/Pasted image 20240216152812.png",
     "assets/images/EM/Pasted image 20240216152802.png",
     "assets/images/EM/Pasted image 20240216152753.png",
@@ -167,7 +167,6 @@
     "assets/images/EM/Pasted image 20240216152706.png",
     "assets/images/EM/Pasted image 20240216152653.png",
     "assets/images/EM/Pasted image 20240216152648.png",
-    "assets/images/EM/Pasted image 20240216152640.png",
     "_pages/Fundamental.md",
     "_pages/Advanced.md",
     "_pages/Digital.md",
