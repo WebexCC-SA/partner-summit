@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_pages/Digital.md",
+                "file": "_pages/Advanced.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_pages/Digital.md",
+                "file": "_pages/Advanced.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_pages/Digital.md",
+                "file": "_pages/Advanced.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_pages/Digital.md"
+                "file": "_pages/Advanced.md"
               }
             }
           }
@@ -156,6 +156,7 @@
   },
   "active": "2672355a05b54dec",
   "lastOpenFiles": [
+    "_pages/Fundamental.md",
     "assets/images/email_copy_debug.gif",
     "_pages/Digital.md",
     "assets/images/LAB2_email/OneTransaction.png.md",
