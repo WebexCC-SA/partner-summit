@@ -64,7 +64,8 @@ An API method defines what the API Client (who is allowed to ask for the data or
 
 These are the methods supported for Webex Contact Center APIs:
 
-![[API01.jpg]]
+![API01](/assets/images/API01.jpg)
+
 
 #### API Anatomy
 
