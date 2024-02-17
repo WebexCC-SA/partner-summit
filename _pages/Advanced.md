@@ -56,7 +56,7 @@ An API is a set of tools, definitions, and rules or protocols for building a sof
 
 APIs allow one component of software to easily communicate with another component of software. Cisco product designers determine the APIs that each Cisco product supports.
 
-Many of the Webex Customer Experience APIs are RESTful. Each resource is represented by a base URL and supports various methods for API usage. Refer to API Reference (https://developer.webex- cx.com/documentation/introduction-to-apis) for details.
+Many of the Webex Customer Experience APIs are RESTful. Each resource is represented by a base URL and supports various methods for API usage. Refer to API Reference (https://developer.webex-cx.com/documentation/introduction-to-apis) for details.
 
 #### Methods
 
