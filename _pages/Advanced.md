@@ -64,7 +64,7 @@ An API method defines what the API Client (who is allowed to ask for the data or
 
 These are the methods supported for Webex Contact Center APIs:
 
-![[Pasted image 20240216151234.png]]
+![[API01.jpg]]
 
 #### API Anatomy
 
