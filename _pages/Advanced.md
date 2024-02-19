@@ -215,9 +215,13 @@ Postman offers lot of other options for APIs, some of which we'll explore in the
 
 ===============================================================
 ## JDS APIs & Use Cases
+This lab is designed to teach you the concepts and functionalities of Customer Journey Data Services (JDS), both in regard to the JDS Widget that can be added in Agent Desktop as well as the API capabilities of the solution, since JDS remains an API-first solution today. You will learn how to use the JDS widget, how to add new customers (identities) to your JDS database as well as how to use the JDS APIs to extract information and act upon it. 
 
 # Exploring JDSs APIs & Widget
--- About JDS
+JDS Desktop Widget provides agents with an interface that shows the end customer’s complete journey with the agent’s business, aggregated metrics of their experience as well as the customer’s unique identifiers (aliases).
+<img width="1015" alt="image" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/ef44388d-8984-430b-b2d1-971f8929926a">
+
+
 ## Task 1: Adding a new identity for the JDS project
 ## Task 2: Adding JDS to the Desktop layout 
 -- Assign to the team and sign in as an agent
