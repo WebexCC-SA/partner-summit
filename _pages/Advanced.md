@@ -214,7 +214,26 @@ Postman offers lot of other options for APIs, some of which we'll explore in the
 
 
 ===============================================================
-## Custom Widgets on Agent Desktop
+## JDS APIs & Use Cases
+
+# Exploring JDSs APIs & Widget
+-- About JDS
+## Task 1: Adding a new identity for the JDS project
+## Task 2: Adding JDS to the Desktop layout 
+-- Assign to the team and sign in as an agent
+## Task 3: Downloading the JDS Postman collection
+## Task 4: Exploring the JDS APIs
+## Task 5: Creating a new event via API 
+-- Check in the widget
+
+
+
+# Use Case - Journey Based Queue Priority
+-- About Use Case
+## Task 1: Getting number of requests for the X last days/hours
+## Task 2: Adding JDS API Request to the Flow Designer
+## Task 3: Making a test call and checking the restul
+
 
 
 
