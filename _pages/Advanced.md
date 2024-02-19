@@ -64,13 +64,13 @@ An API method defines what the API Client (who is allowed to ask for the data or
 
 These are the methods supported for Webex Contact Center APIs:
 
-![API01](/assets/images/API01.jpg)
+![API01](/assets/images/API/API01.jpg)
 
 
 #### API Anatomy
 
 Here is an example of an API GET request that helps define the API anatomy:
-![[Pasted image 20240216151339.png]]
+![API02](/assets/images/API/API02.jpg)
 
 ##### - http:// or https://
 	- Protocol over which data is sent between client and server.
@@ -105,13 +105,13 @@ In this example you will use deck of cards public API to simulate a game of card
 [https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=6](https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=6)
 
 You see the response in Json format:
-![[Pasted image 20240216151808.png]]
+![API03](/assets/images/API/API03.jpg)
 
 **Step 2.** Change the parameter now to 1 and check the response.
 [https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1](https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1)
 
 You see the remaining cards in one deck.
-![[Pasted image 20240216151902.png]]
+![API04](/assets/images/API/API04.jpg)
 
 **Step 3**. The count variable defines how many cards to draw from the deck. Be sure to replace _deck_id_ with the id obtain from the previous example. You can also replace it with “new” to create a new shuffle deck and draw cards from this new deck.
 
@@ -119,15 +119,15 @@ https://deckofcardsapi.com/api/deck/<<deck_id>>/draw/?count=2
 
 Replace the deck_id with the id, you got from the previous response. For example: [https://deckofcardsapi.com/api/deck/58f7v8te5530/draw/?count=2](https://deckofcardsapi.com/api/deck/58f7v8te5530/draw/?count=2)
 
-![[Pasted image 20240216152026.png]]
+![API1](/assets/images/API/API1.jpg)
 
-![[Pasted image 20240216152035.png]]
+![API2](/assets/images/API/API2.jpg)
 
 or replace it with “new”.
 https://deckofcardsapi.com/api/deck/new/draw/?count=2
 
-![[Pasted image 20240216152058.png]]
-![[Pasted image 20240216152104.png]]
+![API3](/assets/images/API/API3.jpg)
+![API4](/assets/images/API/API4.jpg)
 
 ***Note:** In these examples, you did not have to be authenticated and authorized because it is a public API.*
 
@@ -143,62 +143,60 @@ In this lab we will use Web based version of the Postman API client tool to defi
 ***Note**: In this lab you will use Postman browser and sign in with a pre-registered account *
 
 **Step 1.** Locate the Chrome icon at the bottom of the task bar and launch it.
-![[Pasted image 20240216152136.png]]
+![API5](/assets/images/API/API5.jpg)
 
 **Step 2.** Navigate to postman.com and select sign in.
-![[Pasted image 20240216152145.png]]
+![API6](/assets/images/API/API6.jpg)
 
 **Step 3.** Provide the username related to the username assigned by your proctor and the password. ***Note:** Please be careful to follow the steps if you use shared infrastructure.*
 
 For example, the username is **<<To_add_user_from the sheet>>.** The password is the same for all users: **<<To_add_pwd_from the sheet>>.**
 
-![[Pasted image 20240216152404.png]]
+![API7](/assets/images/API/API7.jpg)
 
 **Step 4.** Create your workspace. On the Workspaces tab, type the name of your workspace. In this exercise your workspace name is the same as the username. So, for Pod1, type Ciscolabuser001.
-![[Pasted image 20240216152540.png]]
+![API8](/assets/images/API/API8.jpg)
 
 **Step 5.** On the Workspace create window, add the name, check the Personal option and click Create Workspace.
-![[Pasted image 20240216152606.png]]
+![API9](/assets/images/API/API9.jpg)
 
-![[Pasted image 20240216152613.png]]
+![API10](/assets/images/API/API10.jpg)
 
 **Step 6.** You see your workspace created and all options on the left side of the window. You will navigate to each of this option to understand Postman functionality.
-![[Pasted image 20240216152640.png]]
+![API11](/assets/images/API/API11.jpg)
 
 Step 7. Select New and then HTTP Request to create a new API request.
-![[Pasted image 20240216152648.png]]
-
-![[Pasted image 20240216152653.png]]
+![API11-12](/assets/images/API/API11-12.jpg)
 
 **Step 8.** Notice in the screenshot below that the default method is GET; Click the drop-down arrow next to it to show all other REST API methods including the ones mentioned above for WxCC.
-![[Pasted image 20240216152706.png]]
+![API13](/assets/images/API/API13.jpg)
 
 **Step 9.** Evaluate the previous deck of cards API via Postman. Copy the following URL and paste it into Postman and select the GET option to the left:
 
 [https://deckofcardsapi.com/api/deck/new/draw/?count=2](https://deckofcardsapi.com/api/deck/new/draw/?count=2)
-![[Pasted image 20240216152716.png]]
+![API14](/assets/images/API/API14.jpg)
 Note, that after adding the URL, the parameter count was automatically added.
 
 **Step 10.** Click Send button. Review the results. You see 200 OK in the response, which indicates that this was a successful response, you see the body of the response and the format.
-![[Pasted image 20240216152725.png]]
+![API15](/assets/images/API/API15.jpg)
 
 **Step 11.** Save this request in a Collection. Select Save As from the pull-down button.
-![[Pasted image 20240216152734.png]]
+![API16](/assets/images/API/API16.jpg)
 
 **Step 12.** Click Create a Collection. Add the name DeckofCards and click Create. Then, click Save.
-![[Pasted image 20240216152747.png]]
+![API17](/assets/images/API/API17.jpg)
 
-![[Pasted image 20240216152753.png]]
+![API18](/assets/images/API/API18.jpg)
 
 You see the collection now added to your workspace.
 
 **Step 13.** Open a brand-new deck of cards. Copy the following URL, paste it into Postman, and select the POST option to the left. Add the parameter _jokers_enabled=true._
 https://deckofcardsapi.com/api/deck/new/
 
-![[Pasted image 20240216152802.png]]
+![API19](/assets/images/API/API19.jpg)
 
 **Step 14.** Save this request in the previous created Collection. Change the name of the request and click SAVE.
-![[Pasted image 20240216152812.png]]
+![API20](/assets/images/API/API20.jpg)
 
 
 Postman offers lot of other options for APIs, some of which we'll explore in the subsequent sections of this lab.
