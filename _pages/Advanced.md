@@ -204,19 +204,102 @@ Postman offers lot of other options for APIs, some of which we'll explore in the
 
 # Lab 2 – Developer Portal
 
+Developers can build, enhance, and customize their Customer Experience solution with the rich set of APIs, which includes Contact Center, AI, Journey, Orchestration and Experience Management. The Developers portal help you to get started with the APIs. The Developers portal provides detailed API reference docs as well as the Try Out functionality which help to familiarize you with WxCC APIs and learn quickly.
 
 
+## Objectives
+
+The objective of the lab is to understand the benefits of the Cisco Developers Portal to learn and understand WxCC APIs.
+
+### Task 1: Introduction to developer portal
+
+**Step 1. **Open a web browser and navigate to the developer portal: **developer.webex-cx.com.**
+Sign in with the username assigned to you and the password is **~~Ciscolabuser123!**~~ 
+
+![[Pasted image 20240220092705.png]]
 
 
+**Step 2.** Select Documentation from the top-right corner.
+![[Pasted image 20240220093717.png]]
+
+You can see different sections on the left-hand sides, for example:
+
+**Authentication**: This section explains the authentication method used by WxCC and the prerequisites.
+
+**Common API errors:** In this section you have the list of errors that can be returned as a response to an API request.
+
+**Introduction to APIs**: In this section you can find an overview to the WxCC open architecture APIs.
+
+**API Reference**: You will see in this section all the APIs categories that WxCC offers. 
+
+**Step 3.** Navigate to the API reference and select Address Book
+![[Pasted image 20240220093807.png]]
+Step 4. In this case, you want to first list the address books already created. So, select the GET request under “List Address Books Entries (v2 API)”
+
+Step 5. You can see all the parameters required, like **orgid** and optional parameters, like **page** or**page size,** and so on.
+
+Step 6. On the right-hand side, you see how the API is executed. You can see the method; GET; the URL used with the variable (orgid) and the code language that is being used (you can use cURL, csharp, java, python, etc.)
+![[Pasted image 20240220093821.png]]
+
+Step 7. Select the Try out section. As you notice, this requires an authorization token. The token used by default, is the one automatically assigned when you log in with the admin credentials to the Developers portal. It also pulls the orgid from the organization the user you logged in is part of. Click Run.
+
+You see the 200 Response, which indicates the request was successful. You also see the address books created in this org. You can scroll down in the response window to see the list of all address books.
+
+![[Pasted image 20240220093832.png]]
+
+Step 8. Log in with the same user to WxCC Portal: [https://portal-v2.wxcc-anz1.cisco.com/portal/home](https://portal-v2.wxcc-anz1.cisco.com/portal/home) and navigate to Provisioning > Address Book
+
+![[Pasted image 20240220093850.png]]
+
+![[Pasted image 20240220093856.png]]
 
 
+### Task 2 Develop a Webex Application
+
+This task shows you the configuration steps to create a Webex application. This covers how to build the authentication part of the application for use with Postman.
+
+Step 1. Logon to [https://developer.webex-cx.com](https://developer.webex-cx.com) with your username and password. On the top-right hand corner, hover over your userID and select My Webex Apps from the pop-out menu.
+
+![[Pasted image 20240220093915.png]]
+
+Step 2. Provide the name of your choice, description of your choice, the redirect URI and check the scopes (Config, write and read).
+
+For the URI, we are using Postman as a sample application so, use this URI: [https://oauth.pstmn.io/v1/callback](https://oauth.pstmn.io/v1/callback) and select the top 3 scopes as shown in the screenshot below.
+
+![[Pasted image 20240220093926.png]]
+
+Step 3. Accept the terms and click **Add Integration**.
+
+![[Pasted image 20240220093936.png]]
+
+Step 4. You will get the response with the Client ID, Client Secret, and the URL that you could embed in your application to initiate the authentication.
+
+![[Pasted image 20240220093948.png]]
+
+Step 5. Copy the whole URL into a new browser window and you see that redirect you to a Webex authentication page.
+
+![[Pasted image 20240220093957.png]]
+
+Step 6. On the authentication window, click Accept.
+![[Pasted image 20240220094006.png]]
+
+Step 7. You see that your application is now authenticated.
+
+![[Pasted image 20240220094017.png]]
+
+More Information about creating a Webex application and using Postman in this document: [https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html)
+
+[configure-webex-contact-center-apis-with.html](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html)
+
+
+# Lab 3 – WxCC APIs - Postman
 
 
 
 ===============================================================
 ## Custom Widgets on Agent Desktop
 
-
+![[]]
 
 <p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>
 		
