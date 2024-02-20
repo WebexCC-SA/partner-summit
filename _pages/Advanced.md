@@ -6,7 +6,7 @@ category: Jekyll
 layout: post
 ---
 ```
-Last modified: Tue, 16 Feb 2024
+Last modified: Tue, 20 Feb 2024
 ```
 
 ## Webex Contact Center API and Widgets
@@ -22,12 +22,12 @@ Let's dive in and unlock the potential of Contact Center API integration and age
 
 | Topic | Lab Type | Difficulty Level | Estimated length |
 | ---- | ---- | ---- | ---- |
-| [**Part 1: APIs on Webex Contact Center (WxCC)**](#APIs-on-Webex-Contact-Center) | Practical Lab | MED | 90 min |
-| - Lab 1 –APIs Fundamental |  |  |  |
-| - Lab 2 – Developer Portal |  |  |  |
-| - Lab 3 – WxCC APIs - Postman |  |  |  |
-| - Lab 4 – Import WxCC APIs to Postman |  |  |  |
-| [**Part 2: Custom Widgets on Agent Desktop**](#Custom-Widgets-on-Agent-Desktop) | Practical Lab | HARD | ?? min |
+| [**Part 1: APIs on Webex Contact Center (WxCC)**](#APIs-on-Webex-Contact-Center) | Practical Lab | MED | 45 min |
+| Lab 1 – APIs Fundamental |  |  |  |
+| Lab 2 – Developer Portal |  |  |  |
+| Lab 3 – WxCC APIs - Postman |  |  |  |
+| Lab 4 – Import WxCC APIs to Postman |  |  |  |
+| [**JDS APIs & Use Case**](#jds-apis--use-cases) | Practical Lab | HARD | 45 min |
 
 
 ## **APIs on Webex Contact Center (WxCC)**
@@ -44,7 +44,7 @@ Upon completion of this lab, you will be able to:
 
 **Disclaimer:** This lab is not designed for a production system, thus not all recommended features are implemented or enabled optimally. For implementation and design-related questions, please contact your representative at Cisco, or a Cisco partner.
 
-## Lab 1 –APIs Fundamental 
+## Lab 1 – APIs Fundamental 
 ### Objectives 
 The objective of the lab is to introduce you to concept of APIs and the way the Postman tool can be used to manage APIs.
 
@@ -317,9 +317,165 @@ JDS Desktop Widget provides agents with an interface that shows the end customer
 
 
 ## Task 1: Adding a new identity for the JDS project
+
+> Note 1: For this task, you must have an admin account with the **"Full admin"** permissions.\
+> Note 2: To save time, we will be skipping that exercise. Please read it and go to the next task.
+{: .block-tip }
+
+1.	Add a new identity for yourself to JDS project. Navigate to Control Hub with your administrator credentials.
+
+2.	Navigate to Customer Journey Data under Monitoring.
+<img width="1790" alt="image" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/b469dce7-8fde-4ca1-be48-9114bd6faa4f">
+
+
+3.	A project (named  **Lab Tenant**) has already been created for the purposes of this lab. Click on it to check its configuration.
+
+4.	Click on the Identities tab. Identities are all the end-customer profiles created to be tracked by this specific JDS project.
+ <img width="1786" alt="image" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/203c2b35-7aeb-4278-85fb-cafbca307736">
+
+
+
+5.	Click on **Add Identities** button. In the UI you can only add identities by uploading a CSV file. To check the expected format of the CSV, click on Download to download the sample template.
+ 
+6.	Open the file. You see the expected format is the following:
+```Id,First Name,Last Name,Email Addresses,Phone Numbers,Customer Ids```
+
+7.	Enter a row with your details keeping in mind the following:
+•	**Id** field should be left empty.
+•	If you want to add multiple **email addresses, phone numbers or customer IDs**, you need to use the pipe “|” delimiter between them. For example, try to add your phone number both with and without a plus sign.
+•	**Customer ID** is a unique ID given by the JDS administrator to each customer. Make sure to use a large number to avoid conflicts with existing customer IDs.
+
+8.	Based on the above, your new line should look similar to this:
+ <img width="989" alt="image" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/890d2d05-9eec-4d6f-9e0d-b2ea67f16c66">
+
+
+9.	Save the file and go back in Control Hub, click on **Choose a file** and select the file you created. Click on **Next**. If all is good, you will see the Import Status as _Completed_. In case of errors, you will get the message Completed with Errors and the option to download the error file to understand what you need to fix.
+
+10.	Click on **Close** button. You should now be able to see your created identity in the list.
+
+
+
 ## Task 2: Adding JDS to the Desktop layout 
--- Assign to the team and sign in as an agent
+The process to add the JDS Widget is also thoroughly explained on the [GitHub page](https://github.com/CiscoDevNet/cjaas-widgets/blob/main/CustomerJourney/README-VERSION-9.0.0.md), including a video walkthrough. 
+
+1.	Download the default JSON Layout from the Control Hub -> Contact Center ->  Desktop Layouts ->  Global Layout 
+<img width="1720" alt="Screenshot 2024-02-20 at 17 52 00" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/3431a739-07e4-4d38-82e6-d4be6ae7e51b">
+
+2. Within the downloaded default desktop layout JSON file, search for the data property "visibility": "IVR_TRANSCRIPT" under the **agent** section. Find the following code block associated with that.
+> Note: IVR_TRANSCRIPT may appear a few times, please find the last appearance of "visibility": "IVR_TRANSCRIPT"
+
+<img width="967" alt="image" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/9016f607-c58e-4916-946d-a7aba49e3bd0">
+
+3.	Copy the JDS Widget code block below:
+
+```
+{
+            "comp": "md-tab",
+            "attributes": {
+              "slot": "tab"
+            },
+            "children": [
+              {
+                "comp": "slot",
+                "attributes": {
+                  "name": "WXM_JOURNEY_TAB"
+                }
+              }
+            ],
+            "visibility": "WXM_JOURNEY"
+          },
+          {
+            "comp": "md-tab-panel",
+            "attributes": {
+              "slot": "panel",
+              "class": "widget-pane"
+            },
+            "children": [
+              {
+                "comp": "customer-journey-widget",
+                "script": "https://cjaas.cisco.com/widgets/customer-journey-9.0.0.js",
+                "attributes": {
+                  "base-url": "https://api-jds.prod-useast1.ciscowxdap.com",
+                  "logs-on": "true",
+                  "project-id": "65171e0682b7f52b9209b39d",
+                  "template-id": "journey-default-template1",
+                  "icon-data-path": "https://wxcc-widgets.s3.us-west-1.amazonaws.com/icons.json",
+                  "limit": "50",
+                  "time-frame": "All",
+                  "live-stream": "true"
+                },
+                "properties": {
+                  "interactionData": "$STORE.agentContact.taskSelected",
+                  "bearerToken": "$STORE.auth.accessToken",
+                  "organizationId": "e56f00d4-98d8-4b62-a165-d05a41243d98"
+                },
+                "wrapper": {
+                  "title": "Customer Journey Widget",
+                  "maximizeAreaName": "app-maximize-area"
+                }
+              }
+            ]
+          },
+```
+> For this lab, the Project ID is **65171e0682b7f52b9209b39d**. Project ID can be found in the Customer Journey Data tab in Control Hub.
+<img width="753" alt="Screenshot 2024-02-20 at 17 53 11" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/60968b46-818e-4809-ab27-17dc275a4a33">
+
+4. If in the **Default Desktop Layout** the WxM widget is already presented, make sure that the following section is removed
+```
+{
+            "comp": "md-tab",
+            "attributes": {
+              "slot": "tab"
+            },
+            "children": [
+              {
+                "comp": "slot",
+                "attributes": {
+                  "name": "WXM_JOURNEY_TAB"
+                }
+              }
+            ],
+            "visibility": "WXM_JOURNEY"
+          },
+          {
+            "comp": "md-tab-panel",
+            "attributes": {
+              "slot": "panel",
+              "class": "widget-pane"
+            },
+            "children": [
+              {
+                "comp": "agentx-wc-cloudcherry-widget",
+                "properties": {
+                  "userModel": "$STORE.app.userModel",
+                  "spaceId": "",
+                  "metricsId": "",
+                  "ani": "$STORE.agentContact.taskSelected.ani",
+                  "isDarkMode": "$STORE.app.darkMode"
+                },
+                "wrapper": {
+                  "title": "Customer Experience Journey",
+                  "maximizeAreaName": "app-maximize-area"
+                }
+              }
+            ],
+            "visibility": "WXM_JOURNEY"
+          },
+```
+
+4. Save the desktop Layout that now has your customer journey widget code. 
+
+> The modified JSON file (4 steps above) can be downloaded [here](files/JDS_Layout.json)
+{: .block-tip }
+
+5. Go to Control Hub -> Contact Center ->  Desktop Layouts and Create a new Desktop Layout. 
+
+6. In the name section set your **ID**_JDS_Layout (example: **140_JDS_Layout**). Click on **Replace file**, assign the Layout to your team, and click **Create**.
+
+
 ## Task 3: Downloading the JDS Postman collection
+As JDS is an API-first solution, there is a very wide [range of APIs](https://developer.webex-cx.com/documentation/journey) available. To make the introduction to them easier, Cisco has created a [JDS API Collection](https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/customer-journey-samples/cjds-postman-example/JDS%20CiscoLive.postman_collection.json) that you can download and import in your API tool (e.g. Postman) and start playing around, in conjunction with various use cases. 
+
 ## Task 4: Exploring the JDS APIs
 ## Task 5: Creating a new event via API 
 -- Check in the widget
@@ -333,7 +489,7 @@ JDS Desktop Widget provides agents with an interface that shows the end customer
 ## Task 3: Making a test call and checking the restul
 
 
-![[]]
+
 
 <p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>
 		
