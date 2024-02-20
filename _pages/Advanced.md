@@ -355,8 +355,12 @@ The process to add the JDS Widget is also thoroughly explained on the [GitHub pa
 1.	Download the default JSON Layout from the Control Hub -> Contact Center ->  Desktop Layouts ->  Global Layout 
 <img width="1720" alt="Screenshot 2024-02-20 at 17 52 00" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/3431a739-07e4-4d38-82e6-d4be6ae7e51b">
 
+2. Within the downloaded default desktop layout JSON file, search for the data property "visibility": "IVR_TRANSCRIPT" under the **agent** section. Find the following code block associated with that.
+> Note: IVR_TRANSCRIPT may appear a few times, please find the last appearance of "visibility": "IVR_TRANSCRIPT"
 
-2.	Copy the JDS Widget code block below. 
+<img width="967" alt="image" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/9016f607-c58e-4916-946d-a7aba49e3bd0">
+
+3.	Copy the JDS Widget code block below. 
 <img width="753" alt="Screenshot 2024-02-20 at 17 53 11" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/60968b46-818e-4809-ab27-17dc275a4a33">
 
 JDS Widget code block:
@@ -411,17 +415,56 @@ JDS Widget code block:
 ```
 > For this lab, the Project ID is **65171e0682b7f52b9209b39d**. Project ID can be found in the Customer Journey Data tab in Control Hub.
 
-3. Within the downloaded default desktop layout JSON file, search for the data property "visibility": "IVR_TRANSCRIPT". Find the following code block associated with that.
-> Note: IVR_TRANSCRIPT may appear a few times, please find the last appearance of "visibility": "IVR_TRANSCRIPT"
-
-<img width="967" alt="image" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/9016f607-c58e-4916-946d-a7aba49e3bd0">
-
+4. If in the **Default Desktop Layout** the WxM widget is already presented, make sure that the following section is removed
+```
+{
+            "comp": "md-tab",
+            "attributes": {
+              "slot": "tab"
+            },
+            "children": [
+              {
+                "comp": "slot",
+                "attributes": {
+                  "name": "WXM_JOURNEY_TAB"
+                }
+              }
+            ],
+            "visibility": "WXM_JOURNEY"
+          },
+          {
+            "comp": "md-tab-panel",
+            "attributes": {
+              "slot": "panel",
+              "class": "widget-pane"
+            },
+            "children": [
+              {
+                "comp": "agentx-wc-cloudcherry-widget",
+                "properties": {
+                  "userModel": "$STORE.app.userModel",
+                  "spaceId": "",
+                  "metricsId": "",
+                  "ani": "$STORE.agentContact.taskSelected.ani",
+                  "isDarkMode": "$STORE.app.darkMode"
+                },
+                "wrapper": {
+                  "title": "Customer Experience Journey",
+                  "maximizeAreaName": "app-maximize-area"
+                }
+              }
+            ],
+            "visibility": "WXM_JOURNEY"
+          },
+```
 
 4. Save the desktop Layout that now has your customer journey widget code. 
 
+> The modified JSON file (4 steps above) can be downloaded [here]()
+
 5. Go to Control Hub -> Contact Center ->  Desktop Layouts and Create a new Desktop Layout. 
 
-6. In the name section set your ID_JDS_Layout (example **140_JDS_Layout**). Replace the file and assign the Layout to your team.
+6. In the name section set your **ID**_JDS_Layout (example: **140_JDS_Layout**). Replace the file and assign the Layout to your team.
 
 7. Sign in to the agent desktop by using an incognito mode. If you already signed, just refresh your Agent Desktop and the new configuration should load.
 
