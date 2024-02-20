@@ -356,7 +356,7 @@ The process to add the JDS Widget is also thoroughly explained on the [GitHub pa
 <img width="1720" alt="Screenshot 2024-02-20 at 17 52 00" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/3431a739-07e4-4d38-82e6-d4be6ae7e51b">
 
 
-2.	Copy the JDS Widget code block below. For this lab, the Project ID is **65171e0682b7f52b9209b39d**. Project ID can be found in the Customer Journey Data tab in Control Hub.
+2.	Copy the JDS Widget code block below. 
 <img width="753" alt="Screenshot 2024-02-20 at 17 53 11" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/60968b46-818e-4809-ab27-17dc275a4a33">
 
 JDS Widget code block:
@@ -409,6 +409,7 @@ JDS Widget code block:
             ]
           },
 ```
+> For this lab, the Project ID is **65171e0682b7f52b9209b39d**. Project ID can be found in the Customer Journey Data tab in Control Hub.
 
 3. Within the downloaded default desktop layout JSON file, search for the data property "visibility": "IVR_TRANSCRIPT". Find the following code block associated with that.
 > Note: IVR_TRANSCRIPT may appear a few times, please find the last appearance of "visibility": "IVR_TRANSCRIPT"
