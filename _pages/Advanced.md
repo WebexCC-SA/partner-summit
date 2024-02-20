@@ -105,12 +105,14 @@ In this example you will use deck of cards public API to simulate a game of card
 [https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=6](https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=6)
 
 You see the response in Json format:
+
 ![API03](/assets/images/API/API03.jpg)
 
 **Step 2.** Change the parameter now to 1 and check the response.
 [https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1](https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1)
 
 You see the remaining cards in one deck.
+
 ![API04](/assets/images/API/API04.jpg)
 
 **Step 3**. The count variable defines how many cards to draw from the deck. Be sure to replace _deck_id_ with the id obtain from the previous example. You can also replace it with “new” to create a new shuffle deck and draw cards from this new deck.
@@ -143,6 +145,7 @@ In this lab we will use Web based version of the Postman API client tool to defi
 ***Note**: In this lab you will use Postman browser and sign in with a pre-registered account *
 
 **Step 1.** Locate the Chrome icon at the bottom of the task bar and launch it.
+
 ![API5](/assets/images/API/API5.jpg)
 
 **Step 2.** Navigate to postman.com and select sign in.
@@ -154,7 +157,9 @@ For example, the username is **<<To_add_user_from the sheet>>.** The password is
 
 ![API7](/assets/images/API/API7.jpg)
 
-**Step 4.** Create your workspace. On the Workspaces tab, type the name of your workspace. In this exercise your workspace name is the same as the username. So, for Pod1, type Ciscolabuser001.
+**Step 4.** Create your workspace. On the Workspaces tab, type the name of your workspace. In this exercise your workspace name is the same as the username. So, for Pod1, type ~~**Ciscolabuser001**~~.
+
+
 ![API8](/assets/images/API/API8.jpg)
 
 **Step 5.** On the Workspace create window, add the name, check the Personal option and click Create Workspace.
@@ -175,6 +180,7 @@ Step 7. Select New and then HTTP Request to create a new API request.
 
 [https://deckofcardsapi.com/api/deck/new/draw/?count=2](https://deckofcardsapi.com/api/deck/new/draw/?count=2)
 ![API14](/assets/images/API/API14.jpg)
+
 Note, that after adding the URL, the parameter count was automatically added.
 
 **Step 10.** Click Send button. Review the results. You see 200 OK in the response, which indicates that this was a successful response, you see the body of the response and the format.
