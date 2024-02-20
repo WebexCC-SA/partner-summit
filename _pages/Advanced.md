@@ -44,7 +44,7 @@ Upon completion of this lab, you will be able to:
 
 **Disclaimer:** This lab is not designed for a production system, thus not all recommended features are implemented or enabled optimally. For implementation and design-related questions, please contact your representative at Cisco, or a Cisco partner.
 
-## Lab 1 –APIs Fundamental 
+## Lab 1 – APIs Fundamental 
 ### Objectives 
 The objective of the lab is to introduce you to concept of APIs and the way the Postman tool can be used to manage APIs.
 
@@ -228,6 +228,43 @@ JDS Desktop Widget provides agents with an interface that shows the end customer
 
 
 ## Task 1: Adding a new identity for the JDS project
+>Note 1: For this task, you must have an admin account with the **"Full admin"** permissions.
+>Note 2: To save time, we will be skipping that exercise. Please read it and go to the next task.
+{: .block-tip }
+
+1.	Add a new identity for yourself to JDS project. Navigate to Control Hub with your administrator credentials.
+
+2.	Navigate to Customer Journey Data under Monitoring.
+<img width="1790" alt="image" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/b469dce7-8fde-4ca1-be48-9114bd6faa4f">
+
+
+3.	A project (named  **Lab Tenant**) has already been created for the purposes of this lab. Click on it to check its configuration.
+
+4.	Click on the Identities tab. Identities are all the end-customer profiles created to be tracked by this specific JDS project.
+ <img width="1786" alt="image" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/203c2b35-7aeb-4278-85fb-cafbca307736">
+
+
+
+5.	Click on **Add Identities** button. In the UI you can only add identities by uploading a CSV file. To check the expected format of the CSV, click on Download to download the sample template.
+ 
+6.	Open the file. You see the expected format is the following:
+```Id,First Name,Last Name,Email Addresses,Phone Numbers,Customer Ids```
+
+7.	Enter a row with your details keeping in mind the following:
+•	**Id** field should be left empty.
+•	If you want to add multiple **email addresses, phone numbers or customer IDs**, you need to use the pipe “|” delimiter between them. For example, try to add your phone number both with and without a plus sign.
+•	**Customer ID** is a unique ID given by the JDS administrator to each customer. Make sure to use a large number to avoid conflicts with existing customer IDs.
+
+8.	Based on the above, your new line should look similar to this:
+ <img width="989" alt="image" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/890d2d05-9eec-4d6f-9e0d-b2ea67f16c66">
+
+
+9.	Save the file and go back in Control Hub, click on **Choose a file** and select the file you created. Click on **Next**. If all is good, you will see the Import Status as _Completed_. In case of errors, you will get the message Completed with Errors and the option to download the error file to understand what you need to fix.
+
+10.	Click on **Close** button. You should now be able to see your created identity in the list.
+
+
+
 ## Task 2: Adding JDS to the Desktop layout 
 -- Assign to the team and sign in as an agent
 ## Task 3: Downloading the JDS Postman collection
