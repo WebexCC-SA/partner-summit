@@ -6,7 +6,7 @@ category: Jekyll
 layout: post
 ---
 ```
-Last modified: Tue, 16 Feb 2024
+Last modified: Tue, 20 Feb 2024
 ```
 
 ## Webex Contact Center API and Widgets
@@ -22,12 +22,12 @@ Let's dive in and unlock the potential of Contact Center API integration and age
 
 | Topic | Lab Type | Difficulty Level | Estimated length |
 | ---- | ---- | ---- | ---- |
-| [**Part 1: APIs on Webex Contact Center (WxCC)**](#APIs-on-Webex-Contact-Center) | Practical Lab | MED | 90 min |
-| - Lab 1 –APIs Fundamental |  |  |  |
-| - Lab 2 – Developer Portal |  |  |  |
-| - Lab 3 – WxCC APIs - Postman |  |  |  |
-| - Lab 4 – Import WxCC APIs to Postman |  |  |  |
-| [**Part 2: Custom Widgets on Agent Desktop**](#Custom-Widgets-on-Agent-Desktop) | Practical Lab | HARD | ?? min |
+| [**Part 1: APIs on Webex Contact Center (WxCC)**](#APIs-on-Webex-Contact-Center) | Practical Lab | MED | 45 min |
+| Lab 1 – APIs Fundamental |  |  |  |
+| Lab 2 – Developer Portal |  |  |  |
+| Lab 3 – WxCC APIs - Postman |  |  |  |
+| Lab 4 – Import WxCC APIs to Postman |  |  |  |
+| [**JDS APIs & Use Case**](#jds-apis--use-cases) | Practical Lab | HARD | 45 min |
 
 
 ## **APIs on Webex Contact Center (WxCC)**
