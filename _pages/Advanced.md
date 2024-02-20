@@ -240,20 +240,20 @@ You can see different sections on the left-hand sides, for example:
 
 **Step 3.** Navigate to the API reference and select Address Book
 ![API23](/assets/images/API/API23.jpg)
-Step 4. In this case, you want to first list the address books already created. So, select the GET request under “List Address Books Entries (v2 API)”
+**Step 4.** In this case, you want to first list the address books already created. So, select the GET request under “List Address Books Entries (v2 API)”
 
-Step 5. You can see all the parameters required, like **orgid** and optional parameters, like **page** or**page size,** and so on.
+**Step 5.** You can see all the parameters required, like **orgid** and optional parameters, like **page** or**page size,** and so on.
 
-Step 6. On the right-hand side, you see how the API is executed. You can see the method; GET; the URL used with the variable (orgid) and the code language that is being used (you can use cURL, csharp, java, python, etc.)
+**Step 6.** On the right-hand side, you see how the API is executed. You can see the method; GET; the URL used with the variable (orgid) and the code language that is being used (you can use cURL, csharp, java, python, etc.)
 ![API24](/assets/images/API/API24.jpg)
 
-Step 7. Select the Try out section. As you notice, this requires an authorization token. The token used by default, is the one automatically assigned when you log in with the admin credentials to the Developers portal. It also pulls the orgid from the organization the user you logged in is part of. Click Run.
+**Step 7.** Select the Try out section. As you notice, this requires an authorization token. The token used by default, is the one automatically assigned when you log in with the admin credentials to the Developers portal. It also pulls the orgid from the organization the user you logged in is part of. Click Run.
 
 You see the 200 Response, which indicates the request was successful. You also see the address books created in this org. You can scroll down in the response window to see the list of all address books.
 
 ![API25](/assets/images/API/API25.jpg)
 
-Step 8. Log in with the same user to WxCC Portal: [https://portal-v2.wxcc-anz1.cisco.com/portal/home](https://portal-v2.wxcc-anz1.cisco.com/portal/home) and navigate to Provisioning > Address Book
+**Step 8. **Log in with the same user to WxCC Portal: [https://portal-v2.wxcc-anz1.cisco.com/portal/home](https://portal-v2.wxcc-anz1.cisco.com/portal/home) and navigate to Provisioning > Address Book
 
 ![API26](/assets/images/API/API26.jpg)
 
@@ -264,32 +264,32 @@ Step 8. Log in with the same user to WxCC Portal: [https://portal-v2.wxcc-anz1.c
 
 This task shows you the configuration steps to create a Webex application. This covers how to build the authentication part of the application for use with Postman.
 
-Step 1. Logon to [https://developer.webex-cx.com](https://developer.webex-cx.com) with your username and password. On the top-right hand corner, hover over your userID and select My Webex Apps from the pop-out menu.
+**Step 1. **Logon to [https://developer.webex-cx.com](https://developer.webex-cx.com) with your username and password. On the top-right hand corner, hover over your userID and select My Webex Apps from the pop-out menu.
 
 ![API28](/assets/images/API/API28.jpg)
 
-Step 2. Provide the name of your choice, description of your choice, the redirect URI and check the scopes (Config, write and read).
+**Step 2. **Provide the name of your choice, description of your choice, the redirect URI and check the scopes (Config, write and read).
 
 For the URI, we are using Postman as a sample application so, use this URI: [https://oauth.pstmn.io/v1/callback](https://oauth.pstmn.io/v1/callback) and select the top 3 scopes as shown in the screenshot below.
 
 ![API29](/assets/images/API/API29.jpg)
 
-Step 3. Accept the terms and click **Add Integration**.
+**Step 3. **Accept the terms and click **Add Integration**.
 
 ![API30](/assets/images/API/API30.jpg)
 
-Step 4. You will get the response with the Client ID, Client Secret, and the URL that you could embed in your application to initiate the authentication.
+**Step 4. **You will get the response with the Client ID, Client Secret, and the URL that you could embed in your application to initiate the authentication.
 
 ![API31](/assets/images/API/API31.jpg)
 
-Step 5. Copy the whole URL into a new browser window and you see that redirect you to a Webex authentication page.
+**Step 5. **Copy the whole URL into a new browser window and you see that redirect you to a Webex authentication page.
 
 ![API32](/assets/images/API/API32.jpg)
 
-Step 6. On the authentication window, click Accept.
+**Step 6. **On the authentication window, click Accept.
 ![API33](/assets/images/API/API33.jpg)
 
-Step 7. You see that your application is now authenticated.
+**Step 7. **You see that your application is now authenticated.
 
 ![API34](/assets/images/API/API34.jpg)
 
