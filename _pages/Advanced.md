@@ -297,7 +297,35 @@ More Information about creating a Webex application and using Postman in this do
 
 
 ===============================================================
-## Custom Widgets on Agent Desktop
+## JDS APIs & Use Cases
+This lab is designed to teach you the concepts and functionalities of Customer Journey Data Services (JDS), both in regard to the JDS Widget that can be added in Agent Desktop as well as the API capabilities of the solution, since JDS remains an API-first solution today. You will learn how to use the JDS widget, how to add new customers (identities) to your JDS database as well as how to use the JDS APIs to extract information and act upon it. 
+
+# Exploring JDSs APIs & Widget
+JDS Desktop Widget provides agents with an interface that shows the end customer’s complete journey with the agent’s business, aggregated metrics of their experience as well as the customer’s unique identifiers (aliases).
+<img width="1433" alt="image" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/e710de0e-e311-4e35-9599-6ae72aede7af">
+
+- **Identity / Person**: A unique customer, all the events that the same customer (e.g. call, chat, email, visit website) creates are marked under the same identity.
+- **Alias**: Different ways we can identify the same customer/person (e.g. email, phone number, Customer ID). Customer must have at least one alias.
+- **Profile Template**: A profile template defines the kind of aggregation technique we want to see for a customer (e.g. contacts within _last 24 hours_).
+- **Progressive Profile**: The values that correspond to an identity’s profile template at that particular moment of time (e.g. contacts within last 24 hours = _10_).
+
+
+## Task 1: Adding a new identity for the JDS project
+## Task 2: Adding JDS to the Desktop layout 
+-- Assign to the team and sign in as an agent
+## Task 3: Downloading the JDS Postman collection
+## Task 4: Exploring the JDS APIs
+## Task 5: Creating a new event via API 
+-- Check in the widget
+
+
+
+# Use Case - Journey Based Queue Priority
+-- About Use Case
+## Task 1: Getting number of requests for the X last days/hours
+## Task 2: Adding JDS API Request to the Flow Designer
+## Task 3: Making a test call and checking the restul
+
 
 ![[]]
 
