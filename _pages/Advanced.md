@@ -216,11 +216,11 @@ The objective of the lab is to understand the benefits of the Cisco Developers P
 **Step 1. **Open a web browser and navigate to the developer portal: **developer.webex-cx.com.**
 Sign in with the username assigned to you and the password is **~~Ciscolabuser123!**~~ 
 
-![[Pasted image 20240220092705.png]]
+![API21](/assets/images/API/API21.jpg)
 
 
 **Step 2.** Select Documentation from the top-right corner.
-![[Pasted image 20240220093717.png]]
+![API22](/assets/images/API/API22.jpg)
 
 You can see different sections on the left-hand sides, for example:
 
@@ -233,25 +233,25 @@ You can see different sections on the left-hand sides, for example:
 **API Reference**: You will see in this section all the APIs categories that WxCC offers. 
 
 **Step 3.** Navigate to the API reference and select Address Book
-![[Pasted image 20240220093807.png]]
+![API23](/assets/images/API/API23.jpg)
 Step 4. In this case, you want to first list the address books already created. So, select the GET request under “List Address Books Entries (v2 API)”
 
 Step 5. You can see all the parameters required, like **orgid** and optional parameters, like **page** or**page size,** and so on.
 
 Step 6. On the right-hand side, you see how the API is executed. You can see the method; GET; the URL used with the variable (orgid) and the code language that is being used (you can use cURL, csharp, java, python, etc.)
-![[Pasted image 20240220093821.png]]
+![API24](/assets/images/API/API24.jpg)
 
 Step 7. Select the Try out section. As you notice, this requires an authorization token. The token used by default, is the one automatically assigned when you log in with the admin credentials to the Developers portal. It also pulls the orgid from the organization the user you logged in is part of. Click Run.
 
 You see the 200 Response, which indicates the request was successful. You also see the address books created in this org. You can scroll down in the response window to see the list of all address books.
 
-![[Pasted image 20240220093832.png]]
+![API25](/assets/images/API/API25.jpg)
 
 Step 8. Log in with the same user to WxCC Portal: [https://portal-v2.wxcc-anz1.cisco.com/portal/home](https://portal-v2.wxcc-anz1.cisco.com/portal/home) and navigate to Provisioning > Address Book
 
-![[Pasted image 20240220093850.png]]
+![API26](/assets/images/API/API26.jpg)
 
-![[Pasted image 20240220093856.png]]
+![API27](/assets/images/API/API27.jpg)
 
 
 ### Task 2 Develop a Webex Application
@@ -260,32 +260,32 @@ This task shows you the configuration steps to create a Webex application. This 
 
 Step 1. Logon to [https://developer.webex-cx.com](https://developer.webex-cx.com) with your username and password. On the top-right hand corner, hover over your userID and select My Webex Apps from the pop-out menu.
 
-![[Pasted image 20240220093915.png]]
+![API28](/assets/images/API/API28.jpg)
 
 Step 2. Provide the name of your choice, description of your choice, the redirect URI and check the scopes (Config, write and read).
 
 For the URI, we are using Postman as a sample application so, use this URI: [https://oauth.pstmn.io/v1/callback](https://oauth.pstmn.io/v1/callback) and select the top 3 scopes as shown in the screenshot below.
 
-![[Pasted image 20240220093926.png]]
+![API29](/assets/images/API/API29.jpg)
 
 Step 3. Accept the terms and click **Add Integration**.
 
-![[Pasted image 20240220093936.png]]
+![API30](/assets/images/API/API30.jpg)
 
 Step 4. You will get the response with the Client ID, Client Secret, and the URL that you could embed in your application to initiate the authentication.
 
-![[Pasted image 20240220093948.png]]
+![API31](/assets/images/API/API31.jpg)
 
 Step 5. Copy the whole URL into a new browser window and you see that redirect you to a Webex authentication page.
 
-![[Pasted image 20240220093957.png]]
+![API32](/assets/images/API/API32.jpg)
 
 Step 6. On the authentication window, click Accept.
-![[Pasted image 20240220094006.png]]
+![API33](/assets/images/API/API33.jpg)
 
 Step 7. You see that your application is now authenticated.
 
-![[Pasted image 20240220094017.png]]
+![API34](/assets/images/API/API34.jpg)
 
 More Information about creating a Webex application and using Postman in this document: [https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html)
 
