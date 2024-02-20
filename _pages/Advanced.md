@@ -312,7 +312,7 @@ JDS Desktop Widget provides agents with an interface that shows the end customer
 
 ## Task 1: Adding a new identity for the JDS project
 
-> Note 1: For this task, you must have an admin account with the **"Full admin"** permissions.
+> Note 1: For this task, you must have an admin account with the **"Full admin"** permissions.\
 > Note 2: To save time, we will be skipping that exercise. Please read it and go to the next task.
 {: .block-tip }
 
@@ -460,7 +460,8 @@ JDS Widget code block:
 
 4. Save the desktop Layout that now has your customer journey widget code. 
 
-> The modified JSON file (4 steps above) can be downloaded [here]()
+> The modified JSON file (4 steps above) can be downloaded [here](files/JDS_Layout.json)
+{: .block-tip }
 
 5. Go to Control Hub -> Contact Center ->  Desktop Layouts and Create a new Desktop Layout. 
 
