@@ -360,10 +360,8 @@ The process to add the JDS Widget is also thoroughly explained on the [GitHub pa
 
 <img width="967" alt="image" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/9016f607-c58e-4916-946d-a7aba49e3bd0">
 
-3.	Copy the JDS Widget code block below. 
-<img width="753" alt="Screenshot 2024-02-20 at 17 53 11" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/60968b46-818e-4809-ab27-17dc275a4a33">
+3.	Copy the JDS Widget code block below:
 
-JDS Widget code block:
 ```
 {
             "comp": "md-tab",
@@ -414,6 +412,7 @@ JDS Widget code block:
           },
 ```
 > For this lab, the Project ID is **65171e0682b7f52b9209b39d**. Project ID can be found in the Customer Journey Data tab in Control Hub.
+<img width="753" alt="Screenshot 2024-02-20 at 17 53 11" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/60968b46-818e-4809-ab27-17dc275a4a33">
 
 4. If in the **Default Desktop Layout** the WxM widget is already presented, make sure that the following section is removed
 ```
@@ -465,9 +464,8 @@ JDS Widget code block:
 
 5. Go to Control Hub -> Contact Center ->  Desktop Layouts and Create a new Desktop Layout. 
 
-6. In the name section set your **ID**_JDS_Layout (example: **140_JDS_Layout**). Replace the file and assign the Layout to your team.
+6. In the name section set your **ID**_JDS_Layout (example: **140_JDS_Layout**). Click on **Replace file**, assign the Layout to your team, and click **Create**.
 
-7. Sign in to the agent desktop by using an incognito mode. If you already signed, just refresh your Agent Desktop and the new configuration should load.
 
 ## Task 3: Downloading the JDS Postman collection
 ## Task 4: Exploring the JDS APIs
@@ -483,7 +481,7 @@ JDS Widget code block:
 ## Task 3: Making a test call and checking the restul
 
 
-![[]]
+
 
 <p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>
 		
