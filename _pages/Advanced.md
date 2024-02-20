@@ -468,6 +468,8 @@ The process to add the JDS Widget is also thoroughly explained on the [GitHub pa
 
 
 ## Task 3: Downloading the JDS Postman collection
+As JDS is an API-first solution, there is a very wide [range of APIs](https://developer.webex-cx.com/documentation/journey) available. To make the introduction to them easier, Cisco has created a [JDS API Collection](https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/customer-journey-samples/cjds-postman-example/JDS%20CiscoLive.postman_collection.json) that you can download and import in your API tool (e.g. Postman) and start playing around, in conjunction with various use cases. 
+
 ## Task 4: Exploring the JDS APIs
 ## Task 5: Creating a new event via API 
 -- Check in the widget
