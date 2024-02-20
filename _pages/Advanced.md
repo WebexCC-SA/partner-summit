@@ -311,8 +311,9 @@ JDS Desktop Widget provides agents with an interface that shows the end customer
 
 
 ## Task 1: Adding a new identity for the JDS project
->Note 1: For this task, you must have an admin account with the **"Full admin"** permissions.
->Note 2: To save time, we will be skipping that exercise. Please read it and go to the next task.
+
+> Note 1: For this task, you must have an admin account with the **"Full admin"** permissions.
+> Note 2: To save time, we will be skipping that exercise. Please read it and go to the next task.
 {: .block-tip }
 
 1.	Add a new identity for yourself to JDS project. Navigate to Control Hub with your administrator credentials.
