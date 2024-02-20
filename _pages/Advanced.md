@@ -350,7 +350,80 @@ JDS Desktop Widget provides agents with an interface that shows the end customer
 
 
 ## Task 2: Adding JDS to the Desktop layout 
--- Assign to the team and sign in as an agent
+The process to add the JDS Widget is also thoroughly explained on the [GitHub page](https://github.com/CiscoDevNet/cjaas-widgets/blob/main/CustomerJourney/README-VERSION-9.0.0.md), including a video walkthrough. 
+
+1.	Download the default JSON Layout from the Control Hub -> Contact Center ->  Desktop Layouts ->  Global Layout 
+<img width="1720" alt="Screenshot 2024-02-20 at 17 52 00" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/3431a739-07e4-4d38-82e6-d4be6ae7e51b">
+
+
+2.	Copy the JDS Widget code block below. For this lab, the Project ID is **65171e0682b7f52b9209b39d**. Project ID can be found in the Customer Journey Data tab in Control Hub.
+<img width="753" alt="Screenshot 2024-02-20 at 17 53 11" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/60968b46-818e-4809-ab27-17dc275a4a33">
+
+JDS Widget code block:
+```
+{
+            "comp": "md-tab",
+            "attributes": {
+              "slot": "tab"
+            },
+            "children": [
+              {
+                "comp": "slot",
+                "attributes": {
+                  "name": "WXM_JOURNEY_TAB"
+                }
+              }
+            ],
+            "visibility": "WXM_JOURNEY"
+          },
+          {
+            "comp": "md-tab-panel",
+            "attributes": {
+              "slot": "panel",
+              "class": "widget-pane"
+            },
+            "children": [
+              {
+                "comp": "customer-journey-widget",
+                "script": "https://cjaas.cisco.com/widgets/customer-journey-9.0.0.js",
+                "attributes": {
+                  "base-url": "https://api-jds.prod-useast1.ciscowxdap.com",
+                  "logs-on": "true",
+                  "project-id": "65171e0682b7f52b9209b39d",
+                  "template-id": "journey-default-template1",
+                  "icon-data-path": "https://wxcc-widgets.s3.us-west-1.amazonaws.com/icons.json",
+                  "limit": "50",
+                  "time-frame": "All",
+                  "live-stream": "true"
+                },
+                "properties": {
+                  "interactionData": "$STORE.agentContact.taskSelected",
+                  "bearerToken": "$STORE.auth.accessToken",
+                  "organizationId": "e56f00d4-98d8-4b62-a165-d05a41243d98"
+                },
+                "wrapper": {
+                  "title": "Customer Journey Widget",
+                  "maximizeAreaName": "app-maximize-area"
+                }
+              }
+            ]
+          },
+```
+
+3. Within the downloaded default desktop layout JSON file, search for the data property "visibility": "IVR_TRANSCRIPT". Find the following code block associated with that.
+> Note: IVR_TRANSCRIPT may appear a few times, please find the last appearance of "visibility": "IVR_TRANSCRIPT"
+
+<img width="967" alt="image" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/9016f607-c58e-4916-946d-a7aba49e3bd0">
+
+
+4. Save the desktop Layout that now has your customer journey widget code. 
+
+5. Go to Control Hub -> Contact Center ->  Desktop Layouts and Create a new Desktop Layout. 
+
+6. In the name section set your ID_JDS_Layout (example **140_JDS_Layout**). Replace the file and assign the Layout to your team.
+
+7. Sign in to the agent desktop by using an incognito mode. If you already signed, just refresh your Agent Desktop and the new configuration should load.
+
 ## Task 3: Downloading the JDS Postman collection
 ## Task 4: Exploring the JDS APIs
 ## Task 5: Creating a new event via API 
