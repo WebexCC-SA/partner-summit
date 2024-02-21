@@ -9,13 +9,13 @@ layout: post
 Last modified: Tue, 20 Feb 2024
 ```
 
-## Webex Contact Center API and Widgets
+## Webex Contact Center API and Customer Journey Data Services (JDS)
 
-Welcome to the Contact Center API and Agent Desktop Customization Lab Guide – your gateway to exploring advanced features in Contact Center solutions. This intermediate-level tutorial focuses on integrating APIs and customizing agent desktops using widgets.
+Welcome to the Contact Center API and JDS Lab Guide – your gateway to exploring advanced features in Contact Center solutions. This intermediate-level tutorial focuses on integrating APIs and exploring JDS functionality.
 
-As businesses prioritize exceptional customer experiences, this guide empowers you to enhance agent workflows. You'll gain hands-on experience integrating Contact Center APIs and discover how to customize agent desktops effectively with widgets. Whether you're a developer or customization enthusiast, this tutorial is designed to meet your intermediate-level needs, providing the skills to create a more intuitive and personalized workspace for contact center agents.
+As businesses prioritize exceptional customer experiences, this guide empowers you to enhance agent workflows. You'll gain hands-on experience integrating Contact Center APIs and discover how to use JDS effectively with JDS widget.
 
-Let's dive in and unlock the potential of Contact Center API integration and agent desktop customization!
+Let's dive in and unlock the potential of Contact Center API integration and JDS use cases!
 
 ## Table of Contents
 
@@ -281,7 +281,7 @@ JDS Desktop Widget provides agents with an interface that shows the end customer
 
 
 ## Task 2: Adding JDS to the Desktop layout 
-The process to add the JDS Widget is also thoroughly explained on the [GitHub page](https://github.com/CiscoDevNet/cjaas-widgets/blob/main/CustomerJourney/README-VERSION-9.0.0.md), including a video walkthrough. 
+The process to add the JDS Widget is also thoroughly explained on the [GitHub page](https://github.com/CiscoDevNet/cjaas-widgets/blob/main/CustomerJourney/README-VERSION-9.0.0.md){:target="\_blank"}, including a video walkthrough. 
 
 1.	Download the default JSON Layout from the Control Hub -> Contact Center ->  Desktop Layouts ->  Global Layout 
 <img width="1720" alt="Screenshot 2024-02-20 at 17 52 00" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/3431a739-07e4-4d38-82e6-d4be6ae7e51b">
@@ -342,8 +342,9 @@ The process to add the JDS Widget is also thoroughly explained on the [GitHub pa
             ]
           },
 ```
-> For this lab, the Project ID is **65171e0682b7f52b9209b39d**. Project ID can be found in the Customer Journey Data tab in Control Hub.
 <img width="753" alt="Screenshot 2024-02-20 at 17 53 11" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/60968b46-818e-4809-ab27-17dc275a4a33">
+> For this lab, the Project ID is **65171e0682b7f52b9209b39d**. Project ID can be found in the Customer Journey Data tab in Control Hub.
+{: .block-tip }
 
 4. If in the **Default Desktop Layout** the WxM widget is already presented, make sure that the following section is removed
 ```
@@ -387,23 +388,121 @@ The process to add the JDS Widget is also thoroughly explained on the [GitHub pa
             "visibility": "WXM_JOURNEY"
           },
 ```
+4. For test purposes, let's add the same widget to the **Navigation** panel as a page. This will help us to test the widget even when an agent is not on a call. For this find the **navigation** area in your Layout and add that code
+```
+{
+          "nav": {
+            "label": "JDS System Widget",
+            "icon": "https://static.thenounproject.com/png/508797-200.png",
+            "iconType": "other",
+            "navigateTo": "CustomNav6",
+            "align": "top"
+          },
+          "page": {
+            "id": "customNav6",
+            "widgets": {
+              "right": {
+                "comp": "customer-journey-widget",
+                "script": "https://cjaas.cisco.com/widgets/customer-journey-9.0.0.js",
+                "attributes": {
+                  "base-url": "https://api-jds.prod-useast1.ciscowxdap.com",
+                  "logs-on": "true",
+                  "project-id": "65171e0682b7f52b9209b39d",
+                  "template-id": "journey-default-template1",
+                  "icon-data-path": "https://wxcc-widgets.s3.us-west-1.amazonaws.com/icons.json",
+                  "limit": "50",
+                  "time-frame": "All",
+                  "live-stream": "true"
+                },
+                "properties": {
+                  "interactionData": "$STORE.agentContact.taskSelected",
+                  "bearerToken": "$STORE.auth.accessToken",
+                  "organizationId": "e56f00d4-98d8-4b62-a165-d05a41243d98"
+                },
+                "wrapper": {
+                  "title": "Customer Journey Widget",
+                  "maximizeAreaName": "app-maximize-area"
+                }
+              }
+            },
+            "layout": {
+              "areas": [["right"]],
+              "size": {
+                "cols": [1],
+                "rows": [1]
+              }
+            }
+          }
+        },
+```
+<img width="783" alt="Screenshot 2024-02-21 at 20 46 37" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/95577c31-f23a-4380-94c6-c989df00b9e8">
 
-4. Save the desktop Layout that now has your customer journey widget code. 
 
-> The modified JSON file (4 steps above) can be downloaded [here](files/JDS_Layout.json)
+5. Save the desktop Layout that now has your customer journey widget code. 
+
+> The modified JSON file (4 steps above) can be downloaded [here](files/JDS_Layout.json){:target="\_blank"}
 {: .block-tip }
 
-5. Go to Control Hub -> Contact Center ->  Desktop Layouts and Create a new Desktop Layout. 
+6. Go to Control Hub -> Contact Center ->  Desktop Layouts and Create a new Desktop Layout. 
 
-6. In the name section set your **ID**_JDS_Layout (example: **140_JDS_Layout**). Click on **Replace file**, assign the Layout to your team, and click **Create**.
+7. In the name section set your **ID**_JDS_Layout (example: **140_JDS_Layout**). Click on **Replace file**, assign the Layout to your team, and click **Create**.
+
+### Task 3: Agent Desktop Login
+
+> **Note**: To log in to the agent desktop, use either a different web browser or a new incognito web page. This will prevent the browser caching issues with admin and agent credentials.
+> Depending on your tenant's location the agent ULR link can be different. The example below is for the tenant in the US datacenter.
+{: .block-tip }
+
+1. Navigate to **[https://desktop.wxcc-us1.cisco.com/](https://desktop.wxcc-us1.cisco.com/){:target="\_blank"}** in the **chrome browser** with the incognito mode.
+
+2. Enter the agent’s **email ID** which you created in the previous task.
+
+3. Enter the **Password** for the appropriate username.
+
+4. In the **_Station Credentials_** pane, select **"Desktop"**.
+
+5. Select the team **<w class="attendee_out">Your_Attendee_ID</w>_Team1**.
+
+6. Click **_Submit_** button. The browser may ask you to confirm use the microphone from the browser. 
+
+7. Make sure that you are successfully logged in to the Agent Desktop.
+
+8. Go to the 3rd icon in the navigation panel and type **dbokatov@cisco.com** in the **Lookup User** field 
+<img width="1904" alt="Screenshot 2024-02-21 at 20 46 49" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/8d56ed6d-687c-4fb0-b7ff-842b10eea406">
 
 
 ## Task 3: Downloading the JDS Postman collection
-As JDS is an API-first solution, there is a very wide [range of APIs](https://developer.webex-cx.com/documentation/journey) available. To make the introduction to them easier, Cisco has created a [JDS API Collection](https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/customer-journey-samples/cjds-postman-example/JDS%20CiscoLive.postman_collection.json) that you can download and import in your API tool (e.g. Postman) and start playing around, in conjunction with various use cases. 
+As JDS is an API-first solution, there is a very wide [range of APIs](https://developer.webex-cx.com/documentation/journey){:target="\_blank"} available. To make the introduction to them easier, Cisco has created a [JDS API Collection](https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/customer-journey-samples/cjds-postman-example/JDS%20CiscoLive.postman_collection.json){:target="\_blank"} that you can download and import in your API tool (e.g. Postman) and start playing around, in conjunction with various use cases. 
 
-## Task 4: Exploring the JDS APIs
-## Task 5: Creating a new event via API 
--- Check in the widget
+1. Download the JDS Postman collection, by going to the [GitHub samples page](https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/customer-journey-samples/cjds-postman-example/JDS%20CiscoLive.postman_collection.json){:target="\_blank"}
+
+2. Click on **Download raw file**
+<img width="1785" alt="Screenshot 2024-02-21 at 19 34 27" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/5c197928-ec2c-4fa3-ac8a-bcc4159efdaf">
+
+3. Open the Postman app on your laptop and click on **Import** button.
+   
+4. Select the downloaded JSON file in the appeared window
+<img width="1610" alt="Screenshot 2024-02-21 at 19 36 42" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/08ccaf18-2ca5-4b75-a2a0-02e4b0999c99">
+
+6. Once the JDS collection is imported, select the root folder of the imported collection in the left menu, then navigate to the **Variables**, and define the values 
+> Note: reuse the same values as it was in the API lab (client ID, client Secret and org ID). The **workspaceId** is your project ID which is **65171e0682b7f52b9209b39d**
+
+7. Once the values are defined, click **Save** button
+<img width="1603" alt="Screenshot 2024-02-21 at 19 41 36" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/f1f03ddc-59df-4527-9898-0df61570673b">
+
+8. Go to **Authorization** and click on **Get New Access Token** button. The Postman will redirect you to the Auth page where you need to define your Admin account which was used for the App creation in the dev portal. As a result, you should get the message **Authentication complete**. Click **Proceed** and on the next page click on **Use Token** button
+![Agent Sign In](/assets/images/authJDS.gif)
+
+
+## Task 4: Exploring the JDS APIs & Creating new events
+This video shows you how to use various API's to manage JDS profiles and templates.
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/9c7f0d45-d860-4962-99d2-d5d818fde573" width="100%" height="100%" title="JDS Postman Collection" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+
+
 
 
 
