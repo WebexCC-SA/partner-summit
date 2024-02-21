@@ -144,8 +144,8 @@ The objective of the lab is to understand the benefits of the Cisco Developers P
 
 ### Task 1: Introduction to developer portal
 
-**Step 1. **Open a web browser and navigate to the developer portal: **developer.webex-cx.com.**
-Sign in with the username assigned to you and the password is **~~Ciscolabuser123!**~~ 
+**Step 1.** Open a web browser and navigate to the developer portal: **developer.webex-cx.com.**
+Sign in with the username and assigned to you and the password is your Gold Tenant admin credentials.
 
 ![API21](/assets/images/API/API21.jpg)
 
@@ -178,7 +178,7 @@ You see the 200 Response, which indicates the request was successful. You also s
 
 ![API25](/assets/images/API/API25.jpg)
 
-**Step 8. **Log in with the same user to WxCC Portal: [https://portal-v2.wxcc-anz1.cisco.com/portal/home](https://portal-v2.wxcc-anz1.cisco.com/portal/home) and navigate to Provisioning > Address Book
+**Step 8.** Log in with the same user to WxCC Portal: [https://portal-v2.wxcc-anz1.cisco.com/portal/home](https://portal-v2.wxcc-anz1.cisco.com/portal/home) and navigate to Provisioning > Address Book
 
 ![API26](/assets/images/API/API26.jpg)
 
@@ -189,32 +189,32 @@ You see the 200 Response, which indicates the request was successful. You also s
 
 This task shows you the configuration steps to create a Webex application. This covers how to build the authentication part of the application for use with Postman.
 
-**Step 1. **Logon to [https://developer.webex-cx.com](https://developer.webex-cx.com) with your username and password. On the top-right hand corner, hover over your userID and select My Webex Apps from the pop-out menu.
+**Step 1.** Logon to [https://developer.webex-cx.com](https://developer.webex-cx.com) with your username and password. On the top-right hand corner, hover over your userID and select My Webex Apps from the pop-out menu.
 
 ![API28](/assets/images/API/API28.jpg)
 
-**Step 2. **Provide the name of your choice, description of your choice, the redirect URI and check the scopes (Config, write and read).
+**Step 2.** Provide the name of your choice, description of your choice, the redirect URI and check the scopes (Config, write and read).
 
 For the URI, we are using Postman as a sample application so, use this URI: [https://oauth.pstmn.io/v1/callback](https://oauth.pstmn.io/v1/callback) and select the top 3 scopes as shown in the screenshot below.
 
 ![API29](/assets/images/API/API29.jpg)
 
-**Step 3. **Accept the terms and click **Add Integration**.
+**Step 3.** Accept the terms and click **Add Integration**.
 
 ![API30](/assets/images/API/API30.jpg)
 
-**Step 4. **You will get the response with the Client ID, Client Secret, and the URL that you could embed in your application to initiate the authentication.
+**Step 4.** You will get the response with the Client ID, Client Secret, and the URL that you could embed in your application to initiate the authentication.
 
 ![API31](/assets/images/API/API31.jpg)
 
-**Step 5. **Copy the whole URL into a new browser window and you see that redirect you to a Webex authentication page.
+**Step 5.** Copy the whole URL into a new browser window and you see that redirect you to a Webex authentication page.
 
 ![API32](/assets/images/API/API32.jpg)
 
-**Step 6. **On the authentication window, click Accept.
+**Step 6.** On the authentication window, click Accept.
 ![API33](/assets/images/API/API33.jpg)
 
-**Step 7. **You see that your application is now authenticated.
+**Step 7.** You see that your application is now authenticated.
 
 ![API34](/assets/images/API/API34.jpg)
 
