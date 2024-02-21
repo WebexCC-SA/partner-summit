@@ -476,8 +476,30 @@ The process to add the JDS Widget is also thoroughly explained on the [GitHub pa
 ## Task 3: Downloading the JDS Postman collection
 As JDS is an API-first solution, there is a very wide [range of APIs](https://developer.webex-cx.com/documentation/journey) available. To make the introduction to them easier, Cisco has created a [JDS API Collection](https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/customer-journey-samples/cjds-postman-example/JDS%20CiscoLive.postman_collection.json) that you can download and import in your API tool (e.g. Postman) and start playing around, in conjunction with various use cases. 
 
-## Task 4: Exploring the JDS APIs
-## Task 5: Creating a new event via API 
+1.	Download the JDS Postman collection, by going to the [GitHub samples page] (https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/customer-journey-samples/cjds-postman-example/JDS%20CiscoLive.postman_collection.json)
+
+2. Click on **Download raw file**
+<img width="1785" alt="Screenshot 2024-02-21 at 19 34 27" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/5c197928-ec2c-4fa3-ac8a-bcc4159efdaf">
+
+3. Open the Postman app on your laptop and click on **Import** button.
+   
+4. Select the downloaded JSON file in the appeared window
+<img width="1610" alt="Screenshot 2024-02-21 at 19 36 42" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/08ccaf18-2ca5-4b75-a2a0-02e4b0999c99">
+
+
+6. Once the JDS collection is imported, select the root folder of the imported collection in the left menu, then navigate to the **Variables**, and define the values 
+> Note: reuse the same values as it was in the API lab (client ID, client Secret and org ID). The **workspaceId** is your project ID which is **65171e0682b7f52b9209b39d**
+
+7. Once the values are defined, click **Save** button
+<img width="1603" alt="Screenshot 2024-02-21 at 19 41 36" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/f1f03ddc-59df-4527-9898-0df61570673b">
+
+
+8. Go to **Authorization** and click on **Get New Access Token** button. You should get the message **Authentication complete**. Click **Proceed** and on the next page click on **Use Token** button
+![Auth](https://github.com/WebexCC-SA/partner-summit/assets/43476977/d032ef35-a6ee-4740-af1a-8588e2c089fd)
+
+
+
+## Task 4: Exploring the JDS APIs & Creating new events
 -- Check in the widget
 
 
