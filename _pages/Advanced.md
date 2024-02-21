@@ -167,12 +167,12 @@ You can see different sections on the left-hand sides, for example:
 ![API23](/assets/images/API/API23.jpg)
 **Step 4.** In this case, you want to first list the address books already created. So, select the GET request under “List Address Books Entries (v2 API)”
 
-**Step 5.** You can see all the parameters required, like **orgid** and optional parameters, like **page** or**page size,** and so on.
+**Step 5.** You can see all the parameters required, like **orgid** and optional parameters, like **page** or **page size,** and so on.
 
 **Step 6.** On the right-hand side, you see how the API is executed. You can see the method; GET; the URL used with the variable (orgid) and the code language that is being used (you can use cURL, csharp, java, python, etc.)
 ![API24](/assets/images/API/API24.jpg)
 
-**Step 7.** Select the Try out section. As you notice, this requires an authorization token. The token used by default, is the one automatically assigned when you log in with the admin credentials to the Developers portal. It also pulls the orgid from the organization the user you logged in is part of. Click Run.
+**Step 7.** Select the **Try Out** section. As you notice, this requires an authorization token. The token used by default, is the one automatically assigned when you log in with the admin credentials to the Developers portal. It also pulls the orgid from the organization the user you logged in is part of. **Click Run**.
 
 You see the 200 Response, which indicates the request was successful. You also see the address books created in this org. You can scroll down in the response window to see the list of all address books.
 
