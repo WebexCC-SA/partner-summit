@@ -417,8 +417,9 @@ The process to add the JDS Widget is also thoroughly explained on the [GitHub pa
             ]
           },
 ```
-> For this lab, the Project ID is **65171e0682b7f52b9209b39d**. Project ID can be found in the Customer Journey Data tab in Control Hub.
 <img width="753" alt="Screenshot 2024-02-20 at 17 53 11" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/60968b46-818e-4809-ab27-17dc275a4a33">
+> For this lab, the Project ID is **65171e0682b7f52b9209b39d**. Project ID can be found in the Customer Journey Data tab in Control Hub.
+{: .block-tip }
 
 4. If in the **Default Desktop Layout** the WxM widget is already presented, make sure that the following section is removed
 ```
