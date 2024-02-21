@@ -500,7 +500,14 @@ As JDS is an API-first solution, there is a very wide [range of APIs](https://de
 
 
 ## Task 4: Exploring the JDS APIs & Creating new events
--- Check in the widget
+This video shows you how to use various API's to manage JDS profiles and templates.
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/9c7f0d45-d860-4962-99d2-d5d818fde573" width="100%" height="100%" title="JDS Postman Collection" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+
+
 
 
 
