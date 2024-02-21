@@ -494,7 +494,7 @@ As JDS is an API-first solution, there is a very wide [range of APIs](https://de
 <img width="1603" alt="Screenshot 2024-02-21 at 19 41 36" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/f1f03ddc-59df-4527-9898-0df61570673b">
 
 
-8. Go to **Authorization** and click on **Get New Access Token** button. You should get the message **Authentication complete**. Click **Proceed** and on the next page click on **Use Token** button
+8. Go to **Authorization** and click on **Get New Access Token** button. The Postman will redirect you to the Auth page where you need to define your Admin account which was used for the App creation in the dev portal. As a result, you should get the message **Authentication complete**. Click **Proceed** and on the next page click on **Use Token** button
 ![Auth](https://github.com/WebexCC-SA/partner-summit/assets/43476977/d032ef35-a6ee-4740-af1a-8588e2c089fd)
 
 
