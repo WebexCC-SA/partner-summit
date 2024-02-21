@@ -9,13 +9,13 @@ layout: post
 Last modified: Tue, 20 Feb 2024
 ```
 
-## Webex Contact Center API and Widgets
+## Webex Contact Center API and Customer Journey Data Services (JDS)
 
-Welcome to the Contact Center API and Agent Desktop Customization Lab Guide – your gateway to exploring advanced features in Contact Center solutions. This intermediate-level tutorial focuses on integrating APIs and customizing agent desktops using widgets.
+Welcome to the Contact Center API and JDS Lab Guide – your gateway to exploring advanced features in Contact Center solutions. This intermediate-level tutorial focuses on integrating APIs and exploring JDS functionality.
 
-As businesses prioritize exceptional customer experiences, this guide empowers you to enhance agent workflows. You'll gain hands-on experience integrating Contact Center APIs and discover how to customize agent desktops effectively with widgets. Whether you're a developer or customization enthusiast, this tutorial is designed to meet your intermediate-level needs, providing the skills to create a more intuitive and personalized workspace for contact center agents.
+As businesses prioritize exceptional customer experiences, this guide empowers you to enhance agent workflows. You'll gain hands-on experience integrating Contact Center APIs and discover how to use JDS effectively with JDS widget.
 
-Let's dive in and unlock the potential of Contact Center API integration and agent desktop customization!
+Let's dive in and unlock the potential of Contact Center API integration and JDS use cases!
 
 ## Table of Contents
 
