@@ -91,9 +91,9 @@ When making requests to the Webex REST API, an Authentication HTTP header is use
 For authorization, there are different types that are supported for Webex APIs:
 - None: Web API resource is public, anybody can place requests
 - Basic (over SSL/TSL): Username and password passed to server in base64 encoded (not encrypted) string.
-- Authorization : Basic ENCODEDSTRING
+	- Authorization : Basic ENCODEDSTRING
 - Oauth 2.0: Standard framework to retrieve access token from Identity Provider
-- Authorization: Bearer ENCODEDSTRING
+	- Authorization: Bearer ENCODEDSTRING
  - Authorization can be short-lived and require refreshing of token.
 
 #### Examples:
@@ -132,81 +132,6 @@ https://deckofcardsapi.com/api/deck/new/draw/?count=2
 ![API4](/assets/images/API/API4.jpg)
 
 ***Note:** In these examples, you did not have to be authenticated and authorized because it is a public API.*
-
-
-#### Task 2: Postman Fundamentals
-
-Postman is an API platform for building and using APIs. It includes a comprehensive set of tools that help accelerate the API lifecycle—from design, testing, documentation, and mocking to the sharing and discoverability of your APIs.
-
-Postman can only run on the Chrome browser. To use Postman, you will first need to install Google Chrome.
-
-In this lab we will use Web based version of the Postman API client tool to define API requests and test them.
-
-***Note**: In this lab you will use Postman browser and sign in with a pre-registered account *
-
-**Step 1.** Locate the Chrome icon at the bottom of the task bar and launch it.
-
-![API5](/assets/images/API/API5.jpg)
-
-**Step 2.** Navigate to postman.com and select sign in.
-![API6](/assets/images/API/API6.jpg)
-
-**Step 3.** Provide the username related to the username assigned by your proctor and the password. ***Note:** Please be careful to follow the steps if you use shared infrastructure.*
-
-For example, the username is **<<To_add_user_from the sheet>>.** The password is the same for all users: **<<To_add_pwd_from the sheet>>.**
-
-![API7](/assets/images/API/API7.jpg)
-
-**Step 4.** Create your workspace. On the Workspaces tab, type the name of your workspace. In this exercise your workspace name is the same as the username. So, for Pod1, type ~~**Ciscolabuser001**~~.
-
-
-![API8](/assets/images/API/API8.jpg)
-
-**Step 5.** On the Workspace create window, add the name, check the Personal option and click Create Workspace.
-![API9](/assets/images/API/API9.jpg)
-
-![API10](/assets/images/API/API10.jpg)
-
-**Step 6.** You see your workspace created and all options on the left side of the window. You will navigate to each of this option to understand Postman functionality.
-![API11](/assets/images/API/API11.jpg)
-
-Step 7. Select New and then HTTP Request to create a new API request.
-![API11-12](/assets/images/API/API11-12.jpg)
-
-**Step 8.** Notice in the screenshot below that the default method is GET; Click the drop-down arrow next to it to show all other REST API methods including the ones mentioned above for WxCC.
-![API13](/assets/images/API/API13.jpg)
-
-**Step 9.** Evaluate the previous deck of cards API via Postman. Copy the following URL and paste it into Postman and select the GET option to the left:
-
-[https://deckofcardsapi.com/api/deck/new/draw/?count=2](https://deckofcardsapi.com/api/deck/new/draw/?count=2)
-![API14](/assets/images/API/API14.jpg)
-
-Note, that after adding the URL, the parameter count was automatically added.
-
-**Step 10.** Click Send button. Review the results. You see 200 OK in the response, which indicates that this was a successful response, you see the body of the response and the format.
-![API15](/assets/images/API/API15.jpg)
-
-**Step 11.** Save this request in a Collection. Select Save As from the pull-down button.
-![API16](/assets/images/API/API16.jpg)
-
-**Step 12.** Click Create a Collection. Add the name DeckofCards and click Create. Then, click Save.
-![API17](/assets/images/API/API17.jpg)
-
-![API18](/assets/images/API/API18.jpg)
-
-You see the collection now added to your workspace.
-
-**Step 13.** Open a brand-new deck of cards. Copy the following URL, paste it into Postman, and select the POST option to the left. Add the parameter _jokers_enabled=true._
-https://deckofcardsapi.com/api/deck/new/
-
-![API19](/assets/images/API/API19.jpg)
-
-**Step 14.** Save this request in the previous created Collection. Change the name of the request and click SAVE.
-![API20](/assets/images/API/API20.jpg)
-
-
-Postman offers lot of other options for APIs, some of which we'll explore in the subsequent sections of this lab.
-
 
 # Lab 2 – Developer Portal
 
