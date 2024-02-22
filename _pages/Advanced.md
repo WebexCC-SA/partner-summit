@@ -27,7 +27,7 @@ Let's dive in and unlock the potential of Contact Center API integration and JDS
 | Lab 2 – Developer Portal |  |  |  |
 | Lab 3 – WxCC APIs - Postman |  |  |  |
 | Lab 4 – Import WxCC APIs to Postman |  |  |  |
-| [**JDS APIs & Use Case**](#jds-apis--use-cases) | Practical Lab | HARD | 45 min |
+| [**Part 2: JDS APIs & Use Case**](#jds-apis--use-cases) | Practical Lab | MID | 45 min |
 
 
 ## **APIs on Webex Contact Center (WxCC)**
@@ -489,8 +489,15 @@ Step 25. Execute the GET API for the specific address book, one more time. You s
 
 
 ===============================================================
-## JDS APIs & Use Cases
+## Part2: JDS APIs & Use Cases 
+### Lab Objective
 This lab is designed to teach you the concepts and functionalities of Customer Journey Data Services (JDS), both in regard to the JDS Widget that can be added in Agent Desktop as well as the API capabilities of the solution, since JDS remains an API-first solution today. You will learn how to use the JDS widget, how to add new customers (identities) to your JDS database as well as how to use the JDS APIs to extract information and act upon it. 
+
+
+### Pre-requisites
+- You have Admin access to Control Hub 
+- You have completed [**Part 1: APIs on Webex Contact Center (WxCC)**](#APIs-on-Webex-Contact-Center)
+
 
 # Exploring JDSs APIs & Widget
 JDS Desktop Widget provides agents with an interface that shows the end customer’s complete journey with the agent’s business, aggregated metrics of their experience as well as the customer’s unique identifiers (aliases).
@@ -820,6 +827,10 @@ This video shows you how to use various API's to manage JDS profiles and templat
 9. Click on **Send** button and check the new event at the agent desktop.
 <img width="1755" alt="Screenshot 2024-02-22 at 16 20 25" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/80bdd9ef-b053-4bb3-9be0-d9de3b18777a">
 
+> Note: The `data.channelType` defines a particular icon of every incoming journey event.
+The entire mapping list can be found on GitHub: https://github.com/CiscoDevNet/cjaas-widgets/blob/jds-widget-9.0.0/CustomerJourney/README-VERSION-9.0.0.md
+<img width="1124" alt="image" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/f60a48d3-68d0-4dd4-875b-c4b61156417b">
+
 
 
 # Use Case - Journey Based Queue Priority
@@ -827,10 +838,204 @@ A customer has contacted his travel service several times in the last couple of 
 <img width="972" alt="Screenshot 2024-02-22 at 16 24 54" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/1b33f2d3-0aca-4432-8629-45367394958a">
 
 ## Task 1: Getting the total number of requests for the X days/hours
+1. The journey profile template aggregates the values and provides you with the total number of events for a specific time. Make sure that your journey profile template has the right view which includes lookBackPeriod for the last 48 hours. In the layout, we have already defined the template with the specific name
+```
+"template-id": "journey-default-template1",
+```
+
+2. For verifying the profile view go to the Postman API **Get Progressive Profile View - journey-default-template2** and change the URL parameter from
+`journey-default-template2` to `journey-default-template1`. As the result you should get {{baseUrl}}/admin/v1/api/profile-view-template/workspace-id/{{workspaceId}}/template-id/journey-default-template1. 
+
+3. Run this GET API and verify that it includes settings for the last 48 hours. 
+<img width="1613" alt="Screenshot 2024-02-22 at 18 47 30" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/d90c66da-b720-4990-bc2e-8d562426a703">
+
+
+4. If you are using a different tenant, you need to create the template with the name defined in the layout. In order to do it, go to **Create - journey-default-template2** API in Postman and replace the body with this code
+<img width="1611" alt="Screenshot 2024-02-22 at 18 49 27" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/be7a8476-b359-4e0e-ac70-fdf4d90ee734">
+
+```
+{
+    "name": "journey-default-template1",
+    "attributes": [
+        {
+            "version": "0.1",
+            "event": "task:new",
+            "metaDataType": "string",
+            "metaData": "origin",
+            "limit": 100,
+            "displayName": "No of times contacted in the last 24 hours",
+            "lookBackDurationType": "hours",
+            "lookBackPeriod": 24,
+            "aggregationMode": "Count",
+            "rules": null,
+            "widgetAttributes": {
+                "type": "table"
+            },
+            "verbose": true
+        },
+        {
+            "version": "0.1",
+            "event": "task:new",
+            "metaDataType": "string",
+            "metaData": "origin",
+            "limit": 200,
+            "displayName": "No of times contacted in the last 48 hours",
+            "lookBackDurationType": "hours",
+            "lookBackPeriod": 48,
+            "aggregationMode": "Count",
+            "rules": null,
+            "widgetAttributes": {
+                "type": "table"
+            },
+            "verbose": true
+        },
+        {
+            "version": "0.1",
+            "event": "task:new",
+            "metaDataType": "string",
+            "metaData": "origin",
+            "limit": 700,
+            "displayName": "No of times contacted in the last 7 days",
+            "lookBackDurationType": "days",
+            "lookBackPeriod": 7,
+            "aggregationMode": "Count",
+            "rules": null,
+            "widgetAttributes": {
+                "type": "table"
+            },
+            "verbose": true
+        },
+        {
+            "version": "0.1",
+            "event": "task:new",
+            "metaDataType": "string",
+            "metaData": "origin",
+            "limit": 100,
+            "displayName": "No of times contacted in the last 7 days via email",
+            "lookBackDurationType": "days",
+            "lookBackPeriod": 7,
+            "aggregationMode": "Count",
+            "rules": {
+                "logic": "SINGLE",
+                "condition": "task:new,channelType,string,Value EQ email"
+            },
+            "widgetAttributes": {
+                "type": "table"
+            },
+            "verbose": true
+        },
+        {
+            "version": "0.1",
+            "event": "task:new",
+            "metaDataType": "string",
+            "metaData": "origin",
+            "limit": 100,
+            "displayName": "No of times contacted in the last 7 days via chat",
+            "lookBackDurationType": "days",
+            "lookBackPeriod": 7,
+            "aggregationMode": "Count",
+            "rules": {
+                "logic": "SINGLE",
+                "condition": "task:new,channelType,string,Value EQ chat"
+            },
+            "widgetAttributes": {
+                "type": "table"
+            },
+            "verbose": true
+        },
+        {
+            "version": "0.1",
+            "event": "task:new",
+            "metaDataType": "string",
+            "metaData": "origin",
+            "limit": 100,
+            "displayName": "No of times contacted in the last 7 days via telephony",
+            "lookBackDurationType": "days",
+            "lookBackPeriod": 7,
+            "aggregationMode": "Count",
+            "rules": {
+                "logic": "SINGLE",
+                "condition": "task:new,channelType,string,Value EQ telephony"
+            },
+            "widgetAttributes": {
+                "type": "table"
+            },
+            "verbose": true
+        }
+    ]
+}
+```
+
+4. Now let's get the **person-id**, by running **Get Identity** API. Modify the URL in Postman and put the number **+3227045654** after the alias. You should get
+`GET {{baseUrl}}/admin/v1/api/person/workspace-id/{{workspaceId}}/aliases/3227045654`
+<img width="1479" alt="image" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/b812a278-3336-46fa-b26c-bf520334fe6e">
+
+5. Save in notepad the person ID, which is "65ad476d01e91d3fe3f65e5c". You will need it for the next API
+   
+6. Go to **Get Progressive Template values against user** and modify the URL by defining the person-id and right template name. It should be:
+`{{baseUrl}}/v1/api/progressive-profile-view/workspace-id/{{workspaceId}}/person-id/65ad476d01e91d3fe3f65e5c/template-name/journey-default-template1`
+
+7. Run the API and check the response for the last 48 hours. The **result** is the total number of events for the last 2 days. We will use that value for the routing decision in the next task. 
+<img width="1574" alt="Screenshot 2024-02-22 at 18 53 28" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/cc9053c0-99fe-41b7-afbe-c28eb531be00">
+
 
 ## Task 2: Adding JDS API Request to the Flow Designer
-## Task 3: Making a test call and checking the restul
 
+In order to achieve that use case, we will need to use 2 JDS APIs:
+- Get the person-id API - https://developer.webex-cx.com/documentation/journey/v1/search-for-an-identity-via-aliases
+- Get Progressive Template values against user - https://developer.webex-cx.com/documentation/journey/v1/historic-progressive-profile-view-using-template-name
+
+1. By using your admin account, go to the Control Hub -> Webex CC -> Flows https://admin.webex.com/wxcc/routing-flows/flows
+
+2. Open the flow which was created during the Fundamental lab
+
+> Note: Alternatively, you can create a new Flow and map your Entry Point and DN to that Flow.
+
+3. In Postman, go to the JDS root folder -> Authorization -> Token and copy the access token to the notepad
+> Note: For this task, we will use the temporary access tokens which will expire after 8-12 hours. Soon we will be releasing the Webex CC API Connector, which will allow you to generate OAuth2 access tokens directly from the Flow Designer.
+<img width="1118" alt="Screenshot 2024-02-22 at 21 17 56" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/766c3694-8aae-4c09-b170-525b224571ff">
+
+4. Go back to the Flow Designer, you will need to create the following logic
+<img width="816" alt="Screenshot 2024-02-22 at 22 43 02" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/12d4a1c9-436c-4c01-832a-e2023977dd37">
+
+4a. Click on the main canvas and add 2 Flow Variables:
+- **Identity** with type String
+- **Total_Requests** with eh type Integer
+
+4b. Add the **HTTPRequest_1** activity with the following Settings:
+- Request URL: https://api-jds.prod-useast1.ciscowxdap.com/v1/api/person/workspace-id/65171e0682b7f52b9209b39d/aliases/{{NewPhoneContact.ANI}}
+- Method: GET
+- HTTP Request Headers Key: Authorization
+- HTTP Request Headers Values: Bearer + Your access token from Postman
+- Content Type: Application/JSON
+- Parse Settings Content Type: JSON
+- Parse Settings Output Variable: Identity
+- Parse Settings Path Expression: $.data[0].id
+
+4c. Add the **HTTPRequest_2** activity with the following Settings:
+- Request URL: https://api-jds.prod-useast1.ciscowxdap.com/v1/api/progressive-profile-view/workspace-id/65171e0682b7f52b9209b39d/person-id/{{Identity}}/template-name/journey-default-template1
+- Method: GET
+- HTTP Request Headers Key: Authorization
+- HTTP Request Headers Values: Bearer + Your access token from Postman
+- Content Type: Application/JSON
+- Parse Settings Content Type: JSON
+- Parse Settings Output Variable: Total_Requests
+- Parse Settings Path Expression: $.data[0].attributes[1].result
+
+4d. Add the **Condition** activity with the following Settings:
+- Expression: {{ Total_Requests > 2 }}
+
+4e: Add 2 queues with different priority (as it shown on a screenshot above)
+
+4f: Publish the Flow by clicking on **Validation** toggle and **Publish Flow** button
+ 
+## Task 3: Making a test call and checking the restul
+1. Make your agent available for that queue
+   
+2. Make 3 test calls to the agent
+
+3. Open **DEBUG** tool in the Flow Designer by clicking on **DEBUG** button and verify though which queue the 3rd call was delivered
+<img width="1717" alt="image" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/60ead024-087b-43ac-8715-de325482eaf3">
 
 
 
