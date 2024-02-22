@@ -185,7 +185,7 @@ You see the 200 Response, which indicates the request was successful. You also s
 ![API27](/assets/images/API/API27.jpg)
 
 
-### Task 2 Develop a Webex Application
+### Task 2. Develop a Webex Application
 
 This task shows you the configuration steps to create a Webex application. This covers how to build the authentication part of the application for use with Postman.
 
@@ -224,6 +224,35 @@ More Information about creating a Webex application and using Postman in this do
 
 
 # Lab 3 – WxCC APIs - Postman
+
+### PREREQUISITES: 
+You should have your own Postman account in order to use the software or online version of Postman.
+
+### Task 1: Postman Account Creation (Optional in case you don't have your own account)
+
+**Step1.** Access https://www.postman.com/ and click on **Sign Up for Free**
+![Postman1](/assets/images/API/Postman1.jpg)
+
+**Step 2**. Provide your email, username and password then click Create Free account.
+	Step2a. (Alternatively) You can use your own Gmail account if you want.
+
+![Postman2](/assets/images/API/Postman2.jpg)
+
+**Step 3**. Provide additional details. Choose anything you like from drop down list.
+
+![Postman3](/assets/images/API/Postman3.jpg)
+
+Step 4. Confirm your account by accessing provided mailbox and clicking Confirm My Email. You will be redirected to Postman Web Page that you can use to build you API Calls.
+
+![Postman4](/assets/images/API/Postman4.jpg)
+
+
+
+
+
+
+
+
 
 
 
