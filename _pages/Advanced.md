@@ -30,7 +30,7 @@ Let's dive in and unlock the potential of Contact Center API integration and JDS
 | [**Part 2: JDS APIs & Use Case**](#jds-apis--use-cases) | Practical Lab | MID | 45 min |
 
 
-## **APIs on Webex Contact Center (WxCC)**
+## **PART 1: APIs on Webex Contact Center (WxCC)**
 
 This is an **intermediate** level lab intended for engineers with prior **Webex Contact Center (WxCC)** experience.
 
@@ -668,50 +668,40 @@ You can import APIs collection from another Postman application or from any othe
 
 Cisco TAC has created a document explaining WxCC API functionality and where you can download a set of APIs collection and then import it in your postman section.
 
-Step 1. Open Chrome web browser and navigate to this document:
+**Step 1.** Open Chrome web browser and navigate to this document:
 
 [https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html) [configure-webex-contact-center-apis-with.html](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html)
 
 ![API90](/assets/images/API/API90.jpg)
 
-Step 2. Scroll down to step 5 in the document and click on the Sample Postman APIs link.
-
+**Step 2.** Scroll down to step 5 in the document and click on the Sample Postman APIs link.
 ![API91](/assets/images/API/API91.jpg)
 
-Step 3. On the new GitHub window, select New WebexCC OAuth2 APIs…
-
+**Step 3.** On the new GitHub window, select New WebexCC OAuth2 APIs…
 ![API92](/assets/images/API/API92.jpg)
 
-Step 4. Select the icon to copy the API samples and past it to a notepad text (CTRL -V).
-
+**Step 4.** Select the icon to copy the API samples and past it to a notepad text (CTRL -V).
 ![API93](/assets/images/API/API93.jpg)
-
 
 ![API94](/assets/images/API/API94.jpg)
 
-
-Step 5. Save the file in the Downloads folder as Ciscolabuser001.json
+**Step 5.** Save the file in the Downloads folder as Ciscolabuser001.json
 ![API95](/assets/images/API/API95.jpg)
 
-
-Step 6. On Postman, select Import.
+**Step 6.** On Postman, select Import.
 ![API96](/assets/images/API/API96.jpg)
-Step 7. On the import window, select files from the Drop section.
 
+**Step 7.** On the import window, select files from the Drop section.
 ![API97](/assets/images/API/API97.jpg)
 
-Step 8. Navigate to the Downloads folder and click Open.
-
+**Step 8.** Navigate to the Downloads folder and click Open.
 ![API98](/assets/images/API/API98.jpg)
 
-Step 9. You will see a new collection created with all WxCC APIs.
-
+**Step 9.** You will see a new collection created with all WxCC APIs.
 ![API99](/assets/images/API/API99.jpg)
 
 
 **Congratulations!! You have finished this lab.**
-
-
 
 
 
