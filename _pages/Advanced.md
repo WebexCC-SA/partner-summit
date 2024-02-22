@@ -734,10 +734,9 @@ A customer has contacted his travel service several times in the last couple of 
 }
 ```
 
-4. Now let's get the **person-id**, by running **Get Identity** API. Modify the URL in Postman and put **dbokatov@cisco.com** after the alias. You should get
-`GET {{baseUrl}}/admin/v1/api/person/workspace-id/{{workspaceId}}/aliases/dbokatov@cisco.com`
-<img width="1611" alt="Screenshot 2024-02-22 at 18 49 27" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/dad3aaac-46e2-4ccc-b5ca-1c95501f2608">
-
+4. Now let's get the **person-id**, by running **Get Identity** API. Modify the URL in Postman and put the number **+3227045654** after the alias. You should get
+`GET {{baseUrl}}/admin/v1/api/person/workspace-id/{{workspaceId}}/aliases/3227045654`
+<img width="1479" alt="image" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/b812a278-3336-46fa-b26c-bf520334fe6e">
 
 5. Save in notepad the person ID, which is "65ad476d01e91d3fe3f65e5c". You will need it for the next API
    
@@ -749,6 +748,7 @@ A customer has contacted his travel service several times in the last couple of 
 
 
 ## Task 2: Adding JDS API Request to the Flow Designer
+
 In order to achieve that use case, we will need to use 2 JDS APIs:
 - Get the person-id API - https://developer.webex-cx.com/documentation/journey/v1/search-for-an-identity-via-aliases
 - Get Progressive Template values against user - https://developer.webex-cx.com/documentation/journey/v1/historic-progressive-profile-view-using-template-name
@@ -759,10 +759,51 @@ In order to achieve that use case, we will need to use 2 JDS APIs:
 
 > Note: Alternatively, you can create a new Flow and map your Entry Point and DN to that Flow.
 
-3. 
+3. In Postman, go to the JDS root folder -> Authorization -> Token and copy the access token to the notepad
+> Note: For this task, we will use the temporary access tokens which will expire after 8-12 hours. Soon we will be releasing the Webex CC API Connector, which will allow you to generate OAuth2 access tokens directly from the Flow Designer.
+<img width="1118" alt="Screenshot 2024-02-22 at 21 17 56" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/766c3694-8aae-4c09-b170-525b224571ff">
+
+4. Go back to the Flow Designer, you will need to create the following logic
+<img width="816" alt="Screenshot 2024-02-22 at 22 43 02" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/12d4a1c9-436c-4c01-832a-e2023977dd37">
+
+4a. Click on the main canvas and add 2 Flow Variables:
+- **Identity** with type String
+- **Total_Requests** with eh type Integer
+
+4b. Add the **HTTPRequest_1** activity with the following Settings:
+- Request URL: https://api-jds.prod-useast1.ciscowxdap.com/v1/api/person/workspace-id/65171e0682b7f52b9209b39d/aliases/{{NewPhoneContact.ANI}}
+- Method: GET
+- HTTP Request Headers Key: Authorization
+- HTTP Request Headers Values: Bearer + Your access token from Postman
+- Content Type: Application/JSON
+- Parse Settings Content Type: JSON
+- Parse Settings Output Variable: Identity
+- Parse Settings Path Expression: $.data[0].id
+
+4c. Add the **HTTPRequest_2** activity with the following Settings:
+- Request URL: https://api-jds.prod-useast1.ciscowxdap.com/v1/api/progressive-profile-view/workspace-id/65171e0682b7f52b9209b39d/person-id/{{Identity}}/template-name/journey-default-template1
+- Method: GET
+- HTTP Request Headers Key: Authorization
+- HTTP Request Headers Values: Bearer + Your access token from Postman
+- Content Type: Application/JSON
+- Parse Settings Content Type: JSON
+- Parse Settings Output Variable: Total_Requests
+- Parse Settings Path Expression: $.data[0].attributes[1].result
+
+4d. Add the **Condition** activity with the following Settings:
+- Expression: {{ Total_Requests > 2 }}
+
+4e: Add 2 queues with different priority (as it shown on a screenshot above)
+
+4f: Publish the Flow by clicking on **Validation** toggle and **Publish Flow** button
  
 ## Task 3: Making a test call and checking the restul
+1. Make your agent available for that queue
+   
+2. Make 3 test calls to the agent
 
+3. Open **DEBUG** tool in the Flow Designer by clicking on **DEBUG** button and verify though which queue the 3rd call was delivered
+<img width="1717" alt="image" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/60ead024-087b-43ac-8715-de325482eaf3">
 
 
 
