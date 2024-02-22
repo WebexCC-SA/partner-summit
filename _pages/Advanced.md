@@ -311,20 +311,178 @@ Note, that after adding the URL, the parameter count was automatically added.
 
 
 
+## Task 3. Postman - WxCC Address Book Management
 
 
+Step 1. Locate the Chrome icon at the bottom of the task bar and launch it.
+
+![API5](/assets/images/API/API5.jpg)
+
+Step 2. Navigate to postman.com and select sign in.
+![API35](/assets/images/API/API35.jpg)
+
+**Step 3.** Provide your username and the password.
+![API36](/assets/images/API/API36.jpg)
+
+Step 4. Navigate to the Workspace tab and select your workspace (created in lab1).
+![API37](/assets/images/API/API37.jpg)
 
 
+Step 5. Create a new request. On the left-hand side window select New and then select HTTP Request.
+
+![API38](/assets/images/API/API38.jpg)
 
 
+Step 6. Open another browser window and log in to Developer Portal developer.webex-cx.com. Once logged in, click on Documentation link on top and select Address Book (under API REFERENCE)
+
+![API39](/assets/images/API/API39.jpg)
+
+Step 7. Since we want to create a new address book, we will use a POST request. Select this Post request on the Developers portal. Use v3 API for this. See screenshot.
+
+![API40](/assets/images/API/API40.jpg)
+
+Step 8. Here you can see the required parameters that you need to provide in Postman:
+
+**Method**: POST
+
+**URI**: /organization/{orgId}/address-book, where {orgId} is a variable that you can create in Postman and assign the value of your organization.**Name**: In this case your will use Ciscolabuser001ABook
+
+**parent Type**: We will use ORGANIZATION.
+
+Step 9. Select the Try out button to show information that Postman will need as parameter or env variable for the API request. Refer to the screenshot below. You will need this request body too.
+
+![API41](/assets/images/API/API41.jpg)
 
 
+Body:
+{
+  "name": "TechSummit_AddressBook",
+  "parentType": "ORGANIZATION",
+  "description": "TechSummit 2024",
+  "siteId": ""
+}
+
+Click Run
+
+You should see
+
+![API42](/assets/images/API/API42.jpg)
+
+If you have not logged in to the portal already, in another tab, login to the portal:
+
+And verify that you can see this new address book created like this example:
+
+![API43](/assets/images/API/API43.jpg)
+
+Congratulations! You have run a simple API towards Webex CC and created an address book without logging into the portal.
+
+Step 10. Switch back to your Postman browser tab. Before sending the API request to create an address book, we need to create 3 environment variables: **org_id, addressBookId** and **datacenter**. This is a required parameter to create an address book. On Postman, select **Environments** and then **Create Environment**.
+
+![API44](/assets/images/API/API44.jpg)
+
+Step 11. Rename the New environment to any name you like, for example: Ciscolabusser001E
+
+![API45](/assets/images/API/API45.jpg)
+
+Step 12. Add a new Variable called **datacenter** with the initial value of **anz1**. Then add another variable with the name orgId (info in screenshot may be different – org_id) and copy the orgId value from the Developers portal to the initial value. Add a 3rd variable addressBookId and for the initial value, obtain the Address Book ID from the portal: [https://portal-v2.wxcc-anz1.cisco.com/portal/home#](https://portal-v2.wxcc-anz1.cisco.com/portal/home) > Address Book and click Save.
+
+![API46](/assets/images/API/API46.jpg)
+
+Developers Portal:
+![API47](/assets/images/API/API47.jpg)
+
+Step 13. On the left Menu panel, choose Collections, and click on the + to create a new Blank collection for Webex CC and give it a name (click on the 3 dots and rename it). Select the environment on the top-right corner of the postman window.
 
 
+![API49](/assets/images/API/API49.jpg)
+
+Step 14. Under the collection you just created, click on Add Request. On the Untitled Request window (or the New Request), click on the 3 dots and rename it to “Address Book Entry”, change the method to POST (not GET) and on for the URI enter the  one provided in the Developers portal /organization/{orgId}/address-book/{addressBookId}/entry) plus the server address. Change orgId for the variable you created orgId and add {}:
+
+https://api.wxcc-{{datacenter}}.cisco.com/organization/{{orgId}}/address-book/{{addressBookId}}/entry
+
+Step 15. Next step is to provide the authorization. On Postman click on the Authorization tab and select Bearer Token.
+
+![API50](/assets/images/API/API50.jpg)
 
 
+Now, login to the Developers portal: [https://developer.webex-cx.com/documentation/address-book](https://developer.webex-cx.com/documentation/address-book)
+
+Go to Documentation on the right hand top corner > Click on Create An Address Book Entry and Try Out on the right – You can now copy your personal token and use it.
+
+![API51](/assets/images/API/API51.jpg)
+![API52](/assets/images/API/API52.jpg)
+
+Step 16. Now, you need to provide the request parameters in the body. Select the **Body** tab in Postman and then select **raw.**
 
 
+Step 17. Copy the following request format and paste it into Postman body request.
+
+{
+
+  "name": "John Doe1",
+
+  "number": "+61435144347"
+
+}
+
+Step 18. Identify the media type sent in the API request. Select **Headers** and add **Content-Type** and the value **application/json**
+
+![API53](/assets/images/API/API53.jpg)
+
+
+**Reference:**
+![API54](/assets/images/API/API54.jpg)
+
+Step 19. Click Send. You see the response 201 created and the id for the new address book. Copy this address book id and paste it in notepad because we will use it later.
+
+![API55](/assets/images/API/API55.jpg)
+
+
+Step 20. Save this API request in a new collection. Select Save, then Save As.
+
+![API56](/assets/images/API/API56.jpg)
+
+
+On the Save window, add the Request name (Create Address book). Click New Collection. Add the name of the collection and click Create, the click Save after the collection has been created.
+![API57](/assets/images/API/API57.jpg)
+
+
+You see the new collection and API request added.
+![API58](/assets/images/API/API58.jpg)
+
+Step 21. Using an API request verify that this address book exist in WxCC. This is very simple. Create a new tab in Postman and use this against the GET method https://api.wxcc-{{datacenter}}.cisco.com/organization/{{orgId}}/v3/address-book to list all the address books. Remember to use the Environment and the Authorisation as Bearer token as described before.![A screenshot of a computer
+Description automatically generated](file:///C:/Users/yabondar/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png)
+
+
+![API59](/assets/images/API/API59.jpg)
+
+
+Step 22. Save this API in the collection. Click Save then Save As. On the Request name add **List Address books.** Click Save to save it on the WxCCAPIs collection.
+
+
+![API60](/assets/images/API/API60.jpg)
+
+
+Step 23. You can also list a specific address book. Use the same GET API and just add he address book id that you have previously copied in notepad and click Send.
+
+for example: https://api.wxcc-{{datacenter}}.cisco.com/organization/{{orgid}}/address- book/8fd95b96-556d-49be-94b8-fabc1237054c
+
+![API61](/assets/images/API/API61.jpg)
+
+You see only the address book with that id.
+
+![API62](/assets/images/API/API62.jpg)
+
+Step 24. Delete the address book just created. Using the same GET API, we use in the previous step, change the method to DELETE and click Send.
+
+![API63](/assets/images/API/API63.jpg)
+
+You see 204 No Content, which indicates that the address book was deleted but there is no content in the response body, which is expected.
+
+![API64](/assets/images/API/API64.jpg)
+Step 25. Execute the GET API for the specific address book, one more time. You see 404 Not Found since the address book no longer exist.
+
+![API65](/assets/images/API/API65.jpg)
 
 
 
