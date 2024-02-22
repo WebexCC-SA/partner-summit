@@ -501,8 +501,63 @@ This video shows you how to use various API's to manage JDS profiles and templat
 	<iframe src="https://app.vidcast.io/share/embed/9c7f0d45-d860-4962-99d2-d5d818fde573" width="100%" height="100%" title="JDS Postman Collection" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
+1. Let’s try to create a new event via API. Let's start with the default-generated events such as email and chat.
+   
+2. In the Postman, navigate to the **Create email default events for journey-default-template** 
+
+3. Change **identity** and **"origin"** to **"dbokatov@cisco.com"**. Your API body should look like:
+```
+{
+  "specversion": "1.0",
+  "type": "task:new",
+  "source": "wxcc",
+  "id": "{{$guid}}",
+  "identity": "dbokatov@cisco.com",
+  "identitytype": "email",
+  "datacontenttype": "application/json",
+  "data": {
+    "taskId": "{{$guid}}",
+    "origin": "dbokatov@cisco.com",
+    "channelType": "email"
+  }
+}
+```
+
+4. Click on **Send** button and verify the response status. It should be **202 Accepted**
+
+5. Now do the same step 3 with chat by clicking on **Create chat default events for journey-default-template**
+
+6. Go back to the JDS widget in the Agent Desktop and verify the result. You can refresh the page if the events have not appeared. Now you should see new events in the right panel
+<img width="1773" alt="Screenshot 2024-02-22 at 16 17 16" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/8bfb0c5f-0b95-4619-86fc-3211318e8581">
 
 
+> Note: We can create any kind of Event and add it to the customer’s journey (e.g. customer visited our webpage).
+
+7. Let's do a custom event by duplicating the existing API request. Click on `...` in front of **Create chat default events for journey-default-template**.
+<img width="1007" alt="Screenshot 2024-02-22 at 15 47 08" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/fc612e3c-dff3-4c93-898c-1fa29e6fc94f">
+
+
+9. Once the copy is created, replace the body with the code below:
+```
+{  "id": "{{$guid}}",
+  "specversion": "1.0",
+  "type": "test",
+  "source": "test",
+  "identity": "+3227045654",
+  "identitytype": "phone",
+  "datacontenttype": "application/json",
+  "data": {
+    "phone": "+3227045654",
+    "status": "New Booking",
+    "origin": "WEB - FLY HIGH",
+    "channelType": "Payment Complete",
+    "topic": "Paradise destination",
+    "channelBreakout": "Web Page Visit"
+}}
+```
+
+9. Click on **Send** button and check the new event at the agent desktop.
+<img width="1755" alt="Screenshot 2024-02-22 at 16 20 25" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/80bdd9ef-b053-4bb3-9be0-d9de3b18777a">
 
 
 
