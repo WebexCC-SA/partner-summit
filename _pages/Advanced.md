@@ -485,6 +485,204 @@ Step 25. Execute the GET API for the specific address book, one more time. You s
 ![API65](/assets/images/API/API65.jpg)
 
 
+## Task 3. Postman - WxCC Tasks Management vias APIs
+
+The Task resource represents a request or demand for work from agents. Concretely, a **telephony** Task is an incoming call. For chat, a Task is a chat session. For email, a Task is an email chain. This API returns a list of Tasks (open or closed) within a date range. The data range is provided in epoch time format.
+
+The API is: **/v1/tasks**
+
+And the required fields are f**rom** & to - filters tasks created between the given epoch timestamps (in milliseconds).
+
+Step 1. Convert regular time to epoch time. Open a web browser and navigate to
+
+**epochconverter.com**
+
+Specify the date that you want to convert and click **Human date to Timestamp.**
+
+Note: Change the date to today’s and time as 12:00 AM as in example shown in the screen shot below.
+
+![[Pasted image 20240222190942.png]]
+
+
+Step 2. Copy the Timestamp in milliseconds
+![[Pasted image 20240222191004.png]]
+
+Step 3: Do the same for end of day today as in today’s date and 11:59 PM; example: 1700830799000; this is for the ‘to’ field.
+
+And save it in a notepad; It'll be used later in a GET API request testing.
+
+Step 4. In postman, request a list of all tasks from that specific epoch time. On Postman, click New and Create a New HTTP Request.
+
+![[Pasted image 20240222191015.png]]
+
+
+For the URI add: https://api.wxcc-{{datacenter}}.cisco.com/v1/tasks?orgId={{orgId}}
+
+and since from and to are required parameters, add a parameter "from" with the value of epoch time copied  earlier and “to” fields.
+
+![[Pasted image 20240222191024.png]]
+
+Step 4. Next step is to provide the authorization. On Postman click on the Authorization tab and select Bearer Token.
+
+![[Pasted image 20240222191034.png]]
+
+
+Now, copy the value from the Developers portal and paste it in the token field. Navigate to Developers portal Tasks APs section, select GET. Select the **Try Out** button and then copy the Authorization token.
+
+![[Pasted image 20240222191050.png]]
+![[Pasted image 20240222191054.png]]
+
+
+Since the token was added in previous steps, you will see the token already there.
+
+Step 5. Save this API in the WxCC APIs collection. Select Save As, then add the name of the request (List Tasks from Epoch time) and click save.
+
+![[Pasted image 20240222191104.png]]
+
+Step 6. Send a request for the task related to voice calls. Using the same GET TASK API, add a parameter call "channelTypes" with the value "telephony". Click Send. You will see 200 OK response containing list of voice tasks only.
+
+![[Pasted image 20240222191116.png]]
+
+
+## Task 4. Postman - WxCC Queue Statistics
+
+The Queue resource is the waiting line which holds Tasks from the time they are created, to the time they are either assigned to an Agent or abandoned by the customer. A Queue is tied to a certain channel type e.g., email, chat, or telephony, and will be summarized by number and time statistics for how Tasks pass through. Queue statistics show only for 24 hours and use the epoch time format.
+
+The API request to obtain the task in queue for a 24-hour period is:
+## /v1/queues/statistics
+
+Required parameters are:
+
+**From**: Start time for the query (in epoch milliseconds).
+
+**To**: End time for the query (in epoch milliseconds).
+
+  
+
+Step 1. Open a web browser and navigate to **epochconverter.com**
+
+Specify the date and time that you want to convert for **from** and **to** queue range. Click **Human date to Timestamp. Use 24 Nov 2023 as a date to return some data.**
+
+
+## From epoch time
+
+Copy the Timestamp in milliseconds  ![](file:///C:/Users/yabondar/AppData/Local/Temp/msohtmlclip1/01/clip_image002.jpg)1700744400000
+
+And save it in a notepad; It'll be used later as a value for the "from" parameter in a GET API request testing.
+![[Pasted image 20240222191207.png]]
+
+## To epoch time
+Go back to epochconverter.com browser window and change the date/time so that it’s no more
+than 24 hrs than the previous time captured for the "from" parameter. Example 1700830799000
+![[Pasted image 20240222191219.png]]
+
+Copy the Timestamp in milliseconds  ![](file:///C:/Users/yabondar/AppData/Local/Temp/msohtmlclip1/01/clip_image002.jpg)1700830799000
+
+And save it in a notepad; It'll be used later as a value for the "to" parameter in a GET API request testing.
+
+Step 2. In postman, request a list of all tasks in queue from and to the specific epoch time. On Postman, click New and Create a New HTTP Request.
+
+![[Pasted image 20240222191240.png]]
+
+On the URI add: https://api.wxcc-{{datacenter}}.cisco.com/v1/queues/statistics?orgId={{orgId}}
+
+and since **from** and **to** are required parameters, add them with the epoch time you have copied before.
+![[Pasted image 20240222191251.png]]
+
+Step 3. Next step is to provide the authorization. On Postman click on the Authorization tab and select Bearer Token.
+![[Pasted image 20240222191259.png]]
+
+Now, copy the value from the Developers portal and paste it in the token field. Navigate to Developers portal Queue APIs section, select GET. Select the **Try Out** button and then copy the Authorization token.
+
+![[Pasted image 20240222191313.png]]
+![[Pasted image 20240222191317.png]]
+
+
+Since the token was added in previous steps, you will see the token already exists. Confirm that it is same as what you copied from the developer portal.
+
+Step 4. Click Send. You see 200 OK response indicating that request was successful. Note that response lists statistics for various task queues.
+
+![[Pasted image 20240222191329.png]]
+
+Step 5. Save this API in the WxCC APIs collection. Select Save As, then add the name of the request (List Queues statistics) and click save.
+![[Pasted image 20240222191343.png]]
+
+
+## Task 5. Postman - WxCC Agent Activities
+
+
+The Agent activities API allows you to retrieve agent activities. Sorted by start time ascending. The API is **/v1/agents/activities.**
+
+And the required field is only:
+
+**From**: Filters agent activities after the given epoch timestamp (in milliseconds).
+
+Parameter "**To**" is optional but if used, it needs to be within 24hrs (86400000 msec) of "from" parameter.
+
+Step 1. Convert regular time to epoch time. Open a web browser and navigate to
+
+**epochconverter.com**
+
+Specify the date that you want to convert and click **Human date to Timestamp.**
+
+![[Pasted image 20240222191405.png]]
+
+
+Step 2. Copy the Timestamp in milliseconds for from and to
+
+from: 1700744400000
+
+to: 1700830799000
+
+And save it in a notepad; It'll be used later as a value for the "from" parameter in a GET API request testing.
+
+Step 3. In postman, request a list of all agent activities from that specific epoch time. On Postman, click New and Create a New HTTP Request.
+
+![[Pasted image 20240222191415.png]]
+
+On the URI add: https://api.wxcc-{{datacenter}}.cisco.com/v1/agents/activities?orgId={{org_id}}
+
+and since from is a required parameter add the parameter from with the epoch time you have copied before.
+
+Example screenshot (remember to include to field below from) – not in screenshot.
+
+![[Pasted image 20240222191426.png]]
+
+Step 4. Next step is to provide the authorization. On Postman click on the Authorization tab and select Bearer Token.
+![[Pasted image 20240222191435.png]]
+Now, copy the value from the Developers portal and paste it in the token field. Navigate to Developers portal agent activities APIs section, select GET. Select the **Try Out** button and then copy the Authorization token.
+
+![[Pasted image 20240222191441.png]]
+
+![[Pasted image 20240222191445.png]]
+
+
+Since the token was added in previous steps, you will see the token already there.
+
+Step 5. Click **Send**. You see 400 bad requests because the **from**, **to** cannot exceed 1 day.
+
+![[Pasted image 20240222191455.png]]
+
+Ste 6. Add the “**to”** parameter with less than 1 day. For example, use a timestamp from 1696165200000and **to** 1696251599000 – 1 Oct 2023**.** Click Send. You see 200 Ok, which means that the request was successful even though, there are no agent activities during this time.
+
+![[Pasted image 20240222191507.png]]
+
+
+Step 7. Save this API in the WxCC APIs collection. Select Save As, then add the name of the request (List Agent activities) and click save.
+
+![[Pasted image 20240222191514.png]]
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
