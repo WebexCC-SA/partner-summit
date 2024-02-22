@@ -493,7 +493,7 @@ The API is: **/v1/tasks**
 
 And the required fields are f**rom** & to - filters tasks created between the given epoch timestamps (in milliseconds).
 
-Step 1. Convert regular time to epoch time. Open a web browser and navigate to
+**Step 1. **Convert regular time to epoch time. Open a web browser and navigate to
 
 **epochconverter.com**
 
