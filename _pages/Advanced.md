@@ -27,7 +27,7 @@ Let's dive in and unlock the potential of Contact Center API integration and JDS
 | Lab 2 – Developer Portal |  |  |  |
 | Lab 3 – WxCC APIs - Postman |  |  |  |
 | Lab 4 – Import WxCC APIs to Postman |  |  |  |
-| [**JDS APIs & Use Case**](#jds-apis--use-cases) | Practical Lab | HARD | 45 min |
+| [**Part 2: JDS APIs & Use Case**](#jds-apis--use-cases) | Practical Lab | MID | 45 min |
 
 
 ## **APIs on Webex Contact Center (WxCC)**
@@ -257,8 +257,15 @@ Step 4. Confirm your account by accessing provided mailbox and clicking Confirm 
 
 
 ===============================================================
-## JDS APIs & Use Cases
+## Part2: JDS APIs & Use Cases 
+### Lab Objective
 This lab is designed to teach you the concepts and functionalities of Customer Journey Data Services (JDS), both in regard to the JDS Widget that can be added in Agent Desktop as well as the API capabilities of the solution, since JDS remains an API-first solution today. You will learn how to use the JDS widget, how to add new customers (identities) to your JDS database as well as how to use the JDS APIs to extract information and act upon it. 
+
+
+### Pre-requisites
+- You have Admin access to Control Hub 
+- You have completed [**Part 1: APIs on Webex Contact Center (WxCC)**](#APIs-on-Webex-Contact-Center)
+
 
 # Exploring JDSs APIs & Widget
 JDS Desktop Widget provides agents with an interface that shows the end customer’s complete journey with the agent’s business, aggregated metrics of their experience as well as the customer’s unique identifiers (aliases).
@@ -588,6 +595,10 @@ This video shows you how to use various API's to manage JDS profiles and templat
 9. Click on **Send** button and check the new event at the agent desktop.
 <img width="1755" alt="Screenshot 2024-02-22 at 16 20 25" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/80bdd9ef-b053-4bb3-9be0-d9de3b18777a">
 
+> Note: The `data.channelType` defines a particular icon of every incoming journey event.
+The entire mapping list can be found on GitHub: https://github.com/CiscoDevNet/cjaas-widgets/blob/jds-widget-9.0.0/CustomerJourney/README-VERSION-9.0.0.md
+<img width="1124" alt="image" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/f60a48d3-68d0-4dd4-875b-c4b61156417b">
+
 
 
 # Use Case - Journey Based Queue Priority
@@ -738,6 +749,18 @@ A customer has contacted his travel service several times in the last couple of 
 
 
 ## Task 2: Adding JDS API Request to the Flow Designer
+In order to achieve that use case, we will need to use 2 JDS APIs:
+- Get the person-id API - https://developer.webex-cx.com/documentation/journey/v1/search-for-an-identity-via-aliases
+- Get Progressive Template values against user - https://developer.webex-cx.com/documentation/journey/v1/historic-progressive-profile-view-using-template-name
+
+1. By using your admin account, go to the Control Hub -> Webex CC -> Flows https://admin.webex.com/wxcc/routing-flows/flows
+
+2. Open the flow which was created during the Fundamental lab
+
+> Note: Alternatively, you can create a new Flow and map your Entry Point and DN to that Flow.
+
+3. 
+ 
 ## Task 3: Making a test call and checking the restul
 
 
