@@ -225,6 +225,14 @@ More Information about creating a Webex application and using Postman in this do
 
 # Lab 3 – WxCC APIs - Postman
 
+Postman is an API platform for building and using APIs. It includes a comprehensive set of tools that help accelerate the API lifecycle—from design, testing, documentation, and mocking to the sharing and discoverability of your APIs.
+
+Postman can run on the Chrome browser. To use Postman, you will first need to install Google Chrome. As alternative you can also install free Postman application available on https://www.postman.com/downloads/. 
+
+In this lab we will use Web based version of the Postman API client tool to define API requests and test them.
+
+**Note**: This lab is built for Postman in browser mode but you can use preinstalled version of Postman.
+
 ### PREREQUISITES: 
 You should have your own Postman account in order to use the software or online version of Postman.
 
@@ -248,7 +256,7 @@ Step 4. Confirm your account by accessing provided mailbox and clicking Confirm 
 
 
 
-
+### Task 2:  
 
 
 
