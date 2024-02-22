@@ -562,8 +562,11 @@ This video shows you how to use various API's to manage JDS profiles and templat
 
 
 # Use Case - Journey Based Queue Priority
--- About Use Case
-## Task 1: Getting number of requests for the X last days/hours
+A customer has contacted his travel service several times in the last couple of days. The next incoming call could be prioritized if a specific threshold is met (for example: the number of contacts on a particular reservation in the last 2 days greater than 2) 
+<img width="972" alt="Screenshot 2024-02-22 at 16 24 54" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/1b33f2d3-0aca-4432-8629-45367394958a">
+
+## Task 1: Getting the total number of requests for the X days/hours
+
 ## Task 2: Adding JDS API Request to the Flow Designer
 ## Task 3: Making a test call and checking the restul
 
