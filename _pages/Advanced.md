@@ -566,6 +566,147 @@ A customer has contacted his travel service several times in the last couple of 
 <img width="972" alt="Screenshot 2024-02-22 at 16 24 54" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/1b33f2d3-0aca-4432-8629-45367394958a">
 
 ## Task 1: Getting the total number of requests for the X days/hours
+1. The journey profile template aggregates the values and provides you with the total number of events for a specific time. Make sure that your journey profile template has the right view which includes lookBackPeriod for the last 48 hours. In the layout, we have already defined the template with the specific name
+```
+"template-id": "journey-default-template1",
+```
+
+2. For verifying the profile view go to the Postman API **Get Progressive Profile View - journey-default-template2** and change the URL parameter from
+`journey-default-template2` to `journey-default-template1`. As the result you should get {{baseUrl}}/admin/v1/api/profile-view-template/workspace-id/{{workspaceId}}/template-id/journey-default-template1. 
+
+3. Run this GET API and verify that it includes settings for the last 48 hours. 
+<img width="1613" alt="Screenshot 2024-02-22 at 18 47 30" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/d90c66da-b720-4990-bc2e-8d562426a703">
+
+
+4. If you are using a different tenant, you need to create the template with the name defined in the layout. In order to do it, go to **Create - journey-default-template2** API in Postman and replace the body with this code
+<img width="1611" alt="Screenshot 2024-02-22 at 18 49 27" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/be7a8476-b359-4e0e-ac70-fdf4d90ee734">
+
+```
+{
+    "name": "journey-default-template1",
+    "attributes": [
+        {
+            "version": "0.1",
+            "event": "task:new",
+            "metaDataType": "string",
+            "metaData": "origin",
+            "limit": 100,
+            "displayName": "No of times contacted in the last 24 hours",
+            "lookBackDurationType": "hours",
+            "lookBackPeriod": 24,
+            "aggregationMode": "Count",
+            "rules": null,
+            "widgetAttributes": {
+                "type": "table"
+            },
+            "verbose": true
+        },
+        {
+            "version": "0.1",
+            "event": "task:new",
+            "metaDataType": "string",
+            "metaData": "origin",
+            "limit": 200,
+            "displayName": "No of times contacted in the last 48 hours",
+            "lookBackDurationType": "hours",
+            "lookBackPeriod": 48,
+            "aggregationMode": "Count",
+            "rules": null,
+            "widgetAttributes": {
+                "type": "table"
+            },
+            "verbose": true
+        },
+        {
+            "version": "0.1",
+            "event": "task:new",
+            "metaDataType": "string",
+            "metaData": "origin",
+            "limit": 700,
+            "displayName": "No of times contacted in the last 7 days",
+            "lookBackDurationType": "days",
+            "lookBackPeriod": 7,
+            "aggregationMode": "Count",
+            "rules": null,
+            "widgetAttributes": {
+                "type": "table"
+            },
+            "verbose": true
+        },
+        {
+            "version": "0.1",
+            "event": "task:new",
+            "metaDataType": "string",
+            "metaData": "origin",
+            "limit": 100,
+            "displayName": "No of times contacted in the last 7 days via email",
+            "lookBackDurationType": "days",
+            "lookBackPeriod": 7,
+            "aggregationMode": "Count",
+            "rules": {
+                "logic": "SINGLE",
+                "condition": "task:new,channelType,string,Value EQ email"
+            },
+            "widgetAttributes": {
+                "type": "table"
+            },
+            "verbose": true
+        },
+        {
+            "version": "0.1",
+            "event": "task:new",
+            "metaDataType": "string",
+            "metaData": "origin",
+            "limit": 100,
+            "displayName": "No of times contacted in the last 7 days via chat",
+            "lookBackDurationType": "days",
+            "lookBackPeriod": 7,
+            "aggregationMode": "Count",
+            "rules": {
+                "logic": "SINGLE",
+                "condition": "task:new,channelType,string,Value EQ chat"
+            },
+            "widgetAttributes": {
+                "type": "table"
+            },
+            "verbose": true
+        },
+        {
+            "version": "0.1",
+            "event": "task:new",
+            "metaDataType": "string",
+            "metaData": "origin",
+            "limit": 100,
+            "displayName": "No of times contacted in the last 7 days via telephony",
+            "lookBackDurationType": "days",
+            "lookBackPeriod": 7,
+            "aggregationMode": "Count",
+            "rules": {
+                "logic": "SINGLE",
+                "condition": "task:new,channelType,string,Value EQ telephony"
+            },
+            "widgetAttributes": {
+                "type": "table"
+            },
+            "verbose": true
+        }
+    ]
+}
+```
+
+4. Now let's get the **person-id**, by running **Get Identity** API. Modify the URL in Postman and put **dbokatov@cisco.com** after the alias. You should get
+`GET {{baseUrl}}/admin/v1/api/person/workspace-id/{{workspaceId}}/aliases/dbokatov@cisco.com`
+<img width="1611" alt="Screenshot 2024-02-22 at 18 49 27" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/dad3aaac-46e2-4ccc-b5ca-1c95501f2608">
+
+
+5. Save in notepad the person ID, which is "65ad476d01e91d3fe3f65e5c". You will need it for the next API
+   
+6. Go to **Get Progressive Template values against user** and modify the URL by defining the person-id and right template name. It should be:
+`{{baseUrl}}/v1/api/progressive-profile-view/workspace-id/{{workspaceId}}/person-id/65ad476d01e91d3fe3f65e5c/template-name/journey-default-template1`
+
+7. Run the API and check the response for the last 48 hours. The **result** is the total number of events for the last 2 days. We will use that value for the routing decision in the next task. 
+<img width="1574" alt="Screenshot 2024-02-22 at 18 53 28" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/cc9053c0-99fe-41b7-afbe-c28eb531be00">
+
 
 ## Task 2: Adding JDS API Request to the Flow Designer
 ## Task 3: Making a test call and checking the restul
