@@ -242,7 +242,7 @@ You should have your own Postman account in order to use the software or online 
 ![Postman1](/assets/images/API/Postman1.jpg)
 
 **Step 2**. Provide your email, username and password then click Create Free account.
-	Step2a. (Alternatively) You can use your own Gmail account if you want.
+	**Step2a.** (Alternatively) You can use your own Gmail account if you want.
 
 ![Postman2](/assets/images/API/Postman2.jpg)
 
@@ -285,7 +285,7 @@ Step 4. Confirm your account by accessing provided mailbox and clicking Confirm 
 ![API11-12](/assets/images/API/API11-12.jpg)
 
 
-**Step 8. ** Notice in the screenshot below that the default method is GET; Click the drop-down arrow next to it to show all other REST API methods including the ones mentioned above for WxCC.
+**Step 8.** Notice in the screenshot below that the default method is GET; Click the drop-down arrow next to it to show all other REST API methods including the ones mentioned above for WxCC.
 
 ![API13](/assets/images/API/API13.jpg)
 
@@ -312,14 +312,15 @@ Note, that after adding the URL, the parameter count was automatically added.
 ## Task 3. Postman - WxCC Address Book Management
 
 
-**Step 1. **Locate the Chrome icon at the bottom of the task bar and launch it.
+**Step 1.** Locate the Chrome icon at the bottom of the task bar and launch it.
 
 ![API5](/assets/images/API/API5.jpg)
 
-**Step 2. **Navigate to postman.com and select sign in.
+**Step 2.** Navigate to postman.com and select sign in.
 ![API35](/assets/images/API/API35.jpg)
 
 **Step 3.** Provide your username and the password.
+
 ![API36](/assets/images/API/API36.jpg)
 
 **Step 4.** Navigate to the Workspace tab and select your workspace (created in lab1).
@@ -331,11 +332,11 @@ Note, that after adding the URL, the parameter count was automatically added.
 ![API38](/assets/images/API/API38.jpg)
 
 
-**Step 6. **Open another browser window and log in to Developer Portal developer.webex-cx.com. Once logged in, click on Documentation link on top and select Address Book (under API REFERENCE)
+**Step 6.** Open another browser window and log in to Developer Portal developer.webex-cx.com. Once logged in, click on Documentation link on top and select Address Book (under API REFERENCE)
 
 ![API39](/assets/images/API/API39.jpg)
 
-**Step 7. **Since we want to create a new address book, we will use a POST request. Select this Post request on the Developers portal. Use v3 API for this. See screenshot.
+**Step 7.** Since we want to create a new address book, we will use a POST request. Select this Post request on the Developers portal. Use v3 API for this. See screenshot.
 
 ![API40](/assets/images/API/API40.jpg)
 
@@ -353,12 +354,12 @@ Note, that after adding the URL, the parameter count was automatically added.
 
 
 Body:
-{
-  "name": "TechSummit_AddressBook",
-  "parentType": "ORGANIZATION",
-  "description": "TechSummit 2024",
-  "siteId": ""
-}
+`**{`**
+  **`"name": "TechSummit_AddressBook",`**
+  **`"parentType": "ORGANIZATION",`**
+  **`"description": "TechSummit 2024",`**
+  **`"siteId": ""`**
+**`}**`
 
 Click Run
 
@@ -382,11 +383,12 @@ Congratulations! You have run a simple API towards Webex CC and created an addre
 
 ![API45](/assets/images/API/API45.jpg)
 
-**Step 12. **Add a new Variable called **datacenter** with the initial value of **anz1**. Then add another variable with the name orgId (info in screenshot may be different – org_id) and copy the orgId value from the Developers portal to the initial value. Add a 3rd variable addressBookId and for the initial value, obtain the Address Book ID from the portal: [https://portal-v2.wxcc-anz1.cisco.com/portal/home#](https://portal-v2.wxcc-anz1.cisco.com/portal/home) > Address Book and click Save.
+**Step 12.** Add a new Variable called **datacenter** with the initial value of **anz1**. Then add another variable with the name orgId (info in screenshot may be different – org_id) and copy the orgId value from the Developers portal to the initial value. Add a 3rd variable addressBookId and for the initial value, obtain the Address Book ID from the portal: [https://portal-v2.wxcc-anz1.cisco.com/portal/home#](https://portal-v2.wxcc-anz1.cisco.com/portal/home) > Address Book and click Save.
 
 ![API46](/assets/images/API/API46.jpg)
 
 Developers Portal:
+
 ![API47](/assets/images/API/API47.jpg)
 
 **Step 13.** On the left Menu panel, choose Collections, and click on the + to create a new Blank collection for Webex CC and give it a name (click on the 3 dots and rename it). Select the environment on the top-right corner of the postman window.
@@ -415,10 +417,10 @@ Go to Documentation on the right hand top corner > Click on Create An Address Bo
 
 **Step 17.** Copy the following request format and paste it into Postman body request.
 
-{
-  "name": "John Doe1",
-  "number": "+61435144347"
-}
+`**{`**
+  **`"name": "John Doe1",`**
+  **`"number": "+61435144347"`**
+**`}**`
 
 **Step 18.** Identify the media type sent in the API request. Select **Headers** and add **Content-Type** and the value **application/json**
 
@@ -479,6 +481,7 @@ You see 204 No Content, which indicates that the address book was deleted but th
 ![API65](/assets/images/API/API65.jpg)
 
 
+
 ## Task 3. Postman - WxCC Tasks Management vias APIs
 
 The Task resource represents a request or demand for work from agents. Concretely, a **telephony** Task is an incoming call. For chat, a Task is a chat session. For email, a Task is an email chain. This API returns a list of Tasks (open or closed) within a date range. The data range is provided in epoch time format.
@@ -487,13 +490,10 @@ The API is: **/v1/tasks**
 
 And the required fields are f**rom** & to - filters tasks created between the given epoch timestamps (in milliseconds).
 
-**Step 1.** Convert regular time to epoch time. Open a web browser and navigate to
-
-**epochconverter.com**
-
+**Step 1.** Convert regular time to epoch time. Open a web browser and navigate to **https://www.epochconverter.com**.
 Specify the date that you want to convert and click **Human date to Timestamp.**
 
-Note: Change the date to today’s and time as 12:00 AM as in example shown in the screen shot below.
+**Note:** Change the date to today’s and time as 12:00 AM as in example shown in the screen shot below.
 
 ![API66](/assets/images/API/API66.jpg)
 
@@ -501,30 +501,22 @@ Note: Change the date to today’s and time as 12:00 AM as in example shown in t
 **Step 2.** Copy the Timestamp in milliseconds ![API67](/assets/images/API/API67.jpg)
 
 **Step 3.** Do the same for end of day today as in today’s date and 11:59 PM; example: 1700830799000; this is for the ‘to’ field.
-
 And save it in a notepad; It'll be used later in a GET API request testing.
 
 **Step 4.** In postman, request a list of all tasks from that specific epoch time. On Postman, click New and Create a New HTTP Request.
 
 ![API68](/assets/images/API/API68.jpg)
 
-
 For the URI add: https://api.wxcc-{{datacenter}}.cisco.com/v1/tasks?orgId={{orgId}}
-
 and since from and to are required parameters, add a parameter "from" with the value of epoch time copied  earlier and “to” fields.
 
 ![API69](/assets/images/API/API69.jpg)
 
 **Step 4.** Next step is to provide the authorization. On Postman click on the Authorization tab and select Bearer Token.
-
 ![API70](/assets/images/API/API70.jpg)
 
-
 Now, copy the value from the Developers portal and paste it in the token field. Navigate to Developers portal Tasks APs section, select GET. Select the **Try Out** button and then copy the Authorization token.
-
 ![API71](/assets/images/API/API71.jpg)
-![[Pasted image 20240222191054.png]]
-
 
 Since the token was added in previous steps, you will see the token already there.
 
@@ -549,17 +541,15 @@ Required parameters are:
 **To**: End time for the query (in epoch milliseconds).
   
 
-**Step 1. ** Open a web browser and navigate to **epochconverter.com**
+**Step 1. ** Open a web browser and navigate to **https://www.epochconverter.com**
 
 Specify the date and time that you want to convert for **from** and **to** queue range. Click **Human date to Timestamp. Use 24 Nov 2023 as a date to return some data.**
 
 ## From epoch time
 
 Copy the Timestamp in milliseconds. Example: 1700744400000
-
 And save it in a notepad; It'll be used later as a value for the "from" parameter in a GET API request testing.
 ![API74](/assets/images/API/API74.jpg)
-
 ## To epoch time
 Go back to epochconverter.com browser window and change the date/time so that it’s no more
 than 24 hrs than the previous time captured for the "from" parameter. Example 1700830799000
@@ -569,16 +559,15 @@ Copy the Timestamp in milliseconds. Example:1700830799000
 
 And save it in a notepad; It'll be used later as a value for the "to" parameter in a GET API request testing.
 
-**Step 2. **In postman, request a list of all tasks in queue from and to the specific epoch time. On Postman, click New and Create a New HTTP Request.
+**Step 2.** In postman, request a list of all tasks in queue from and to the specific epoch time. On Postman, click New and Create a New HTTP Request.
 
 ![API76](/assets/images/API/API76.jpg)
 
 On the URI add: https://api.wxcc-{{datacenter}}.cisco.com/v1/queues/statistics?orgId={{orgId}}
-
 and since **from** and **to** are required parameters, add them with the epoch time you have copied before.
 ![API77](/assets/images/API/API77.jpg)
 
-**Step 3. **Next step is to provide the authorization. On Postman click on the Authorization tab and select Bearer Token.
+**Step 3.** Next step is to provide the authorization. On Postman click on the Authorization tab and select Bearer Token.
 ![API78](/assets/images/API/API78.jpg)
 
 Now, copy the value from the Developers portal and paste it in the token field. Navigate to Developers portal Queue APIs section, select GET. Select the **Try Out** button and then copy the Authorization token.
@@ -587,13 +576,12 @@ Now, copy the value from the Developers portal and paste it in the token field. 
 
 Since the token was added in previous steps, you will see the token already exists. Confirm that it is same as what you copied from the developer portal.
 
-**Step 4. **Click Send. You see 200 OK response indicating that request was successful. Note that response lists statistics for various task queues.
+**Step 4.** Click Send. You see 200 OK response indicating that request was successful. Note that response lists statistics for various task queues.
 
 ![API80](/assets/images/API/API80.jpg)
 
-**Step 5. **Save this API in the WxCC APIs collection. Select Save As, then add the name of the request (List Queues statistics) and click save.
+**Step 5.** Save this API in the WxCC APIs collection. Select Save As, then add the name of the request (List Queues statistics) and click save.
 ![API81](/assets/images/API/API81.jpg)
-
 
 ## Task 5. Postman - WxCC Agent Activities
 
@@ -601,19 +589,14 @@ Since the token was added in previous steps, you will see the token already exis
 The Agent activities API allows you to retrieve agent activities. Sorted by start time ascending. The API is **/v1/agents/activities.**
 
 And the required field is only:
-
 **From**: Filters agent activities after the given epoch timestamp (in milliseconds).
 
 Parameter "**To**" is optional but if used, it needs to be within 24hrs (86400000 msec) of "from" parameter.
 
-**Step 1.** Convert regular time to epoch time. Open a web browser and navigate to
-
-**epochconverter.com**
-
+**Step 1.** Convert regular time to epoch time. Open a web browser and navigate to **https://www.epochconverter.com**.
 Specify the date that you want to convert and click **Human date to Timestamp.**
 
 ![API82](/assets/images/API/API82.jpg)
-
 
 **Step 2.** Copy the Timestamp in milliseconds for from and to
 from: 1700744400000
@@ -621,39 +604,37 @@ to: 1700830799000
 
 And save it in a notepad; It'll be used later as a value for the "from" parameter in a GET API request testing.
 
-**Step 3. **In postman, request a list of all agent activities from that specific epoch time. On Postman, click New and Create a New HTTP Request.
+**Step 3.** In postman, request a list of all agent activities from that specific epoch time. On Postman, click New and Create a New HTTP Request.
 
 ![API83](/assets/images/API/API83.jpg)
 
 On the URI add: https://api.wxcc-{{datacenter}}.cisco.com/v1/agents/activities?orgId={{org_id}}
-
 and since from is a required parameter add the parameter from with the epoch time you have copied before.
 
 Example screenshot (remember to include to field below from) – not in screenshot.
 
 ![API84](/assets/images/API/API84.jpg)
 
-**Step 4. **Next step is to provide the authorization. On Postman click on the Authorization tab and select Bearer Token.
+**Step 4.** Next step is to provide the authorization. On Postman click on the Authorization tab and select Bearer Token.
 ![API85](/assets/images/API/API85.jpg)
 Now, copy the value from the Developers portal and paste it in the token field. Navigate to Developers portal agent activities APIs section, select GET. Select the **Try Out** button and then copy the Authorization token.
 
 ![API86](/assets/images/API/API86.jpg)
 
-
 Since the token was added in previous steps, you will see the token already there.
 
-**Step 5. **Click **Send**. You see 400 bad requests because the **from**, **to** cannot exceed 1 day.
+**Step 5.** Click **Send**. You see 400 bad requests because the **from**, **to** cannot exceed 1 day.
 
 ![API87](/assets/images/API/API87.jpg)
 
-**Step 6. **Add the “**to”** parameter with less than 1 day. For example, use a timestamp from 1696165200000and **to** 1696251599000 – 1 Oct 2023**.** Click Send. You see 200 Ok, which means that the request was successful even though, there are no agent activities during this time.
+**Step 6.** Add the “**to”** parameter with less than 1 day. For example, use a timestamp from 1696165200000and **to** 1696251599000 – 1 Oct 2023**.** Click Send. You see 200 Ok, which means that the request was successful even though, there are no agent activities during this time.
 
 ![API88](/assets/images/API/API88.jpg)
-
 
 **Step 7.** Save this API in the WxCC APIs collection. Select Save As, then add the name of the request (List Agent activities) and click save.
 
 ![API89](/assets/images/API/API89.jpg)
+
 
 
 # Lab 4 – Import WxCC APIs to Postman
