@@ -231,12 +231,12 @@ Postman can run on the Chrome browser. To use Postman, you will first need to in
 
 In this lab we will use Web based version of the Postman API client tool to define API requests and test them.
 
-**Note**: This lab is built for Postman in browser mode but you can use preinstalled version of Postman.
+**Note**: This lab is built for Postman browser mode but you can use pre-installed version of Postman.
 
 ### PREREQUISITES: 
-You should have your own Postman account in order to use the software or online version of Postman.
+You should have your own Postman account in order to use the software or online version of Postman. Please follow Task 1. Postman Account Creation. If you already have account feel free to skip this task and proceed with Task 2.
 
-### Task 1: Postman Account Creation (Optional in case you don't have your own account)
+### Task 1. Postman Account Creation (Optional in case you don't have your own account)
 
 **Step1.** Access https://www.postman.com/ and click on **Sign Up for Free**
 ![Postman1](/assets/images/API/Postman1.jpg)
@@ -254,9 +254,75 @@ Step 4. Confirm your account by accessing provided mailbox and clicking Confirm 
 
 ![Postman4](/assets/images/API/Postman4.jpg)
 
+### Task 2:  Postman Fundamentals
+
+**Step 1**. Locate the Chrome icon at the bottom of the task bar and launch it.
+
+![API5](/assets/images/API/API5.jpg)
+
+**Step 2**. Navigate to postman.com and select sign in.
+![API6](/assets/images/API/API6.jpg)
+
+**Step 3.** Provide your username and the password.
+
+![API7](/assets/images/API/API7.jpg)
+
+**Step 4**. Create your workspace. On the Workspaces tab, type the name of your workspace. In this exercise your workspace name could be the same as your username.
+
+![API8](/assets/images/API/API8.jpg)
+
+**Step 5**. On the Workspace create window, add the name, check the Personal option and click Create Workspace.
+
+![API9](/assets/images/API/API9.jpg)
 
 
-### Task 2:  
+**Step 6.** You see your workspace created and all options on the left side of the window. You will navigate to each of this option to understand Postman functionality.
+
+![API10](/assets/images/API/API10.jpg)
+
+**Step 7.** Select New and then HTTP Request to create a new API request.
+
+![API11-12](/assets/images/API/API11-12.jpg)
+
+
+**Step 8. ** Notice in the screenshot below that the default method is GET; Click the drop-down arrow next to it to show all other REST API methods including the ones mentioned above for WxCC.
+
+![API13](/assets/images/API/API13.jpg)
+
+**Step 9.** Evaluate the previous deck of cards API via Postman. Copy the following URL and paste it into Postman and select the GET option to the left:
+
+[https://deckofcardsapi.com/api/deck/new/draw/?count=2](https://deckofcardsapi.com/api/deck/new/draw/?count=2)
+
+![API14](/assets/images/API/API14.jpg)
+
+Note, that after adding the URL, the parameter count was automatically added.
+
+**Step 10.** Click Send button. Review the results. You see 200 OK in the response, which indicates that this was a successful response, you see the body of the response and the format.
+
+![API15](/assets/images/API/API15.jpg)
+
+**Step 11**. Save this request in a Collection. Select Save As from the pull-down button.
+
+![API16](/assets/images/API/API16.jpg)
+
+**Step 12**. Click Create a Collection. Add the name DeckofCards and click Create. Then, click Save.
+
+![API17](/assets/images/API/API17.jpg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
