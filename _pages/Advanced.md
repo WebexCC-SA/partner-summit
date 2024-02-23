@@ -32,7 +32,7 @@ Let's dive in and unlock the potential of Contact Center API integration and JDS
 |  – Use Case - Journey Based Queue Priority |  |  |  |
 
 
-## **Part 1: APIs on Webex Contact Center (WxCC)**
+# Part 1: APIs on Webex Contact Center (WxCC)
 
 This is an **intermediate** level lab intended for engineers with prior **Webex Contact Center (WxCC)** experience.
 
@@ -135,7 +135,7 @@ https://deckofcardsapi.com/api/deck/new/draw/?count=2
 
 ***Note:** In these examples, you did not have to be authenticated and authorized because it is a public API.*
 
-# Lab 2 – Developer Portal
+## Lab 2 – Developer Portal
 
 Developers can build, enhance, and customize their Customer Experience solution with the rich set of APIs, which includes Contact Center, AI, Journey, Orchestration and Experience Management. The Developers portal help you to get started with the APIs. The Developers portal provides detailed API reference docs as well as the Try Out functionality which help to familiarize you with WxCC APIs and learn quickly.
 
@@ -225,7 +225,7 @@ More Information about creating a Webex application and using Postman in this do
 [configure-webex-contact-center-apis-with.html](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html)
 
 
-# Lab 3 – WxCC APIs - Postman
+## Lab 3 – WxCC APIs - Postman
 
 Postman is an API platform for building and using APIs. It includes a comprehensive set of tools that help accelerate the API lifecycle—from design, testing, documentation, and mocking to the sharing and discoverability of your APIs.
 
@@ -637,9 +637,9 @@ Since the token was added in previous steps, you will see the token already ther
 
 
 
-# Lab 4 – Import WxCC APIs to Postman
+## Lab 4 – Import WxCC APIs to Postman
 
-# Objectives
+### Objectives
 
 This lab demonstrates importing existing APIs from the WxCC Developers Portal or ones created by a third party or Cisco TAC.
 
@@ -687,7 +687,7 @@ Cisco TAC has created a document explaining WxCC API functionality and where you
 
 
 ===============================================================
-## Part 2: JDS APIs & Use Cases 
+# Part 2: JDS APIs & Use Cases 
 ### Lab Objective
 This lab is designed to teach you the concepts and functionalities of Customer Journey Data Services (JDS), both in regard to the JDS Widget that can be added in Agent Desktop as well as the API capabilities of the solution, since JDS remains an API-first solution today. You will learn how to use the JDS widget, how to add new customers (identities) to your JDS database as well as how to use the JDS APIs to extract information and act upon it. 
 
@@ -697,7 +697,7 @@ This lab is designed to teach you the concepts and functionalities of Customer J
 - You have completed [**Part 1: APIs on Webex Contact Center (WxCC)**](#APIs-on-Webex-Contact-Center)
 
 
-# Exploring JDSs APIs & Widget
+## Exploring JDSs APIs & Widget
 JDS Desktop Widget provides agents with an interface that shows the end customer’s complete journey with the agent’s business, aggregated metrics of their experience as well as the customer’s unique identifiers (aliases).
 <img width="1433" alt="image" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/e710de0e-e311-4e35-9599-6ae72aede7af">
 
@@ -1031,7 +1031,7 @@ The entire mapping list can be found on GitHub: https://github.com/CiscoDevNet/c
 
 
 
-# Use Case - Journey Based Queue Priority
+## Use Case - Journey Based Queue Priority
 A customer has contacted his travel service several times in the last couple of days. The next incoming call could be prioritized if a specific threshold is met (for example: the number of contacts on a particular reservation in the last 2 days greater than 2) 
 <img width="972" alt="Screenshot 2024-02-22 at 16 24 54" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/1b33f2d3-0aca-4432-8629-45367394958a">
 
