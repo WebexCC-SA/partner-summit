@@ -20,14 +20,14 @@ Let's dive in and unlock the potential of Contact Center API integration and JDS
 ## Table of Contents
 
 
-| Topic | Lab Type | Difficulty Level | Estimated length |
-| ---- | ---- | ---- | ---- |
-| [**Part 1: APIs on Webex Contact Center (WxCC)**](#APIs-on-Webex-Contact-Center) | Practical Lab | MED | 45 min |
-| Lab 1 – APIs Fundamental |  |  |  |
-| Lab 2 – Developer Portal |  |  |  |
-| Lab 3 – WxCC APIs - Postman |  |  |  |
-| Lab 4 – Import WxCC APIs to Postman |  |  |  |
-| [**Part 2: JDS APIs & Use Case**](#jds-apis--use-cases) | Practical Lab | MID | 45 min |
+| Topic                                                                            | Lab Type      | Difficulty Level | Estimated length |
+| -------------------------------------------------------------------------------- | ------------- | ---------------- | ---------------- |
+| [**Part 1: APIs on Webex Contact Center (WxCC)**](#APIs-on-Webex-Contact-Center) | Practical Lab | MED              | 45 min           |
+| Lab 1 – APIs Fundamental                                                         |               |                  |                  |
+| Lab 2 – Developer Portal                                                         |               |                  |                  |
+| Lab 3 – WxCC APIs - Postman                                                      |               |                  |                  |
+| Lab 4 – Import WxCC APIs to Postman                                              |               |                  |                  |
+| [**Part 2: JDS APIs & Use Case**](#jds-apis--use-cases)                          | Practical Lab | MID              | 45 min           |
 
 
 ## **PART 1: APIs on Webex Contact Center (WxCC)**
@@ -44,7 +44,7 @@ Upon completion of this lab, you will be able to:
 
 **Disclaimer:** This lab is not designed for a production system, thus not all recommended features are implemented or enabled optimally. For implementation and design-related questions, please contact your representative at Cisco, or a Cisco partner.
 
-## Lab 1 – APIs Fundamental 
+# Lab 1 – APIs Fundamental 
 ### Objectives 
 The objective of the lab is to introduce you to concept of APIs and the way the Postman tool can be used to manage APIs.
 
@@ -133,7 +133,7 @@ https://deckofcardsapi.com/api/deck/new/draw/?count=2
 
 ***Note:** In these examples, you did not have to be authenticated and authorized because it is a public API.*
 
-# Lab 2 – Developer Portal
+## Lab 2 – Developer Portal
 
 Developers can build, enhance, and customize their Customer Experience solution with the rich set of APIs, which includes Contact Center, AI, Journey, Orchestration and Experience Management. The Developers portal help you to get started with the APIs. The Developers portal provides detailed API reference docs as well as the Try Out functionality which help to familiarize you with WxCC APIs and learn quickly.
 
@@ -309,7 +309,7 @@ Note, that after adding the URL, the parameter count was automatically added.
 
 ![API17](/assets/images/API/API17.jpg)
 
-## Task 3. Postman - WxCC Address Book Management
+### Task 3. Postman - WxCC Address Book Management
 
 
 **Step 1.** Locate the Chrome icon at the bottom of the task bar and launch it.
@@ -482,7 +482,7 @@ You see 204 No Content, which indicates that the address book was deleted but th
 
 
 
-## Task 3. Postman - WxCC Tasks Management vias APIs
+### Task 3. Postman - WxCC Tasks Management vias APIs
 
 The Task resource represents a request or demand for work from agents. Concretely, a **telephony** Task is an incoming call. For chat, a Task is a chat session. For email, a Task is an email chain. This API returns a list of Tasks (open or closed) within a date range. The data range is provided in epoch time format.
 
@@ -529,7 +529,7 @@ Since the token was added in previous steps, you will see the token already ther
 ![API73](/assets/images/API/API73.jpg)
 
 
-## Task 4. Postman - WxCC Queue Statistics
+### Task 4. Postman - WxCC Queue Statistics
 
 The Queue resource is the waiting line which holds Tasks from the time they are created, to the time they are either assigned to an Agent or abandoned by the customer. A Queue is tied to a certain channel type e.g., email, chat, or telephony, and will be summarized by number and time statistics for how Tasks pass through. Queue statistics show only for 24 hours and use the epoch time format.
 
@@ -583,7 +583,7 @@ Since the token was added in previous steps, you will see the token already exis
 **Step 5.** Save this API in the WxCC APIs collection. Select Save As, then add the name of the request (List Queues statistics) and click save.
 ![API81](/assets/images/API/API81.jpg)
 
-## Task 5. Postman - WxCC Agent Activities
+### Task 5. Postman - WxCC Agent Activities
 
 
 The Agent activities API allows you to retrieve agent activities. Sorted by start time ascending. The API is **/v1/agents/activities.**
@@ -643,7 +643,7 @@ Since the token was added in previous steps, you will see the token already ther
 
 This lab demonstrates importing existing APIs from the WxCC Developers Portal or ones created by a third party or Cisco TAC.
 
-## Task 1. Import Collection APIs from Cisco Documentation
+### Task 1. Import Collection APIs from Cisco Documentation
 
 You can import APIs collection from another Postman application or from any other exported file.
 
