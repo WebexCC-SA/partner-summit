@@ -113,7 +113,7 @@ For authorization, there are different types that are supported for Webex APIs:
 
 In this example you will use deck of cards public API to simulate a game of cards.
 
-**Step 1.** Open a Firefox Web browser, execute this GET API and define the number of decks you want to use. The default is one. But change the parameter to 6 in order to play Blackjack.
+**Step 1.** Open a Web browser, execute this GET API and define the number of decks you want to use. The default is one. But change the parameter to 6 in order to play Blackjack.
 
 [https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=6](https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=6)
 
@@ -216,9 +216,12 @@ For the URI, we are using Postman as a sample application so, use this URI: [htt
 
 ![API30](https://webexcc-sa.github.io/partner-summit/assets/images/API/API30.jpg)
 
-**Step 4.** You will get the response with the Client ID, Client Secret, and the URL that you could embed in your application to initiate the authentication.
+**Step 4.** You will get the response with the Client ID, Client Secret, and the URL that you could embed in your application to initiate the authentication. 
 
 ![API31](https://webexcc-sa.github.io/partner-summit/assets/images/API/API31.jpg)
+
+Save Client ID and Secret ID into a text file. We will use it later in Lab 4.
+#### **Caution**: Do not share or publish your production Client and Secret IDs as they can be used by **bad people** to harm your system.
 
 **Step 5.** Copy the whole URL into a new browser window and you see that redirect you to a Webex authentication page.
 
@@ -232,7 +235,6 @@ For the URI, we are using Postman as a sample application so, use this URI: [htt
 ![API34](https://webexcc-sa.github.io/partner-summit/assets/images/API/API34.jpg)
 
 More Information about creating a Webex application and using Postman in this document: [https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html)
-
 [configure-webex-contact-center-apis-with.html](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html)
 
 
@@ -324,7 +326,6 @@ Note, that after adding the URL, the parameter count was automatically added.
 
 ### Task 3. Postman - WxCC Address Book Management
 
-
 **Step 1.** Locate the Chrome icon at the bottom of the task bar and launch it.
 
 ![API5](https://webexcc-sa.github.io/partner-summit/assets/images/API/API5.jpg)
@@ -336,7 +337,7 @@ Note, that after adding the URL, the parameter count was automatically added.
 
 ![API36](https://webexcc-sa.github.io/partner-summit/assets/images/API/API36.jpg)
 
-**Step 4.** Navigate to the Workspace tab and select your workspace (created in lab1).
+**Step 4.** Navigate to the Workspace tab and select your workspace (created in **Lab3.Task 2:  Postman Fundamentals**).
 ![API37](https://webexcc-sa.github.io/partner-summit/assets/images/API/API37.jpg)
 
 
@@ -357,9 +358,7 @@ Note, that after adding the URL, the parameter count was automatically added.
 
 **Method**: POST
 
-**URI**: /organization/{orgId}/address-book, where {orgId} is a variable that you can create in Postman and assign the value of your organization.**Name**: In this case your will use Ciscolabuser001ABook
-
-**parent Type**: We will use ORGANIZATION.
+**URI**: /organization/{orgId}/address-book, where {orgId} is a variable that you can create in Postman and assign the value of your organization ID.
 
 **Step 9.** Select the Try out button to show information that Postman will need as parameter or env variable for the API request. Refer to the screenshot below. You will need this request body too.
 
@@ -396,7 +395,9 @@ Congratulations! You have run a simple API towards Webex CC and created an addre
 
 ![API45](https://webexcc-sa.github.io/partner-summit/assets/images/API/API45.jpg)
 
-**Step 12.** Add a new Variable called **datacenter** with the initial value of **anz1**. Then add another variable with the name orgId (info in screenshot may be different – org_id) and copy the orgId value from the Developers portal to the initial value. Add a 3rd variable addressBookId and for the initial value, obtain the Address Book ID from the portal: [https://portal-v2.wxcc-anz1.cisco.com/portal/home#](https://portal-v2.wxcc-anz1.cisco.com/portal/home) > Address Book and click Save.
+**Step 12.** Add a new Variable called **datacenter** with the initial value of **us1**, if you use lab pods.
+**Note:** In case you're using your Gold Tenant use either **eu1**, **eu2**, **anz1**, **ca1** or jp1 (Check with lab proctor if you're not sure).
+Then add another variable with the name orgId (info in screenshot may be different – org_id) and copy the orgId value from the Developers portal to the initial value. Add a 3rd variable addressBookId and for the Initial value, obtain the Address Book ID from the Control Hub-> Contact Center -> Address Book. Verify that all Variables are set and click **Save**.
 
 ![API46](https://webexcc-sa.github.io/partner-summit/assets/images/API/API46.jpg)
 
@@ -413,14 +414,14 @@ Developers Portal:
 
 https://api.wxcc-{{datacenter}}.cisco.com/organization/{{orgId}}/address-book/{{addressBookId}}/entry
 
-**Step 15.** Next step is to provide the authorization. On Postman click on the Authorization tab and select Bearer Token.
+**Step 15.** Next step is to provide the authorization. In Postman click on the **Authorization** tab and select **Bearer Token**.
 
 ![API50](https://webexcc-sa.github.io/partner-summit/assets/images/API/API50.jpg)
 
 
 Now, login to the Developers portal: [https://developer.webex-cx.com/documentation/address-book](https://developer.webex-cx.com/documentation/address-book)
 
-Go to Documentation on the right hand top corner > Click on Create An Address Book Entry and Try Out on the right – You can now copy your personal token and use it.
+Go to **Documentation** on the right hand top corner > Click on **Create An Address Book Entry** and **Try Out** on the right – You can now copy your personal token and use it.
 
 ![API51](https://webexcc-sa.github.io/partner-summit/assets/images/API/API51.jpg)
 ![API52](https://webexcc-sa.github.io/partner-summit/assets/images/API/API52.jpg)
@@ -430,18 +431,14 @@ Go to Documentation on the right hand top corner > Click on Create An Address Bo
 
 **Step 17.** Copy the following request format and paste it into Postman body request.
 
-`**{`**
-  **`"name": "John Doe1",`**
-  **`"number": "+61435144347"`**
-**`}**`
+**{**
+  **"name": "John Doe1",**
+  **"number": "+61435144347"**
+**}**
 
 **Step 18.** Identify the media type sent in the API request. Select **Headers** and add **Content-Type** and the value **application/json**
 
 ![API53](https://webexcc-sa.github.io/partner-summit/assets/images/API/API53.jpg)
-
-
-**Reference:**
-![API54](https://webexcc-sa.github.io/partner-summit/assets/images/API/API54.jpg)
 
 **Step 19.** Click Send. You see the response 201 created and the id for the new address book. Copy this address book id and paste it in notepad because we will use it later.
 
@@ -459,20 +456,18 @@ On the Save window, add the Request name (Create Address book). Click New Collec
 You see the new collection and API request added.
 ![API58](https://webexcc-sa.github.io/partner-summit/assets/images/API/API58.jpg)
 
-**Step 21.** Using an API request verify that this address book exist in WxCC. This is very simple. Create a new tab in Postman and use this against the GET method https://api.wxcc-{{datacenter}}.cisco.com/organization/{{orgId}}/v3/address-book to list all the address books. Remember to use the Environment and the Authorisation as Bearer token as described before.
+**Step 21.** Using an API request verify that this address book exist in WxCC. This is very simple. Create a new tab in Postman and use this against the GET method https://api.wxcc-{{datacenter}}.cisco.com/organization/{{orgId}}/v3/address-book to list all the address books. Remember to use the Environment and the Authorization as Bearer token as described before.
 
 ![API59](https://webexcc-sa.github.io/partner-summit/assets/images/API/API59.jpg)
 
 
 **Step 22.** Save this API in the collection. Click Save then Save As. On the Request name add **List Address books.** Click Save to save it on the WxCCAPIs collection.
-
-
 ![API60](https://webexcc-sa.github.io/partner-summit/assets/images/API/API60.jpg)
 
 
 **Step 23.** You can also list a specific address book. Use the same GET API and just add he address book id that you have previously copied in notepad and click Send.
 
-for example: https://api.wxcc-{{datacenter}}.cisco.com/organization/{{orgid}}/address- book/8fd95b96-556d-49be-94b8-fabc1237054c
+for example: https://api.wxcc-{{datacenter}}.cisco.com/organization/{{orgid}}/address-book/8fd95b96-556d-49be-94b8-fabc1237054c
 
 ![API61](https://webexcc-sa.github.io/partner-summit/assets/images/API/API61.jpg)
 
@@ -493,7 +488,7 @@ You see 204 No Content, which indicates that the address book was deleted but th
 
 
 
-### Task 3. Postman - WxCC Tasks Management vias APIs
+### Task 3. Postman - WxCC Tasks Management vias APIs (Optional)
 
 The Task resource represents a request or demand for work from agents. Concretely, a **telephony** Task is an incoming call. For chat, a Task is a chat session. For email, a Task is an email chain. This API returns a list of Tasks (open or closed) within a date range. The data range is provided in epoch time format.
 
@@ -540,7 +535,7 @@ Since the token was added in previous steps, you will see the token already ther
 ![API73](https://webexcc-sa.github.io/partner-summit/assets/images/API/API73.jpg)
 
 
-### Task 4. Postman - WxCC Queue Statistics
+### Task 4. Postman - WxCC Queue Statistics (Optional)
 
 The Queue resource is the waiting line which holds Tasks from the time they are created, to the time they are either assigned to an Agent or abandoned by the customer. A Queue is tied to a certain channel type e.g., email, chat, or telephony, and will be summarized by number and time statistics for how Tasks pass through. Queue statistics show only for 24 hours and use the epoch time format.
 
