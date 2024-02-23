@@ -27,7 +27,7 @@ Let's dive in and unlock the potential of Contact Center API integration and JDS
 |  – Developer Portal |  |  |  |
 |  – WxCC APIs - Postman |  |  |  |
 |  – Import WxCC APIs to Postman |  |  |  |
-| [**Part 2: JDS APIs & Use Case**](#part-2-jds-apis--use-cases) | Practical Lab | MID | 45 min |
+| [**Part 2: JDS APIs & Use Case**](#part-2-jds-apis--use-cases) | Practical Lab | MED | 45 min |
 |  – JDS Fundamental |  |  |  |
 |  – Use Case - Journey Based Queue Priority |  |  |  |
 
