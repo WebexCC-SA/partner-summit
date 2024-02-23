@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "71db30e5f01c81c5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_pages/Advanced.md",
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_pages/Advanced.md",
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_pages/Advanced.md"
+                "file": "conflict-files-obsidian-git.md"
               }
             }
           }
@@ -154,8 +167,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2672355a05b54dec",
+  "active": "71db30e5f01c81c5",
   "lastOpenFiles": [
+    "_pages/Advanced.md",
+    "conflict-files-obsidian-git.md",
     "assets/images/EM/Pasted image 20240222200317.png",
     "assets/images/EM/Pasted image 20240222200308.png",
     "assets/images/EM/Pasted image 20240222200257.png",
@@ -166,13 +181,11 @@
     "assets/images/EM/Pasted image 20240222200204.png",
     "assets/images/EM/Pasted image 20240222200154.png",
     "assets/images/EM/Pasted image 20240222200145.png",
-    "assets/images/API/API98.jpg",
     "assets/files/JDS_Layout.json",
     "files/JDS_Layout.json",
     "assets/images/API/test.txt",
     "assets/images/API",
     "_pages/Fundamental.md",
-    "_pages/Advanced.md",
     "_pages/Digital.md",
     "assets/images/LAB2_email/OneTransaction.png.md",
     "assets/images/LAB2_email",
@@ -184,7 +197,6 @@
     "assets/images/EM/Contactcenter",
     "assets/images/EM",
     "assets/images/IVR/Untitled",
-    "conflict-files-obsidian-git.md",
     "customer-journey-data-services-introduction.md",
     "_pages/CH.md",
     "_pages/Provisioning.md",
