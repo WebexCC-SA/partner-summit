@@ -22,15 +22,17 @@ Let's dive in and unlock the potential of Contact Center API integration and JDS
 
 | Topic | Lab Type | Difficulty Level | Estimated length |
 | ---- | ---- | ---- | ---- |
-| [**Part 1: APIs on Webex Contact Center (WxCC)**](#APIs-on-Webex-Contact-Center) | Practical Lab | MED | 45 min |
-| Lab 1 – APIs Fundamental |  |  |  |
-| Lab 2 – Developer Portal |  |  |  |
-| Lab 3 – WxCC APIs - Postman |  |  |  |
-| Lab 4 – Import WxCC APIs to Postman |  |  |  |
-| [**Part 2: JDS APIs & Use Case**](#jds-apis--use-cases) | Practical Lab | MID | 45 min |
+| [**Part 1: APIs on Webex Contact Center (WxCC)**](#part-1-apis-on-webex-contact-center) | Practical Lab | MED | 45 min |
+|  – APIs Fundamental |  |  |  |
+|  – Developer Portal |  |  |  |
+|  – WxCC APIs - Postman |  |  |  |
+|  – Import WxCC APIs to Postman |  |  |  |
+| [**Part 2: JDS APIs & Use Case**](#part-2-jds-apis--use-cases) | Practical Lab | MID | 45 min |
+|  – JDS Fundamental |  |  |  |
+|  – Use Case - Journey Based Queue Priority |  |  |  |
 
 
-## **PART 1: APIs on Webex Contact Center (WxCC)**
+## **Part 1: APIs on Webex Contact Center (WxCC)**
 
 This is an **intermediate** level lab intended for engineers with prior **Webex Contact Center (WxCC)** experience.
 
@@ -687,7 +689,7 @@ Cisco TAC has created a document explaining WxCC API functionality and where you
 
 
 ===============================================================
-## Part2: JDS APIs & Use Cases 
+## Part 2: JDS APIs & Use Cases 
 ### Lab Objective
 This lab is designed to teach you the concepts and functionalities of Customer Journey Data Services (JDS), both in regard to the JDS Widget that can be added in Agent Desktop as well as the API capabilities of the solution, since JDS remains an API-first solution today. You will learn how to use the JDS widget, how to add new customers (identities) to your JDS database as well as how to use the JDS APIs to extract information and act upon it. 
 
