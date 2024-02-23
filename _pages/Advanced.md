@@ -66,13 +66,13 @@ An API method defines what the API Client (who is allowed to ask for the data or
 
 These are the methods supported for Webex Contact Center APIs:
 
-![API01](/assets/images/API/API01.jpg)
+![API01](https://webexcc-sa.github.io/partner-summit/assets/images/API/API01.jpg)
 
 
 #### API Anatomy
 
 Here is an example of an API GET request that helps define the API anatomy:
-![API02](/assets/images/API/API02.jpg)
+![API02](https://webexcc-sa.github.io/partner-summit/assets/images/API/API02.jpg)
 
 ##### - http:// or https://
 	- Protocol over which data is sent between client and server.
@@ -108,14 +108,14 @@ In this example you will use deck of cards public API to simulate a game of card
 
 You see the response in Json format:
 
-![API03](/assets/images/API/API03.jpg)
+![API03](https://webexcc-sa.github.io/partner-summit/assets/images/API/API03.jpg)
 
 **Step 2.** Change the parameter now to 1 and check the response.
 [https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1](https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1)
 
 You see the remaining cards in one deck.
 
-![API04](/assets/images/API/API04.jpg)
+![API04](https://webexcc-sa.github.io/partner-summit/assets/images/API/API04.jpg)
 
 **Step 3**. The count variable defines how many cards to draw from the deck. Be sure to replace _deck_id_ with the id obtain from the previous example. You can also replace it with “new” to create a new shuffle deck and draw cards from this new deck.
 
@@ -123,15 +123,15 @@ https://deckofcardsapi.com/api/deck/<<deck_id>>/draw/?count=2
 
 Replace the deck_id with the id, you got from the previous response. For example: [https://deckofcardsapi.com/api/deck/58f7v8te5530/draw/?count=2](https://deckofcardsapi.com/api/deck/58f7v8te5530/draw/?count=2)
 
-![API1](/assets/images/API/API1.jpg)
+![API1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API1.jpg)
 
-![API2](/assets/images/API/API2.jpg)
+![API2](https://webexcc-sa.github.io/partner-summit/assets/images/API/API2.jpg)
 
 or replace it with “new”.
 https://deckofcardsapi.com/api/deck/new/draw/?count=2
 
-![API3](/assets/images/API/API3.jpg)
-![API4](/assets/images/API/API4.jpg)
+![API3](https://webexcc-sa.github.io/partner-summit/assets/images/API/API3.jpg)
+![API4](https://webexcc-sa.github.io/partner-summit/assets/images/API/API4.jpg)
 
 ***Note:** In these examples, you did not have to be authenticated and authorized because it is a public API.*
 
@@ -149,11 +149,11 @@ The objective of the lab is to understand the benefits of the Cisco Developers P
 **Step 1.** Open a web browser and navigate to the developer portal: **developer.webex-cx.com.**
 Sign in with the username and assigned to you and the password is your Gold Tenant admin credentials.
 
-![API21](/assets/images/API/API21.jpg)
+![API21](https://webexcc-sa.github.io/partner-summit/assets/images/API/API21.jpg)
 
 
 **Step 2.** Select Documentation from the top-right corner.
-![API22](/assets/images/API/API22.jpg)
+![API22](https://webexcc-sa.github.io/partner-summit/assets/images/API/API22.jpg)
 
 You can see different sections on the left-hand sides, for example:
 
@@ -166,25 +166,25 @@ You can see different sections on the left-hand sides, for example:
 **API Reference**: You will see in this section all the APIs categories that WxCC offers. 
 
 **Step 3.** Navigate to the API reference and select Address Book
-![API23](/assets/images/API/API23.jpg)
+![API23](https://webexcc-sa.github.io/partner-summit/assets/images/API/API23.jpg)
 **Step 4.** In this case, you want to first list the address books already created. So, select the GET request under “List Address Books Entries (v2 API)”
 
 **Step 5.** You can see all the parameters required, like **orgid** and optional parameters, like **page** or **page size,** and so on.
 
 **Step 6.** On the right-hand side, you see how the API is executed. You can see the method; GET; the URL used with the variable (orgid) and the code language that is being used (you can use cURL, csharp, java, python, etc.)
-![API24](/assets/images/API/API24.jpg)
+![API24](https://webexcc-sa.github.io/partner-summit/assets/images/API/API24.jpg)
 
 **Step 7.** Select the **Try Out** section. As you notice, this requires an authorization token. The token used by default, is the one automatically assigned when you log in with the admin credentials to the Developers portal. It also pulls the orgid from the organization the user you logged in is part of. **Click Run**.
 
 You see the 200 Response, which indicates the request was successful. You also see the address books created in this org. You can scroll down in the response window to see the list of all address books.
 
-![API25](/assets/images/API/API25.jpg)
+![API25](https://webexcc-sa.github.io/partner-summit/assets/images/API/API25.jpg)
 
 **Step 8.** Log in with the same user to WxCC Portal: [https://portal-v2.wxcc-anz1.cisco.com/portal/home](https://portal-v2.wxcc-anz1.cisco.com/portal/home) and navigate to Provisioning > Address Book
 
-![API26](/assets/images/API/API26.jpg)
+![API26](https://webexcc-sa.github.io/partner-summit/assets/images/API/API26.jpg)
 
-![API27](/assets/images/API/API27.jpg)
+![API27](https://webexcc-sa.github.io/partner-summit/assets/images/API/API27.jpg)
 
 
 ### Task 2. Develop a Webex Application
@@ -193,32 +193,32 @@ This task shows you the configuration steps to create a Webex application. This 
 
 **Step 1.** Logon to [https://developer.webex-cx.com](https://developer.webex-cx.com) with your username and password. On the top-right hand corner, hover over your userID and select My Webex Apps from the pop-out menu.
 
-![API28](/assets/images/API/API28.jpg)
+![API28](https://webexcc-sa.github.io/partner-summit/assets/images/API/API28.jpg)
 
 **Step 2.** Provide the name of your choice, description of your choice, the redirect URI and check the scopes (Config, write and read).
 
 For the URI, we are using Postman as a sample application so, use this URI: [https://oauth.pstmn.io/v1/callback](https://oauth.pstmn.io/v1/callback) and select the top 3 scopes as shown in the screenshot below.
 
-![API29](/assets/images/API/API29.jpg)
+![API29](https://webexcc-sa.github.io/partner-summit/assets/images/API/API29.jpg)
 
 **Step 3.** Accept the terms and click **Add Integration**.
 
-![API30](/assets/images/API/API30.jpg)
+![API30](https://webexcc-sa.github.io/partner-summit/assets/images/API/API30.jpg)
 
 **Step 4.** You will get the response with the Client ID, Client Secret, and the URL that you could embed in your application to initiate the authentication.
 
-![API31](/assets/images/API/API31.jpg)
+![API31](https://webexcc-sa.github.io/partner-summit/assets/images/API/API31.jpg)
 
 **Step 5.** Copy the whole URL into a new browser window and you see that redirect you to a Webex authentication page.
 
-![API32](/assets/images/API/API32.jpg)
+![API32](https://webexcc-sa.github.io/partner-summit/assets/images/API/API32.jpg)
 
 **Step 6.** On the authentication window, click Accept.
-![API33](/assets/images/API/API33.jpg)
+![API33](https://webexcc-sa.github.io/partner-summit/assets/images/API/API33.jpg)
 
 **Step 7.** You see that your application is now authenticated.
 
-![API34](/assets/images/API/API34.jpg)
+![API34](https://webexcc-sa.github.io/partner-summit/assets/images/API/API34.jpg)
 
 More Information about creating a Webex application and using Postman in this document: [https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html)
 
@@ -241,106 +241,106 @@ You should have your own Postman account in order to use the software or online 
 ### Task 1. Postman Account Creation (Optional in case you don't have your own account)
 
 **Step1.** Access https://www.postman.com/ and click on **Sign Up for Free**
-![Postman1](/assets/images/API/Postman1.jpg)
+![Postman1](https://webexcc-sa.github.io/partner-summit/assets/images/API/Postman1.jpg)
 
 **Step 2**. Provide your email, username and password then click Create Free account.
 	**Step2a.** (Alternatively) You can use your own Gmail account if you want.
 
-![Postman2](/assets/images/API/Postman2.jpg)
+![Postman2](https://webexcc-sa.github.io/partner-summit/assets/images/API/Postman2.jpg)
 
 **Step 3**. Provide additional details. Choose anything you like from drop down list.
 
-![Postman3](/assets/images/API/Postman3.jpg)
+![Postman3](https://webexcc-sa.github.io/partner-summit/assets/images/API/Postman3.jpg)
 
 Step 4. Confirm your account by accessing provided mailbox and clicking Confirm My Email. You will be redirected to Postman Web Page that you can use to build you API Calls.
 
-![Postman4](/assets/images/API/Postman4.jpg)
+![Postman4](https://webexcc-sa.github.io/partner-summit/assets/images/API/Postman4.jpg)
 
 ### Task 2:  Postman Fundamentals
 
 **Step 1**. Locate the Chrome icon at the bottom of the task bar and launch it.
 
-![API5](/assets/images/API/API5.jpg)
+![API5](https://webexcc-sa.github.io/partner-summit/assets/images/API/API5.jpg)
 
 **Step 2**. Navigate to postman.com and select sign in.
-![API6](/assets/images/API/API6.jpg)
+![API6](https://webexcc-sa.github.io/partner-summit/assets/images/API/API6.jpg)
 
 **Step 3.** Provide your username and the password.
 
-![API7](/assets/images/API/API7.jpg)
+![API7](https://webexcc-sa.github.io/partner-summit/assets/images/API/API7.jpg)
 
 **Step 4**. Create your workspace. On the Workspaces tab, type the name of your workspace. In this exercise your workspace name could be the same as your username.
 
-![API8](/assets/images/API/API8.jpg)
+![API8](https://webexcc-sa.github.io/partner-summit/assets/images/API/API8.jpg)
 
 **Step 5**. On the Workspace create window, add the name, check the Personal option and click Create Workspace.
 
-![API9](/assets/images/API/API9.jpg)
+![API9](https://webexcc-sa.github.io/partner-summit/assets/images/API/API9.jpg)
 
 
 **Step 6.** You see your workspace created and all options on the left side of the window. You will navigate to each of this option to understand Postman functionality.
 
-![API10](/assets/images/API/API10.jpg)
+![API10](https://webexcc-sa.github.io/partner-summit/assets/images/API/API10.jpg)
 
 **Step 7.** Select New and then HTTP Request to create a new API request.
 
-![API11-12](/assets/images/API/API11-12.jpg)
+![API11-12](https://webexcc-sa.github.io/partner-summit/assets/images/API/API11-12.jpg)
 
 
 **Step 8.** Notice in the screenshot below that the default method is GET; Click the drop-down arrow next to it to show all other REST API methods including the ones mentioned above for WxCC.
 
-![API13](/assets/images/API/API13.jpg)
+![API13](https://webexcc-sa.github.io/partner-summit/assets/images/API/API13.jpg)
 
 **Step 9.** Evaluate the previous deck of cards API via Postman. Copy the following URL and paste it into Postman and select the GET option to the left:
 
 [https://deckofcardsapi.com/api/deck/new/draw/?count=2](https://deckofcardsapi.com/api/deck/new/draw/?count=2)
 
-![API14](/assets/images/API/API14.jpg)
+![API14](https://webexcc-sa.github.io/partner-summit/assets/images/API/API14.jpg)
 
 Note, that after adding the URL, the parameter count was automatically added.
 
 **Step 10.** Click Send button. Review the results. You see 200 OK in the response, which indicates that this was a successful response, you see the body of the response and the format.
 
-![API15](/assets/images/API/API15.jpg)
+![API15](https://webexcc-sa.github.io/partner-summit/assets/images/API/API15.jpg)
 
 **Step 11**. Save this request in a Collection. Select Save As from the pull-down button.
 
-![API16](/assets/images/API/API16.jpg)
+![API16](https://webexcc-sa.github.io/partner-summit/assets/images/API/API16.jpg)
 
 **Step 12**. Click Create a Collection. Add the name DeckofCards and click Create. Then, click Save.
 
-![API17](/assets/images/API/API17.jpg)
+![API17](https://webexcc-sa.github.io/partner-summit/assets/images/API/API17.jpg)
 
 ## Task 3. Postman - WxCC Address Book Management
 
 
 **Step 1.** Locate the Chrome icon at the bottom of the task bar and launch it.
 
-![API5](/assets/images/API/API5.jpg)
+![API5](https://webexcc-sa.github.io/partner-summit/assets/images/API/API5.jpg)
 
 **Step 2.** Navigate to postman.com and select sign in.
-![API35](/assets/images/API/API35.jpg)
+![API35](https://webexcc-sa.github.io/partner-summit/assets/images/API/API35.jpg)
 
 **Step 3.** Provide your username and the password.
 
-![API36](/assets/images/API/API36.jpg)
+![API36](https://webexcc-sa.github.io/partner-summit/assets/images/API/API36.jpg)
 
 **Step 4.** Navigate to the Workspace tab and select your workspace (created in lab1).
-![API37](/assets/images/API/API37.jpg)
+![API37](https://webexcc-sa.github.io/partner-summit/assets/images/API/API37.jpg)
 
 
 **Step 5.** Create a new request. On the left-hand side window select New and then select HTTP Request.
 
-![API38](/assets/images/API/API38.jpg)
+![API38](https://webexcc-sa.github.io/partner-summit/assets/images/API/API38.jpg)
 
 
 **Step 6.** Open another browser window and log in to Developer Portal developer.webex-cx.com. Once logged in, click on Documentation link on top and select Address Book (under API REFERENCE)
 
-![API39](/assets/images/API/API39.jpg)
+![API39](https://webexcc-sa.github.io/partner-summit/assets/images/API/API39.jpg)
 
 **Step 7.** Since we want to create a new address book, we will use a POST request. Select this Post request on the Developers portal. Use v3 API for this. See screenshot.
 
-![API40](/assets/images/API/API40.jpg)
+![API40](https://webexcc-sa.github.io/partner-summit/assets/images/API/API40.jpg)
 
 **Step 8.** Here you can see the required parameters that you need to provide in Postman:
 
@@ -352,7 +352,7 @@ Note, that after adding the URL, the parameter count was automatically added.
 
 **Step 9.** Select the Try out button to show information that Postman will need as parameter or env variable for the API request. Refer to the screenshot below. You will need this request body too.
 
-![API41](/assets/images/API/API41.jpg)
+![API41](https://webexcc-sa.github.io/partner-summit/assets/images/API/API41.jpg)
 
 
 Body:
@@ -367,36 +367,36 @@ Click Run
 
 You should see
 
-![API42](/assets/images/API/API42.jpg)
+![API42](https://webexcc-sa.github.io/partner-summit/assets/images/API/API42.jpg)
 
 If you have not logged in to the portal already, in another tab, login to the portal:
 
 And verify that you can see this new address book created like this example:
 
-![API43](/assets/images/API/API43.jpg)
+![API43](https://webexcc-sa.github.io/partner-summit/assets/images/API/API43.jpg)
 
 Congratulations! You have run a simple API towards Webex CC and created an address book without logging into the portal.
 
 **Step 10.** Switch back to your Postman browser tab. Before sending the API request to create an address book, we need to create 3 environment variables: **org_id, addressBookId** and **datacenter**. This is a required parameter to create an address book. On Postman, select **Environments** and then **Create Environment**.
 
-![API44](/assets/images/API/API44.jpg)
+![API44](https://webexcc-sa.github.io/partner-summit/assets/images/API/API44.jpg)
 
 **Step 11.** Rename the New environment to any name you like, for example: Ciscolabusser001E
 
-![API45](/assets/images/API/API45.jpg)
+![API45](https://webexcc-sa.github.io/partner-summit/assets/images/API/API45.jpg)
 
 **Step 12.** Add a new Variable called **datacenter** with the initial value of **anz1**. Then add another variable with the name orgId (info in screenshot may be different – org_id) and copy the orgId value from the Developers portal to the initial value. Add a 3rd variable addressBookId and for the initial value, obtain the Address Book ID from the portal: [https://portal-v2.wxcc-anz1.cisco.com/portal/home#](https://portal-v2.wxcc-anz1.cisco.com/portal/home) > Address Book and click Save.
 
-![API46](/assets/images/API/API46.jpg)
+![API46](https://webexcc-sa.github.io/partner-summit/assets/images/API/API46.jpg)
 
 Developers Portal:
 
-![API47](/assets/images/API/API47.jpg)
+![API47](https://webexcc-sa.github.io/partner-summit/assets/images/API/API47.jpg)
 
 **Step 13.** On the left Menu panel, choose Collections, and click on the + to create a new Blank collection for Webex CC and give it a name (click on the 3 dots and rename it). Select the environment on the top-right corner of the postman window.
 
 
-![API49](/assets/images/API/API49.jpg)
+![API49](https://webexcc-sa.github.io/partner-summit/assets/images/API/API49.jpg)
 
 **Step 14.** Under the collection you just created, click on Add Request. On the Untitled Request window (or the New Request), click on the 3 dots and rename it to “Address Book Entry”, change the method to POST (not GET) and on for the URI enter the  one provided in the Developers portal /organization/{orgId}/address-book/{addressBookId}/entry) plus the server address. Change orgId for the variable you created orgId and add {}:
 
@@ -404,15 +404,15 @@ https://api.wxcc-{{datacenter}}.cisco.com/organization/{{orgId}}/address-book/{{
 
 **Step 15.** Next step is to provide the authorization. On Postman click on the Authorization tab and select Bearer Token.
 
-![API50](/assets/images/API/API50.jpg)
+![API50](https://webexcc-sa.github.io/partner-summit/assets/images/API/API50.jpg)
 
 
 Now, login to the Developers portal: [https://developer.webex-cx.com/documentation/address-book](https://developer.webex-cx.com/documentation/address-book)
 
 Go to Documentation on the right hand top corner > Click on Create An Address Book Entry and Try Out on the right – You can now copy your personal token and use it.
 
-![API51](/assets/images/API/API51.jpg)
-![API52](/assets/images/API/API52.jpg)
+![API51](https://webexcc-sa.github.io/partner-summit/assets/images/API/API51.jpg)
+![API52](https://webexcc-sa.github.io/partner-summit/assets/images/API/API52.jpg)
 
 **Step 16.** Now, you need to provide the request parameters in the body. Select the **Body** tab in Postman and then select **raw.**
 
@@ -426,61 +426,59 @@ Go to Documentation on the right hand top corner > Click on Create An Address Bo
 
 **Step 18.** Identify the media type sent in the API request. Select **Headers** and add **Content-Type** and the value **application/json**
 
-![API53](/assets/images/API/API53.jpg)
+![API53](https://webexcc-sa.github.io/partner-summit/assets/images/API/API53.jpg)
 
 
 **Reference:**
-![API54](/assets/images/API/API54.jpg)
+![API54](https://webexcc-sa.github.io/partner-summit/assets/images/API/API54.jpg)
 
 **Step 19.** Click Send. You see the response 201 created and the id for the new address book. Copy this address book id and paste it in notepad because we will use it later.
 
-![API55](/assets/images/API/API55.jpg)
+![API55](https://webexcc-sa.github.io/partner-summit/assets/images/API/API55.jpg)
 
 
 **Step 20.** Save this API request in a new collection. Select Save, then Save As.
 
-![API56](/assets/images/API/API56.jpg)
+![API56](https://webexcc-sa.github.io/partner-summit/assets/images/API/API56.jpg)
 
 
 On the Save window, add the Request name (Create Address book). Click New Collection. Add the name of the collection and click Create, the click Save after the collection has been created.
-![API57](/assets/images/API/API57.jpg)
+![API57](https://webexcc-sa.github.io/partner-summit/assets/images/API/API57.jpg)
 
 You see the new collection and API request added.
-![API58](/assets/images/API/API58.jpg)
+![API58](https://webexcc-sa.github.io/partner-summit/assets/images/API/API58.jpg)
 
-**Step 21.** Using an API request verify that this address book exist in WxCC. This is very simple. Create a new tab in Postman and use this against the GET method https://api.wxcc-{{datacenter}}.cisco.com/organization/{{orgId}}/v3/address-book to list all the address books. Remember to use the Environment and the Authorisation as Bearer token as described before.![A screenshot of a computer
-Description automatically generated](file:///C:/Users/yabondar/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png)
+**Step 21.** Using an API request verify that this address book exist in WxCC. This is very simple. Create a new tab in Postman and use this against the GET method https://api.wxcc-{{datacenter}}.cisco.com/organization/{{orgId}}/v3/address-book to list all the address books. Remember to use the Environment and the Authorisation as Bearer token as described before.
 
-
-![API59](/assets/images/API/API59.jpg)
+![API59](https://webexcc-sa.github.io/partner-summit/assets/images/API/API59.jpg)
 
 
 **Step 22.** Save this API in the collection. Click Save then Save As. On the Request name add **List Address books.** Click Save to save it on the WxCCAPIs collection.
 
 
-![API60](/assets/images/API/API60.jpg)
+![API60](https://webexcc-sa.github.io/partner-summit/assets/images/API/API60.jpg)
 
 
 **Step 23.** You can also list a specific address book. Use the same GET API and just add he address book id that you have previously copied in notepad and click Send.
 
 for example: https://api.wxcc-{{datacenter}}.cisco.com/organization/{{orgid}}/address- book/8fd95b96-556d-49be-94b8-fabc1237054c
 
-![API61](/assets/images/API/API61.jpg)
+![API61](https://webexcc-sa.github.io/partner-summit/assets/images/API/API61.jpg)
 
 You see only the address book with that id.
 
-![API62](/assets/images/API/API62.jpg)
+![API62](https://webexcc-sa.github.io/partner-summit/assets/images/API/API62.jpg)
 
 **Step 24.** Delete the address book just created. Using the same GET API, we use in the previous step, change the method to DELETE and click Send.
 
-![API63](/assets/images/API/API63.jpg)
+![API63](https://webexcc-sa.github.io/partner-summit/assets/images/API/API63.jpg)
 
 You see 204 No Content, which indicates that the address book was deleted but there is no content in the response body, which is expected.
 
-![API64](/assets/images/API/API64.jpg)
+![API64](https://webexcc-sa.github.io/partner-summit/assets/images/API/API64.jpg)
 **Step 25.** Execute the GET API for the specific address book, one more time. You see 404 Not Found since the address book no longer exist.
 
-![API65](/assets/images/API/API65.jpg)
+![API65](https://webexcc-sa.github.io/partner-summit/assets/images/API/API65.jpg)
 
 
 
@@ -497,38 +495,38 @@ Specify the date that you want to convert and click **Human date to Timestamp.**
 
 **Note:** Change the date to today’s and time as 12:00 AM as in example shown in the screen shot below.
 
-![API66](/assets/images/API/API66.jpg)
+![API66](https://webexcc-sa.github.io/partner-summit/assets/images/API/API66.jpg)
 
 
-**Step 2.** Copy the Timestamp in milliseconds ![API67](/assets/images/API/API67.jpg)
+**Step 2.** Copy the Timestamp in milliseconds ![API67](https://webexcc-sa.github.io/partner-summit/assets/images/API/API67.jpg)
 
 **Step 3.** Do the same for end of day today as in today’s date and 11:59 PM; example: 1700830799000; this is for the ‘to’ field.
 And save it in a notepad; It'll be used later in a GET API request testing.
 
 **Step 4.** In postman, request a list of all tasks from that specific epoch time. On Postman, click New and Create a New HTTP Request.
 
-![API68](/assets/images/API/API68.jpg)
+![API68](https://webexcc-sa.github.io/partner-summit/assets/images/API/API68.jpg)
 
 For the URI add: https://api.wxcc-{{datacenter}}.cisco.com/v1/tasks?orgId={{orgId}}
 and since from and to are required parameters, add a parameter "from" with the value of epoch time copied  earlier and “to” fields.
 
-![API69](/assets/images/API/API69.jpg)
+![API69](https://webexcc-sa.github.io/partner-summit/assets/images/API/API69.jpg)
 
 **Step 4.** Next step is to provide the authorization. On Postman click on the Authorization tab and select Bearer Token.
-![API70](/assets/images/API/API70.jpg)
+![API70](https://webexcc-sa.github.io/partner-summit/assets/images/API/API70.jpg)
 
 Now, copy the value from the Developers portal and paste it in the token field. Navigate to Developers portal Tasks APs section, select GET. Select the **Try Out** button and then copy the Authorization token.
-![API71](/assets/images/API/API71.jpg)
+![API71](https://webexcc-sa.github.io/partner-summit/assets/images/API/API71.jpg)
 
 Since the token was added in previous steps, you will see the token already there.
 
 **Step 5.** Save this API in the WxCC APIs collection. Select Save As, then add the name of the request (List Tasks from Epoch time) and click save.
 
-![API72](/assets/images/API/API72.jpg)
+![API72](https://webexcc-sa.github.io/partner-summit/assets/images/API/API72.jpg)
 
 **Step 6.** Send a request for the task related to voice calls. Using the same GET TASK API, add a parameter call "channelTypes" with the value "telephony". Click Send. You will see 200 OK response containing list of voice tasks only.
 
-![API73](/assets/images/API/API73.jpg)
+![API73](https://webexcc-sa.github.io/partner-summit/assets/images/API/API73.jpg)
 
 
 ## Task 4. Postman - WxCC Queue Statistics
@@ -551,11 +549,11 @@ Specify the date and time that you want to convert for **from** and **to** queue
 
 Copy the Timestamp in milliseconds. Example: 1700744400000
 And save it in a notepad; It'll be used later as a value for the "from" parameter in a GET API request testing.
-![API74](/assets/images/API/API74.jpg)
+![API74](https://webexcc-sa.github.io/partner-summit/assets/images/API/API74.jpg)
 ## To epoch time
 Go back to epochconverter.com browser window and change the date/time so that it’s no more
 than 24 hrs than the previous time captured for the "from" parameter. Example 1700830799000
-![API75](/assets/images/API/API75.jpg)
+![API75](https://webexcc-sa.github.io/partner-summit/assets/images/API/API75.jpg)
 
 Copy the Timestamp in milliseconds. Example:1700830799000
 
@@ -563,27 +561,27 @@ And save it in a notepad; It'll be used later as a value for the "to" parameter 
 
 **Step 2.** In postman, request a list of all tasks in queue from and to the specific epoch time. On Postman, click New and Create a New HTTP Request.
 
-![API76](/assets/images/API/API76.jpg)
+![API76](https://webexcc-sa.github.io/partner-summit/assets/images/API/API76.jpg)
 
 On the URI add: https://api.wxcc-{{datacenter}}.cisco.com/v1/queues/statistics?orgId={{orgId}}
 and since **from** and **to** are required parameters, add them with the epoch time you have copied before.
-![API77](/assets/images/API/API77.jpg)
+![API77](https://webexcc-sa.github.io/partner-summit/assets/images/API/API77.jpg)
 
 **Step 3.** Next step is to provide the authorization. On Postman click on the Authorization tab and select Bearer Token.
-![API78](/assets/images/API/API78.jpg)
+![API78](https://webexcc-sa.github.io/partner-summit/assets/images/API/API78.jpg)
 
 Now, copy the value from the Developers portal and paste it in the token field. Navigate to Developers portal Queue APIs section, select GET. Select the **Try Out** button and then copy the Authorization token.
 
-![API79](/assets/images/API/API79.jpg)
+![API79](https://webexcc-sa.github.io/partner-summit/assets/images/API/API79.jpg)
 
 Since the token was added in previous steps, you will see the token already exists. Confirm that it is same as what you copied from the developer portal.
 
 **Step 4.** Click Send. You see 200 OK response indicating that request was successful. Note that response lists statistics for various task queues.
 
-![API80](/assets/images/API/API80.jpg)
+![API80](https://webexcc-sa.github.io/partner-summit/assets/images/API/API80.jpg)
 
 **Step 5.** Save this API in the WxCC APIs collection. Select Save As, then add the name of the request (List Queues statistics) and click save.
-![API81](/assets/images/API/API81.jpg)
+![API81](https://webexcc-sa.github.io/partner-summit/assets/images/API/API81.jpg)
 
 ## Task 5. Postman - WxCC Agent Activities
 
@@ -598,7 +596,7 @@ Parameter "**To**" is optional but if used, it needs to be within 24hrs (8640000
 **Step 1.** Convert regular time to epoch time. Open a web browser and navigate to **https://www.epochconverter.com**.
 Specify the date that you want to convert and click **Human date to Timestamp.**
 
-![API82](/assets/images/API/API82.jpg)
+![API82](https://webexcc-sa.github.io/partner-summit/assets/images/API/API82.jpg)
 
 **Step 2.** Copy the Timestamp in milliseconds for from and to
 from: 1700744400000
@@ -608,34 +606,34 @@ And save it in a notepad; It'll be used later as a value for the "from" paramete
 
 **Step 3.** In postman, request a list of all agent activities from that specific epoch time. On Postman, click New and Create a New HTTP Request.
 
-![API83](/assets/images/API/API83.jpg)
+![API83](https://webexcc-sa.github.io/partner-summit/assets/images/API/API83.jpg)
 
 On the URI add: https://api.wxcc-{{datacenter}}.cisco.com/v1/agents/activities?orgId={{org_id}}
 and since from is a required parameter add the parameter from with the epoch time you have copied before.
 
 Example screenshot (remember to include to field below from) – not in screenshot.
 
-![API84](/assets/images/API/API84.jpg)
+![API84](https://webexcc-sa.github.io/partner-summit/assets/images/API/API84.jpg)
 
 **Step 4.** Next step is to provide the authorization. On Postman click on the Authorization tab and select Bearer Token.
-![API85](/assets/images/API/API85.jpg)
+![API85](https://webexcc-sa.github.io/partner-summit/assets/images/API/API85.jpg)
 Now, copy the value from the Developers portal and paste it in the token field. Navigate to Developers portal agent activities APIs section, select GET. Select the **Try Out** button and then copy the Authorization token.
 
-![API86](/assets/images/API/API86.jpg)
+![API86](https://webexcc-sa.github.io/partner-summit/assets/images/API/API86.jpg)
 
 Since the token was added in previous steps, you will see the token already there.
 
 **Step 5.** Click **Send**. You see 400 bad requests because the **from**, **to** cannot exceed 1 day.
 
-![API87](/assets/images/API/API87.jpg)
+![API87](https://webexcc-sa.github.io/partner-summit/assets/images/API/API87.jpg)
 
 **Step 6.** Add the “**to”** parameter with less than 1 day. For example, use a timestamp from 1696165200000and **to** 1696251599000 – 1 Oct 2023**.** Click Send. You see 200 Ok, which means that the request was successful even though, there are no agent activities during this time.
 
-![API88](/assets/images/API/API88.jpg)
+![API88](https://webexcc-sa.github.io/partner-summit/assets/images/API/API88.jpg)
 
 **Step 7.** Save this API in the WxCC APIs collection. Select Save As, then add the name of the request (List Agent activities) and click save.
 
-![API89](/assets/images/API/API89.jpg)
+![API89](https://webexcc-sa.github.io/partner-summit/assets/images/API/API89.jpg)
 
 
 
@@ -655,33 +653,33 @@ Cisco TAC has created a document explaining WxCC API functionality and where you
 
 [https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html) [configure-webex-contact-center-apis-with.html](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html)
 
-![API90](/assets/images/API/API90.jpg)
+![API90](https://webexcc-sa.github.io/partner-summit/assets/images/API/API90.jpg)
 
 **Step 2.** Scroll down to step 5 in the document and click on the Sample Postman APIs link.
-![API91](/assets/images/API/API91.jpg)
+![API91](https://webexcc-sa.github.io/partner-summit/assets/images/API/API91.jpg)
 
 **Step 3.** On the new GitHub window, select New WebexCC OAuth2 APIs…
-![API92](/assets/images/API/API92.jpg)
+![API92](https://webexcc-sa.github.io/partner-summit/assets/images/API/API92.jpg)
 
 **Step 4.** Select the icon to copy the API samples and past it to a notepad text (CTRL -V).
-![API93](/assets/images/API/API93.jpg)
+![API93](https://webexcc-sa.github.io/partner-summit/assets/images/API/API93.jpg)
 
-![API94](/assets/images/API/API94.jpg)
+![API94](https://webexcc-sa.github.io/partner-summit/assets/images/API/API94.jpg)
 
 **Step 5.** Save the file in the Downloads folder as Ciscolabuser001.json
-![API95](/assets/images/API/API95.jpg)
+![API95](https://webexcc-sa.github.io/partner-summit/assets/images/API/API95.jpg)
 
 **Step 6.** On Postman, select Import.
-![API96](/assets/images/API/API96.jpg)
+![API96](https://webexcc-sa.github.io/partner-summit/assets/images/API/API96.jpg)
 
 **Step 7.** On the import window, select files from the Drop section.
-![API97](/assets/images/API/API97.jpg)
+![API97](https://webexcc-sa.github.io/partner-summit/assets/images/API/API97.jpg)
 
 **Step 8.** Navigate to the Downloads folder and click Open.
-![API98](/assets/images/API/API98.jpg)
+![API98](https://webexcc-sa.github.io/partner-summit/assets/images/API/API98.jpg)
 
 **Step 9.** You will see a new collection created with all WxCC APIs.
-![API99](/assets/images/API/API99.jpg)
+![API99](https://webexcc-sa.github.io/partner-summit/assets/images/API/API99.jpg)
 
 
 **Congratulations!! You have finished this lab.**
