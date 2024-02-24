@@ -126,6 +126,9 @@ This is a supportive videos that do not require any actions since your tenant is
 
 ![New Team](./assets/images/NewTeam.png)
 
+<img align="middle" src="assets/images/NewTeam.png" width="1000" />
+<br>
+
 
 
 ## Step 3: Activate Contact Center Settings for Users
