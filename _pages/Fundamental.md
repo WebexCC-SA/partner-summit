@@ -124,7 +124,7 @@ This is a supportive videos that do not require any actions since your tenant is
 - Left as a default value `Global Layout` in the Desktop layout drop-down and click on `Create button`.
 
 
-![New Team](\assets\images\NewTeam.png)
+![New Team](assets/images/NewTeam.png)
 
 
 
