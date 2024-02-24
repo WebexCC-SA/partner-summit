@@ -488,7 +488,7 @@ You see 204 No Content, which indicates that the address book was deleted but th
 ![API65](https://webexcc-sa.github.io/partner-summit/assets/images/API/API65.jpg)
 
 
-## Lab 4 – Tokens and Collections Importing
+## Lab 4 – OAuth2 and Collections Importing
 
 ### Objectives
 
@@ -536,8 +536,70 @@ Cisco TAC has created a document explaining WxCC API functionality and where you
 
 ### Task 2. Getting Started with OAuth2 & Postman
 
- Step 1. In Postman, in your Workspace, click on your new uploaded collection that you imported in previous Task. 
- ![API99](https://webexcc-sa.github.io/partner-summit/assets/images/API/API99.jpg)
+ ### **Note**: For this task you need to have pre-installed version of Postman. You can download it from postman web portal https://www.postman.com/downloads/
+
+
+ **Step 1.** Locate the Postman icon at the bottom of the task bar and launch it.
+![Auth1](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth1.jpg)
+
+ **Step 2.**  Login with the your own Postman account or with account you created in Lab3:Task1. 
+![Auth2](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth2.jpg)
+
+You will be redirected to your browser where you need to authenticate yourself
+![Auth3](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth3.jpg)
+
+If login successful, Click on **Open Postman** if your browser asks you to do so.
+![Auth4](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth4.jpg)
+
+**Note:** You will notice that everything you created in Web portal of Postman will be uploaded automatically once you login.
+
+
+**Step 3:** In your Workspace, click on Collections -> your new uploaded collection (that you imported in previous Task). Select Authorization and in Type drop down list select **OAuth2**
+![Auth5](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth5.jpg)
+ 
+**Step 4**. Scroll down to **Configure New Token** section and complete configuration as follows, then click  **Get New Access Token**:
+
+Token Name:  << Your Name >>
+Grant type:  Authorization Code
+Callback URL:  << Leave as it is >>
+Set checkbox for **Authorize using browser**
+Auth URL:  **https://webexapis.com/v1/authorize** 
+Access Token URL:  **https://webexapis.com/v1/access_token**
+Client ID:  <<Your client ID created in Lab2:Task2:Step4>>
+Client Secret:  **<<Your Client Secret created in Lab2:Task2:Step4>>**
+Scope: **cjp:user cjp:config cjp:config_read cjp:config_write**
+State:  **New**
+Client Authentication:  **Send Basic Auth Header**
+
+
+![Auth6](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth6.jpg)
+
+
+**Note:** If you haven't saved Client ID and Client Secret go to https://developer.webex-cx.com/my-apps open your App, copy Client ID and **Regenerate Client Secret**. Do not disclose your production Client ID and Client Secret. 
+
+![Auth7](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth7.jpg)
+
+
+**Step 5**. You need to authenticate yourself in the browser, after which you will see the following  
+![Auth8](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth8.jpg)
+
+**Step 6**. In Postman click Proceed to finish the authentication
+
+![Auth9](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth9.jpg)
+
+**Step 6**. Click on Use Token to apply this token for your collection.
+
+![Auth10](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth10.jpg)
+
+**Step 6**. Verify if new token is being set correctly in **Current Token** section. Also set **Auto-refresh Token** toggle to **On** 
+
+![Auth11](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth11.jpg)
+
+
+**Step 7**. To verify, go to your imported collection -> **Dial Number (Entry Point Mappings)**, Click on  **List Dial Numbers GET** request. Select **Authorization** tab and make sure the type set to **Inherit auth from parent**. Click **Send**. You should **Status: 200 OK** and list of configured dialed numbers with entry points and other data.
+
+![Auth12](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth12.jpg)
+
 # LAB 5 - Tasks, Queues, Activities and Search API (Optional)
 ### Task 1. Postman - WxCC Tasks Management vias APIs
 
