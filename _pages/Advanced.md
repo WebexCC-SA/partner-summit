@@ -519,10 +519,10 @@ Cisco TAC has created a document explaining WxCC API functionality and where you
 ![API94](https://webexcc-sa.github.io/partner-summit/assets/images/API/API94.jpg)
 
 **Step 5.** Save the file in the Downloads folder. By Default the name of the file is **New WebexCC OAuth2 APIs - v3.postman_collection.json**
-![API95](https://webexcc-sa.github.io/partner-summit/assets/images/API/API95.jpg)
+![API951](https://webexcc-sa.github.io/partner-summit/assets/images/API/API951.jpg)
 
 **Step 6.** On Postman, select Import.
-![API96](https://webexcc-sa.github.io/partner-summit/assets/images/API/API96.jpg)
+![API961](https://webexcc-sa.github.io/partner-summit/assets/images/API/API961.jpg)
 
 **Step 7.** On the import window, select files from the Drop section.
 ![API97](https://webexcc-sa.github.io/partner-summit/assets/images/API/API97.jpg)
