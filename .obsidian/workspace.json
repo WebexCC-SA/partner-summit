@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_pages/Digital.md",
+                "file": "_pages/Advanced.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,7 +49,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": false,
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_pages/Digital.md",
+                "file": "_pages/Advanced.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_pages/Digital.md",
+                "file": "_pages/Advanced.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_pages/Digital.md"
+                "file": "_pages/Advanced.md"
               }
             }
           }
@@ -154,22 +154,30 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2672355a05b54dec",
+  "active": "c7612fa5af166412",
   "lastOpenFiles": [
-    "assets/images/email_copy_debug.gif",
+    "assets/images/API/API2-1.jpg",
+    "assets/images/API/API37-1.jpg",
+    "assets/images/API/API38-1.jpg",
+    "assets/images/API/OAuth12.jpg",
+    "assets/images/API/OAuth11.jpg",
+    "assets/images/API/OAuth10.jpg",
+    "assets/images/API/OAuth9.jpg",
+    "assets/images/API/OAuth8.jpg",
+    "assets/images/API/OAuth7.jpg",
+    "assets/images/API/OAuth6.jpg",
+    "assets/images/API/OAuth5.jpg",
+    "_pages/Advanced.md",
+    "conflict-files-obsidian-git.md",
+    "assets/files/JDS_Layout.json",
+    "files/JDS_Layout.json",
+    "assets/images/API/test.txt",
+    "assets/images/API",
+    "_pages/Fundamental.md",
     "_pages/Digital.md",
     "assets/images/LAB2_email/OneTransaction.png.md",
     "assets/images/LAB2_email",
-    "assets/images/DebugConsole3.png",
-    "assets/images/OneTransaction.png",
-    "assets/images/email_paste_debug.gif",
-    "assets/images/emailConfirmation.png",
-    "assets/images/CheckPopSetting.png",
     "Untitled.md",
-    "assets/icons/6.png",
-    "assets/icons/5.png",
-    "assets/icons/4.png",
-    "assets/icons/3.png",
     "assets/icons",
     "_pages/JDS_XM.md",
     "_pages/IVR.md",
@@ -177,17 +185,12 @@
     "assets/images/EM/Contactcenter",
     "assets/images/EM",
     "assets/images/IVR/Untitled",
-    "conflict-files-obsidian-git.md",
     "customer-journey-data-services-introduction.md",
     "_pages/CH.md",
     "_pages/Provisioning.md",
     "files/RTMS GA Launch.pdf",
-    "files/RTMS EA Regional Media.pdf",
-    "assets/files/AnalyzerLab_Flow.json",
     "assets/images/mailinator-1.gif.md",
     "assets/images/Single.md",
-    "assets/images/SSO",
-    "assets/images/OnboardingProcess",
     "Untitled.canvas",
     "_pages/Supervisor.md",
     "files/ESD_default_layout.json.md",
