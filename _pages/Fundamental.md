@@ -126,11 +126,6 @@ This is a supportive videos that do not require any actions since your tenant is
 
 ![New Team](https://webexcc-sa.github.io/partner-summit/assets/images/NewTeam.png)
 
-![New Team](../assets/images/NewTeam.png)
-
-
-<img align="middle" src="/assets/images/NewTeam.png" width="1000" />
-<br>
 
 
 
@@ -154,7 +149,7 @@ This is a supportive videos that do not require any actions since your tenant is
 
 - In the User’s table make sure that the agent is now shown with the Contact Center Enabled flag as Yes and Status as Active.
 
-![Enable User](/assets/images/EnableUser.png)
+![Enable User](https://webexcc-sa.github.io/partner-summit/assets/images/EnableUser.png)
 
 
 
@@ -171,12 +166,12 @@ This is a supportive videos that do not require any actions since your tenant is
 
 - For Queue Routing Type, select the Longest Available Agent option.
 
-![New Queue](/assets/images/NewQueue.png)
+![New Queue](https://webexcc-sa.github.io/partner-summit/assets/images/NewQueue.png)
 
 
 - Create the Call Distribution, selecting  ***yourPrefixID*_Team1** as Group as click on `Save`.
 
-![New Group](/assets/images/NewGroup.png)
+![New Group](https://webexcc-sa.github.io/partner-summit/assets/images/NewGroup.png)
 
 
 - In *Advanced Settings* , set these values:
@@ -184,7 +179,7 @@ This is a supportive videos that do not require any actions since your tenant is
 > Maximum Time in Queue: 600
 > Default Music in Queue: defaultmusic_on_hold.wav
 
-![Queue Advance Settings](/assets/images/QueueAdvanceSettings.png)
+![Queue Advance Settings](https://webexcc-sa.github.io/partner-summit/assets/images/QueueAdvanceSettings.png)
 
 
 - Hit `Save` to complete the Queue creation.
@@ -234,7 +229,7 @@ This is a supportive videos that do not require any actions since your tenant is
 
 - On *Business Hours* node, choose **`TS_BusinessHours` under Schedule Details**.
 
-![Business Hour Node](/assets/images/BusinessHourNode.png)
+![Business Hour Node](https://webexcc-sa.github.io/partner-summit/assets/images/BusinessHourNode.png)
 
 
 - Drop the ***Play Message* node and connect it with Holidays, Overrides and Default edges** from *Business Hours* node.
@@ -245,7 +240,7 @@ This is a supportive videos that do not require any actions since your tenant is
 
 - Link the *Play Message* node with a ***Disconnect Contact*** node.
 
-![Office Closed](/assets/images/OfficeClosed.png)
+![Office Closed](https://webexcc-sa.github.io/partner-summit/assets/images/OfficeClosed.png)
 
 
 
@@ -258,7 +253,7 @@ This is a supportive videos that do not require any actions since your tenant is
 
 - **Link the *Queue Contact* node with a *Play Music* node**. Define the music file and the duration you want to play. **Connect the output edge of the node with the entry edge**, so the music will be playing until the call is forwarded to an agent.
 
-![Basic Flow](/assets/images/BasicFlow.png)
+![Basic Flow](https://webexcc-sa.github.io/partner-summit/assets/images/BasicFlow.png)
 
 
 
@@ -287,7 +282,7 @@ This is a supportive videos that do not require any actions since your tenant is
 - Click the check mark and then `Save`.
 
 
-![New Channel](/assets/images/NewChannel.png)
+![New Channel](https://webexcc-sa.github.io/partner-summit/assets/images/NewChannel.png)
 
 
 
@@ -303,7 +298,7 @@ This is a supportive videos that do not require any actions since your tenant is
 
 - Select **Desktop** as telephony option.
 
-![Station Login](/assets/images/StationLogin.png)
+![Station Login](https://webexcc-sa.github.io/partner-summit/assets/images/StationLogin.png)
 
 
 - Under *User Profile > User Settings*, click on `Speaker and Microphone` to set and test them.
@@ -312,7 +307,7 @@ This is a supportive videos that do not require any actions since your tenant is
 
 - Now move your Availability state to `Available`, so you can start receiving calls.
 
-![Agent Desktop](/assets/images/AgentDesktop.png)
+![Agent Desktop](https://webexcc-sa.github.io/partner-summit/assets/images/AgentDesktop.png)
 
 ## Step 2: Place and accept an inbound call
 
@@ -324,19 +319,19 @@ This is a supportive videos that do not require any actions since your tenant is
 
 - You will receive the incoming call request
 
-![Accept Call](/assets/images/AcceptCall.png)
+![Accept Call](https://webexcc-sa.github.io/partner-summit/assets/images/AcceptCall.png)
 
 
 - Click on `Accept` and the call will be established. You will see now the different call control options (Consult, Transfer, End...) and some other info about the call. 
 
-![Call Connected](/assets/images/CallConnected.png)
+![Call Connected](https://webexcc-sa.github.io/partner-summit/assets/images/CallConnected.png)
 
 - When you want to finish the call, either end it from the customer endpoint or from Agent Desktop by clicking on `End`. 
 
 
 - Select any of the availables **WrapUp codes** and click on **`Submit`**.
 
-![Select Wrap Up](/assets/images/SelectWrapUp.png)
+![Select Wrap Up](https://webexcc-sa.github.io/partner-summit/assets/images/SelectWrapUp.png)
 
 ## Step 3: Verify the Flow Debugger functionality
 
@@ -346,12 +341,12 @@ This is a supportive videos that do not require any actions since your tenant is
 
 - Click on the ***Debug*** option, in the bottom of the page. The Flow Debugger pane will be open and you will see a list with all the latest interactions.
 
-![Flow Debugger](/assets/images/FlowDebugger.png)
+![Flow Debugger](https://webexcc-sa.github.io/partner-summit/assets/images/FlowDebugger.png)
 
 
 - Select the latest interaction and review the activities sequence followed. You can click on each activity to get more details.
 
-![Interaction Review](/assets/images/InteractionReview.png)
+![Interaction Review](https://webexcc-sa.github.io/partner-summit/assets/images/InteractionReview.png)
 
 
 
@@ -366,18 +361,18 @@ This is a supportive videos that do not require any actions since your tenant is
 
 - Click on the telephone icon on the desktop top horizontal header. The Outdial pad will be opened.
 
-![Outdial Pad](/assets/images/OutdialPad.png)
+![Outdial Pad](https://webexcc-sa.github.io/partner-summit/assets/images/OutdialPad.png)
 
 
 - Input the number you want to call. For security purposes, this tenant **international calls are not allowed**, so you will need to call to US number. For example, you can use TAC support number: `1 800 553 2447`.
 
 - The call will be initiated and you will receive the Outdial request at agent desktop. As you're using WebRTC, the call will be automatically accepted, but for rest of endpoints you will need to take the call in the phone.
 
-![Outdial Request](/assets/images/OutdialRequest.png)
+![Outdial Request](https://webexcc-sa.github.io/partner-summit/assets/images/OutdialRequest.png)
 
 - When the call is connected, the behavior is the same as inbound calls. You can decide to Transfer/Consult/Conference the call and click on `End` to finish the call.
 
-![Outdial Connected](/assets/images/OutdialConnected.png)
+![Outdial Connected](https://webexcc-sa.github.io/partner-summit/assets/images/OutdialConnected.png)
 
 
 - As additional settings, you can also create your *Address Book* or customize the *Outdial ANI* displayed to end customer.
@@ -395,7 +390,7 @@ This is a supportive videos that do not require any actions since your tenant is
 
 - Select `TS_SupervisorProfile` as *User Profile and **toggle the Contact Center ON**. 
 
-![Enable Supervisor](/assets/images/EnableSupervisor.png)
+![Enable Supervisor](https://webexcc-sa.github.io/partner-summit/assets/images/EnableSupervisor.png)
 
 - On *Supervisor Settings*, you need to specify the ***Primary team***. This setting is just used to apply the *Desktop Layout* assigned to that team. **If a team is not selected, the global supervisor layout will be applied**.
 
@@ -404,7 +399,7 @@ This is a supportive videos that do not require any actions since your tenant is
 > **Desktop Profile**: `TS_DesktopProfile`
 > **Multimedia Profile**: `TS_MMP`
 
-![Supervisor Settings](/assets/images/SupervisorSettings.png)
+![Supervisor Settings](https://webexcc-sa.github.io/partner-summit/assets/images/SupervisorSettings.png)
 
 
 ## Step 2: Login in Supervisor Desktop and overview
@@ -414,14 +409,14 @@ This is a supportive videos that do not require any actions since your tenant is
 
 - Login with your **wxcclabs+suprv_*yourPrefixID*@gmail.com** supervisor user credentials, input any number as Extension and Submit. In this lab, we're not going to monitor any call, so that number doesn't not matter.
 
-![Supervisor Login](/assets/images/SupervisorLogin.png)
+![Supervisor Login](https://webexcc-sa.github.io/partner-summit/assets/images/SupervisorLogin.png)
 
 
 - You will be logged in the Supervisor Desktop, take some time to explore the different views and options.
 
 - In order to see more data in the dashboards, in the Home page, **Select All the options for Queue Name, Channel Type and Managed Teams**.
 
-![Supervisor Desktop](/assets/images/SupervisorDesktop.png)
+![Supervisor Desktop](https://webexcc-sa.github.io/partner-summit/assets/images/SupervisorDesktop.png)
 
 - Explore the available statistics cards and dashboards.
 
@@ -432,22 +427,22 @@ This is a supportive videos that do not require any actions since your tenant is
 
 - Find your agent user and in the **Actions** column, click on `Change Agent State` and choose the state where you want to move your agent. 
 
-![Team Performance](/assets/images/TeamPerformance.png)
+![Team Performance](https://webexcc-sa.github.io/partner-summit/assets/images/TeamPerformance.png)
 
 
 - If you switch to Chrome browser, where you're logged as an agent, you will see a **notification message** in the top.
 
-![Agent State Changed Desktop](/assets/images/AgentStateChanged.png)
+![Agent State Changed Desktop](https://webexcc-sa.github.io/partner-summit/assets/images/AgentStateChanged.png)
 
 
 - Now let's see the recordings. Navigate to *Recordings* and you will see the **list of all available recordings**. 
 
-![Recordings](/assets/images/Recordings.png)
+![Recordings](https://webexcc-sa.github.io/partner-summit/assets/images/Recordings.png)
 
 
 - Select any recording and  in the **Actions** column, click on `Play Recording`.
 
-![Play Recording](/assets/images/PlayRecording.png)
+![Play Recording](https://webexcc-sa.github.io/partner-summit/assets/images/PlayRecording.png)
 
 
 
