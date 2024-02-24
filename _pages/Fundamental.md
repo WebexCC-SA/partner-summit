@@ -96,12 +96,10 @@ This is a supportive videos that do not require any actions since your tenant is
 > Please don't create or modify the same configuration entities.
 {: .block-warning}
 
-- Navigate to each configuration entity and see how they are configured
+- Navigate to each configuration entity and see how they are configured.
 
 - Special attention on ***Desktop Profile***, **explore the options of different tabs**: *General, Idle/Wrap-up Codes, Collaboration, Dial Plans, Voice Channel options, Agent Statistics, Desktop Timout*.
-    > 
-    > Collaboration
-    >
+
 
 - We also recommend you to watch this [Vidcast](https://app.vidcast.io/share/cd96e528-a708-4139-b135-72bc95de4c73) about ***Business Hours*** configuration.
 
@@ -126,7 +124,8 @@ This is a supportive videos that do not require any actions since your tenant is
 - Left as a default value `Global Layout` in the Desktop layout drop-down and click on `Create button`.
 
 
-![New Team](/assets/images/NewTeam.png)
+![New Team](\assets\images\NewTeam.png)
+
 
 
 ## Step 3: Activate Contact Center Settings for Users
