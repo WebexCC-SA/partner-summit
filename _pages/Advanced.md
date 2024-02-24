@@ -528,10 +528,10 @@ Cisco TAC has created a document explaining WxCC API functionality and where you
 ![API97](https://webexcc-sa.github.io/partner-summit/assets/images/API/API97.jpg)
 
 **Step 8.** Navigate to the Downloads folder and click Open.
-![API98](https://webexcc-sa.github.io/partner-summit/assets/images/API/API98.jpg)
+![API981](https://webexcc-sa.github.io/partner-summit/assets/images/API/API981.jpg)
 
 **Step 9.** You will see a new collection created with all WxCC APIs.
-![API99](https://webexcc-sa.github.io/partner-summit/assets/images/API/API99.jpg)
+![API991](https://webexcc-sa.github.io/partner-summit/assets/images/API/API991.jpg)
 
 
 ### Task 2. Getting Started with OAuth2 & Postman
