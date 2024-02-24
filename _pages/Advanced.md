@@ -19,29 +19,16 @@ Let's dive in and unlock the potential of Contact Center API integration and JDS
 
 ## Table of Contents
 
-
-<<<<<<< HEAD
-| Topic                                                                            | Lab Type      | Difficulty Level | Estimated length |
-| -------------------------------------------------------------------------------- | ------------- | ---------------- | ---------------- |
-| [**Part 1: APIs on Webex Contact Center (WxCC)**](#APIs-on-Webex-Contact-Center) | Practical Lab | MED              | 45 min           |
-| Lab 1 – APIs Fundamental                                                         |               |                  |                  |
-| Lab 2 – Developer Portal                                                         |               |                  |                  |
-| Lab 3 – WxCC APIs - Postman                                                      |               |                  |                  |
-| Lab 4 – Import WxCC APIs to Postman                                              |               |                  |                  |
-| [**Part 2: JDS APIs & Use Case**](#jds-apis--use-cases)                          | Practical Lab | MID              | 45 min           |
-=======
-| Topic | Lab Type | Difficulty Level | Estimated length |
-| ---- | ---- | ---- | ---- |
-| [**Part 1: APIs on Webex Contact Center (WxCC)**](#part-1-apis-on-webex-contact-center) | Practical Lab | MED | 45 min |
-|  – APIs Fundamental |  |  |  |
-|  – Developer Portal |  |  |  |
-|  – WxCC APIs - Postman |  |  |  |
-|  – Import WxCC APIs to Postman |  |  |  |
-| [**Part 2: JDS APIs & Use Case**](#part-2-jds-apis--use-cases) | Practical Lab | MED | 45 min |
-|  – JDS Fundamental |  |  |  |
-|  – Use Case - Journey Based Queue Priority |  |  |  |
->>>>>>> origin/master
-
+| Topic                                                                                   | Lab Type      | Difficulty Level | Estimated length |
+| --------------------------------------------------------------------------------------- | ------------- | ---------------- | ---------------- |
+| [**Part 1: APIs on Webex Contact Center (WxCC)**](#part-1-apis-on-webex-contact-center) | Practical Lab | MED              | 45 min           |
+| – APIs Fundamental                                                                      |               |                  |                  |
+| – Developer Portal                                                                      |               |                  |                  |
+| – WxCC APIs - Postman                                                                   |               |                  |                  |
+| – Auth2 and Collections Importing                                                       |               |                  |                  |
+| [**Part 2: JDS APIs & Use Case**](#part-2-jds-apis--use-cases)                          | Practical Lab | MED              | 45 min           |
+| – JDS Fundamental                                                                       |               |                  |                  |
+| – Use Case - Journey Based Queue Priority                                               |               |                  |                  |
 
 # Part 1: APIs on Webex Contact Center (WxCC)
 
@@ -79,7 +66,6 @@ These are the methods supported for Webex Contact Center APIs:
 
 ![API01](https://webexcc-sa.github.io/partner-summit/assets/images/API/API01.jpg)
 
-
 #### API Anatomy
 
 Here is an example of an API GET request that helps define the API anatomy:
@@ -113,7 +99,7 @@ For authorization, there are different types that are supported for Webex APIs:
 
 In this example you will use deck of cards public API to simulate a game of cards.
 
-**Step 1.** Open a Web browser, execute this GET API and define the number of decks you want to use. The default is one. But change the parameter to 6 in order to play Blackjack.
+**Step 1.** Open a Web browser (Firefox or Edge recommended), execute this GET API and define the number of decks you want to use. The default is one. But change the parameter to 6 in order to play Blackjack.
 
 [https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=6](https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=6)
 
@@ -136,7 +122,7 @@ Replace the deck_id with the id, you got from the previous response. For example
 
 ![API1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API1.jpg)
 
-![API2](https://webexcc-sa.github.io/partner-summit/assets/images/API/API2.jpg)
+![API2-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API2-1.jpg)
 
 or replace it with “new”.
 https://deckofcardsapi.com/api/deck/new/draw/?count=2
@@ -149,7 +135,6 @@ https://deckofcardsapi.com/api/deck/new/draw/?count=2
 ## Lab 2 – Developer Portal
 
 Developers can build, enhance, and customize their Customer Experience solution with the rich set of APIs, which includes Contact Center, AI, Journey, Orchestration and Experience Management. The Developers portal help you to get started with the APIs. The Developers portal provides detailed API reference docs as well as the Try Out functionality which help to familiarize you with WxCC APIs and learn quickly.
-
 
 ## Objectives
 
@@ -178,6 +163,7 @@ You can see different sections on the left-hand sides, for example:
 
 **Step 3.** Navigate to the API reference and select Address Book
 ![API23](https://webexcc-sa.github.io/partner-summit/assets/images/API/API23.jpg)
+
 **Step 4.** In this case, you want to first list the address books already created. So, select the GET request under “List Address Books Entries (v2 API)”
 
 **Step 5.** You can see all the parameters required, like **orgid** and optional parameters, like **page** or **page size,** and so on.
@@ -279,50 +265,40 @@ Step 4. Confirm your account by accessing provided mailbox and clicking Confirm 
 ![API6](https://webexcc-sa.github.io/partner-summit/assets/images/API/API6.jpg)
 
 **Step 3.** Provide your username and the password.
-
 ![API7](https://webexcc-sa.github.io/partner-summit/assets/images/API/API7.jpg)
 
 **Step 4**. Create your workspace. On the Workspaces tab, type the name of your workspace. In this exercise your workspace name could be the same as your username.
-
 ![API8](https://webexcc-sa.github.io/partner-summit/assets/images/API/API8.jpg)
 
 **Step 5**. On the Workspace create window, add the name, check the Personal option and click Create Workspace.
-
 ![API9](https://webexcc-sa.github.io/partner-summit/assets/images/API/API9.jpg)
 
-
 **Step 6.** You see your workspace created and all options on the left side of the window. You will navigate to each of this option to understand Postman functionality.
-
 ![API10](https://webexcc-sa.github.io/partner-summit/assets/images/API/API10.jpg)
 
 **Step 7.** Select New and then HTTP Request to create a new API request.
-
 ![API11-12](https://webexcc-sa.github.io/partner-summit/assets/images/API/API11-12.jpg)
 
 
 **Step 8.** Notice in the screenshot below that the default method is GET; Click the drop-down arrow next to it to show all other REST API methods including the ones mentioned above for WxCC.
-
 ![API13](https://webexcc-sa.github.io/partner-summit/assets/images/API/API13.jpg)
 
 **Step 9.** Evaluate the previous deck of cards API via Postman. Copy the following URL and paste it into Postman and select the GET option to the left:
 
 [https://deckofcardsapi.com/api/deck/new/draw/?count=2](https://deckofcardsapi.com/api/deck/new/draw/?count=2)
-
 ![API14](https://webexcc-sa.github.io/partner-summit/assets/images/API/API14.jpg)
 
 Note, that after adding the URL, the parameter count was automatically added.
 
 **Step 10.** Click Send button. Review the results. You see 200 OK in the response, which indicates that this was a successful response, you see the body of the response and the format.
-
 ![API15](https://webexcc-sa.github.io/partner-summit/assets/images/API/API15.jpg)
 
 **Step 11**. Save this request in a Collection. Select Save As from the pull-down button.
-
 ![API16](https://webexcc-sa.github.io/partner-summit/assets/images/API/API16.jpg)
 
 **Step 12**. Click Create a Collection. Add the name DeckofCards and click Create. Then, click Save.
-
 ![API17](https://webexcc-sa.github.io/partner-summit/assets/images/API/API17.jpg)
+
 
 ### Task 3. Postman - WxCC Address Book Management
 
@@ -338,20 +314,17 @@ Note, that after adding the URL, the parameter count was automatically added.
 ![API36](https://webexcc-sa.github.io/partner-summit/assets/images/API/API36.jpg)
 
 **Step 4.** Navigate to the Workspace tab and select your workspace (created in **Lab3.Task 2:  Postman Fundamentals**).
-![API37](https://webexcc-sa.github.io/partner-summit/assets/images/API/API37.jpg)
+![API37-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API37-1.jpg)
 
 
 **Step 5.** Create a new request. On the left-hand side window select New and then select HTTP Request.
-
-![API38](https://webexcc-sa.github.io/partner-summit/assets/images/API/API38.jpg)
+![API38-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API38-1.jpg)
 
 
 **Step 6.** Open another browser window and log in to Developer Portal developer.webex-cx.com. Once logged in, click on Documentation link on top and select Address Book (under API REFERENCE)
-
 ![API39](https://webexcc-sa.github.io/partner-summit/assets/images/API/API39.jpg)
 
 **Step 7.** Since we want to create a new address book, we will use a POST request. Select this Post request on the Developers portal. Use v3 API for this. See screenshot.
-
 ![API40](https://webexcc-sa.github.io/partner-summit/assets/images/API/API40.jpg)
 
 **Step 8.** Here you can see the required parameters that you need to provide in Postman:
@@ -361,7 +334,6 @@ Note, that after adding the URL, the parameter count was automatically added.
 **URI**: /organization/{orgId}/address-book, where {orgId} is a variable that you can create in Postman and assign the value of your organization ID.
 
 **Step 9.** Select the Try out button to show information that Postman will need as parameter or env variable for the API request. Refer to the screenshot below. You will need this request body too.
-
 ![API41](https://webexcc-sa.github.io/partner-summit/assets/images/API/API41.jpg)
 
 
@@ -382,13 +354,11 @@ You should see
 If you have not logged in to the portal already, in another tab, login to the portal:
 
 And verify that you can see this new address book created like this example:
-
 ![API43](https://webexcc-sa.github.io/partner-summit/assets/images/API/API43.jpg)
 
 **Congratulations! You have run a simple API towards Webex CC and created an address book without logging into the portal.**
 
 **Step 10.** Switch back to your Postman browser tab. Before sending the API request to create an address book, we need to create 3 environment variables: **org_id, addressBookId** and **datacenter**. This is a required parameter to create an address book. On Postman, select **Environments** and then **Create Environment**.
-
 ![API44](https://webexcc-sa.github.io/partner-summit/assets/images/API/API44.jpg)
 
 **Step 11.** Rename the New environment to any name you like, for example: Ciscolabusser001E
@@ -491,9 +461,7 @@ You see 204 No Content, which indicates that the address book was deleted but th
 ## Lab 4 – OAuth2 and Collections Importing
 
 ### Objectives
-
 Access tokens tend to expire after 8-12 hours, while refresh tokens tend to expire in days. This lab demonstrates how to how to configure refresh token in your postman. Also Cisco provides you with preconfigured APIs that can be imported from the WxCC Developers Portal. 
-
 
 ### Task 1. Import Collection APIs from Cisco Documentation
 
@@ -502,7 +470,6 @@ You can import APIs collection from another Postman application or from any othe
 Cisco TAC has created a document explaining WxCC API functionality and where you can download a set of APIs collection and then import it in your postman section.
 
 **Step 1.** Open Chrome web browser and navigate to this document:
-
 [https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html) [configure-webex-contact-center-apis-with.html](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html)
 
 ![API90](https://webexcc-sa.github.io/partner-summit/assets/images/API/API90.jpg)
@@ -565,7 +532,7 @@ Callback URL:  << Leave as it is >>
 Set checkbox for **Authorize using browser**
 Auth URL:  **https://webexapis.com/v1/authorize** 
 Access Token URL:  **https://webexapis.com/v1/access_token**
-Client ID:  <<Your client ID created in Lab2:Task2:Step4>>
+Client ID:  **<<Your client ID created in Lab2:Task2:Step4>>**
 Client Secret:  **<<Your Client Secret created in Lab2:Task2:Step4>>**
 Scope: **cjp:user cjp:config cjp:config_read cjp:config_write**
 State:  **New**
@@ -702,7 +669,7 @@ Since the token was added in previous steps, you will see the token already exis
 **Step 5.** Save this API in the WxCC APIs collection. Select Save As, then add the name of the request (List Queues statistics) and click save.
 ![API81](https://webexcc-sa.github.io/partner-summit/assets/images/API/API81.jpg)
 
-### Task 3. Postman - WxCC Agent Activities
+### Task 3. Postman - WxCC Agent Activities (Optional)
 
 
 The Agent activities API allows you to retrieve agent activities. Sorted by start time ascending. The API is **/v1/agents/activities.**
@@ -754,7 +721,9 @@ Since the token was added in previous steps, you will see the token already ther
 
 ![API89](https://webexcc-sa.github.io/partner-summit/assets/images/API/API89.jpg)
 
-### Task 3. Postman - Working with Search API
+### Task 4. Postman - Working with Search API (Optional)
+
+...................To ADD..................
 
 
 **Congratulations!! You have finished this lab.**
