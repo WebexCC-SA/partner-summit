@@ -149,6 +149,7 @@ Sign in with the username and assigned to you and the password is your Gold Tena
 
 
 **Step 2.** Select Documentation from the top-right corner.
+
 ![API22](https://webexcc-sa.github.io/partner-summit/assets/images/API/API22.jpg)
 
 You can see different sections on the left-hand sides, for example:
@@ -162,6 +163,7 @@ You can see different sections on the left-hand sides, for example:
 **API Reference**: You will see in this section all the APIs categories that WxCC offers. 
 
 **Step 3.** Navigate to the API reference and select Address Book
+
 ![API23](https://webexcc-sa.github.io/partner-summit/assets/images/API/API23.jpg)
 
 **Step 4.** In this case, you want to first list the address books already created. So, select the GET request under “List Address Books Entries (v2 API)”
@@ -169,6 +171,7 @@ You can see different sections on the left-hand sides, for example:
 **Step 5.** You can see all the parameters required, like **orgid** and optional parameters, like **page** or **page size,** and so on.
 
 **Step 6.** On the right-hand side, you see how the API is executed. You can see the method; GET; the URL used with the variable (orgid) and the code language that is being used (you can use cURL, csharp, java, python, etc.)
+
 ![API24](https://webexcc-sa.github.io/partner-summit/assets/images/API/API24.jpg)
 
 **Step 7.** Select the **Try Out** section. As you notice, this requires an authorization token. The token used by default, is the one automatically assigned when you log in with the admin credentials to the Developers portal. It also pulls the orgid from the organization the user you logged in is part of. **Click Run**.
@@ -214,6 +217,7 @@ Save Client ID and Secret ID into a text file. We will use it later in Lab 4.
 ![API32](https://webexcc-sa.github.io/partner-summit/assets/images/API/API32.jpg)
 
 **Step 6.** On the authentication window, click Accept.
+
 ![API33](https://webexcc-sa.github.io/partner-summit/assets/images/API/API33.jpg)
 
 **Step 7.** You see that your application is now authenticated.
@@ -240,6 +244,7 @@ You should have your own Postman account in order to use the software or online 
 ### Task 1. Postman Account Creation (Optional in case you don't have your own account)
 
 **Step1.** Access https://www.postman.com/ and click on **Sign Up for Free**
+
 ![Postman1](https://webexcc-sa.github.io/partner-summit/assets/images/API/Postman1.jpg)
 
 **Step 2**. Provide your email, username and password then click Create Free account.
@@ -262,15 +267,19 @@ Step 4. Confirm your account by accessing provided mailbox and clicking Confirm 
 ![API5](https://webexcc-sa.github.io/partner-summit/assets/images/API/API5.jpg)
 
 **Step 2**. Navigate to postman.com and select sign in.
+
 ![API6](https://webexcc-sa.github.io/partner-summit/assets/images/API/API6.jpg)
 
 **Step 3.** Provide your username and the password.
+
 ![API7](https://webexcc-sa.github.io/partner-summit/assets/images/API/API7.jpg)
 
 **Step 4**. Create your workspace. On the Workspaces tab, type the name of your workspace. In this exercise your workspace name could be the same as your username.
+
 ![API8](https://webexcc-sa.github.io/partner-summit/assets/images/API/API8.jpg)
 
 **Step 5**. On the Workspace create window, add the name, check the Personal option and click Create Workspace.
+
 ![API9](https://webexcc-sa.github.io/partner-summit/assets/images/API/API9.jpg)
 
 **Step 6.** You see your workspace created and all options on the left side of the window. You will navigate to each of this option to understand Postman functionality.
@@ -322,9 +331,11 @@ Note, that after adding the URL, the parameter count was automatically added.
 
 
 **Step 6.** Open another browser window and log in to Developer Portal developer.webex-cx.com. Once logged in, click on Documentation link on top and select Address Book (under API REFERENCE)
+
 ![API39](https://webexcc-sa.github.io/partner-summit/assets/images/API/API39.jpg)
 
 **Step 7.** Since we want to create a new address book, we will use a POST request. Select this Post request on the Developers portal. Use v3 API for this. See screenshot.
+
 ![API40](https://webexcc-sa.github.io/partner-summit/assets/images/API/API40.jpg)
 
 **Step 8.** Here you can see the required parameters that you need to provide in Postman:
@@ -334,6 +345,7 @@ Note, that after adding the URL, the parameter count was automatically added.
 **URI**: /organization/{orgId}/address-book, where {orgId} is a variable that you can create in Postman and assign the value of your organization ID.
 
 **Step 9.** Select the Try out button to show information that Postman will need as parameter or env variable for the API request. Refer to the screenshot below. You will need this request body too.
+
 ![API41](https://webexcc-sa.github.io/partner-summit/assets/images/API/API41.jpg)
 
 
@@ -354,11 +366,13 @@ You should see
 If you have not logged in to the portal already, in another tab, login to the portal:
 
 And verify that you can see this new address book created like this example:
+
 ![API43](https://webexcc-sa.github.io/partner-summit/assets/images/API/API43.jpg)
 
 **Congratulations! You have run a simple API towards Webex CC and created an address book without logging into the portal.**
 
 **Step 10.** Switch back to your Postman browser tab. Before sending the API request to create an address book, we need to create 3 environment variables: **org_id, addressBookId** and **datacenter**. This is a required parameter to create an address book. On Postman, select **Environments** and then **Create Environment**.
+
 ![API44](https://webexcc-sa.github.io/partner-summit/assets/images/API/API44.jpg)
 
 **Step 11.** Rename the New environment to any name you like, for example: Ciscolabusser001E
@@ -421,9 +435,11 @@ Go to **Documentation** on the right hand top corner > Click on **Create An Addr
 
 
 On the Save window, add the Request name (Create Address book). Click New Collection. Add the name of the collection and click Create, the click Save after the collection has been created.
+
 ![API57](https://webexcc-sa.github.io/partner-summit/assets/images/API/API57.jpg)
 
 You see the new collection and API request added.
+
 ![API58](https://webexcc-sa.github.io/partner-summit/assets/images/API/API58.jpg)
 
 **Step 21.** Using an API request verify that this address book exist in WxCC. This is very simple. Create a new tab in Postman and use this against the GET method https://api.wxcc-{{datacenter}}.cisco.com/organization/{{orgId}}/v3/address-book to list all the address books. Remember to use the Environment and the Authorization as Bearer token as described before.
@@ -432,6 +448,7 @@ You see the new collection and API request added.
 
 
 **Step 22.** Save this API in the collection. Click Save then Save As. On the Request name add **List Address books.** Click Save to save it on the WxCCAPIs collection.
+
 ![API60](https://webexcc-sa.github.io/partner-summit/assets/images/API/API60.jpg)
 
 
@@ -475,29 +492,37 @@ Cisco TAC has created a document explaining WxCC API functionality and where you
 ![API90](https://webexcc-sa.github.io/partner-summit/assets/images/API/API90.jpg)
 
 **Step 2.** Scroll down to step 5 in the document and click on the Sample Postman APIs link.
+
 ![API91](https://webexcc-sa.github.io/partner-summit/assets/images/API/API91.jpg)
 
 **Step 3.** On the new GitHub window, select New WebexCC OAuth2 APIs…
+
 ![API92](https://webexcc-sa.github.io/partner-summit/assets/images/API/API92.jpg)
 
 **Step 4.** Select the icon to copy the API samples and past it to a notepad text (CTRL -V).
+
 ![API93](https://webexcc-sa.github.io/partner-summit/assets/images/API/API93.jpg)
 
 ![API94](https://webexcc-sa.github.io/partner-summit/assets/images/API/API94.jpg)
 
-**Step 5.** Save the file in the Downloads folder. By Default the name of the file is **New WebexCC OAuth2 APIs - v3.postman_collection.json**
+**Step 5.** Save the file in the Downloads folder. By Default the name of the file is **New WebexCC OAuth2 APIs - v3.postman_collection.json
+**
 ![API951](https://webexcc-sa.github.io/partner-summit/assets/images/API/API951.jpg)
 
 **Step 6.** On Postman, select Import.
+
 ![API961](https://webexcc-sa.github.io/partner-summit/assets/images/API/API961.jpg)
 
 **Step 7.** On the import window, select files from the Drop section.
+
 ![API97](https://webexcc-sa.github.io/partner-summit/assets/images/API/API97.jpg)
 
 **Step 8.** Navigate to the Downloads folder and click Open.
+
 ![API981](https://webexcc-sa.github.io/partner-summit/assets/images/API/API981.jpg)
 
 **Step 9.** You will see a new collection created with all WxCC APIs.
+
 ![API991](https://webexcc-sa.github.io/partner-summit/assets/images/API/API991.jpg)
 
 
@@ -568,6 +593,9 @@ Client Authentication:  **Send Basic Auth Header**
 ![Auth12](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth12.jpg)
 
 **Congratulations!! You have finished this lab.**
+
+
+
 # LAB 5 - Tasks, Queues, Activities and Search API (Optional)
 ### Task 1. Postman - WxCC Tasks Management vias APIs
 
@@ -600,9 +628,11 @@ and since from and to are required parameters, add a parameter "from" with the v
 ![API69](https://webexcc-sa.github.io/partner-summit/assets/images/API/API69.jpg)
 
 **Step 4.** Next step is to provide the authorization. On Postman click on the Authorization tab and select Bearer Token.
+
 ![API70](https://webexcc-sa.github.io/partner-summit/assets/images/API/API70.jpg)
 
 Now, copy the value from the Developers portal and paste it in the token field. Navigate to Developers portal Tasks APs section, select GET. Select the **Try Out** button and then copy the Authorization token.
+
 ![API71](https://webexcc-sa.github.io/partner-summit/assets/images/API/API71.jpg)
 
 Since the token was added in previous steps, you will see the token already there.
@@ -636,10 +666,12 @@ Specify the date and time that you want to convert for **from** and **to** queue
 
 Copy the Timestamp in milliseconds. Example: 1700744400000
 And save it in a notepad; It'll be used later as a value for the "from" parameter in a GET API request testing.
+
 ![API74](https://webexcc-sa.github.io/partner-summit/assets/images/API/API74.jpg)
 ## To epoch time
 Go back to epochconverter.com browser window and change the date/time so that it’s no more
 than 24 hrs than the previous time captured for the "from" parameter. Example 1700830799000
+
 ![API75](https://webexcc-sa.github.io/partner-summit/assets/images/API/API75.jpg)
 
 Copy the Timestamp in milliseconds. Example:1700830799000
@@ -652,9 +684,11 @@ And save it in a notepad; It'll be used later as a value for the "to" parameter 
 
 On the URI add: https://api.wxcc-{{datacenter}}.cisco.com/v1/queues/statistics?orgId={{orgId}}
 and since **from** and **to** are required parameters, add them with the epoch time you have copied before.
+
 ![API77](https://webexcc-sa.github.io/partner-summit/assets/images/API/API77.jpg)
 
 **Step 3.** Next step is to provide the authorization. On Postman click on the Authorization tab and select Bearer Token.
+
 ![API78](https://webexcc-sa.github.io/partner-summit/assets/images/API/API78.jpg)
 
 Now, copy the value from the Developers portal and paste it in the token field. Navigate to Developers portal Queue APIs section, select GET. Select the **Try Out** button and then copy the Authorization token.
@@ -668,6 +702,7 @@ Since the token was added in previous steps, you will see the token already exis
 ![API80](https://webexcc-sa.github.io/partner-summit/assets/images/API/API80.jpg)
 
 **Step 5.** Save this API in the WxCC APIs collection. Select Save As, then add the name of the request (List Queues statistics) and click save.
+
 ![API81](https://webexcc-sa.github.io/partner-summit/assets/images/API/API81.jpg)
 
 ### Task 3. Postman - WxCC Agent Activities (Optional)
@@ -703,6 +738,7 @@ Example screenshot (remember to include to field below from) – not in screensh
 ![API84](https://webexcc-sa.github.io/partner-summit/assets/images/API/API84.jpg)
 
 **Step 4.** Next step is to provide the authorization. On Postman click on the Authorization tab and select Bearer Token.
+
 ![API85](https://webexcc-sa.github.io/partner-summit/assets/images/API/API85.jpg)
 Now, copy the value from the Developers portal and paste it in the token field. Navigate to Developers portal agent activities APIs section, select GET. Select the **Try Out** button and then copy the Authorization token.
 
