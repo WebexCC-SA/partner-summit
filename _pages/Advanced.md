@@ -567,6 +567,7 @@ Client Authentication:  **Send Basic Auth Header**
 
 ![Auth12](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth12.jpg)
 
+**Congratulations!! You have finished this lab.**
 # LAB 5 - Tasks, Queues, Activities and Search API (Optional)
 ### Task 1. Postman - WxCC Tasks Management vias APIs
 
@@ -727,8 +728,6 @@ Since the token was added in previous steps, you will see the token already ther
 
 
 **Congratulations!! You have finished this lab.**
-
-
 
 ===============================================================
 # Part 2: JDS APIs & Use Cases 
