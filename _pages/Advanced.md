@@ -385,7 +385,7 @@ And verify that you can see this new address book created like this example:
 
 ![API43](https://webexcc-sa.github.io/partner-summit/assets/images/API/API43.jpg)
 
-Congratulations! You have run a simple API towards Webex CC and created an address book without logging into the portal.
+**Congratulations! You have run a simple API towards Webex CC and created an address book without logging into the portal.**
 
 **Step 10.** Switch back to your Postman browser tab. Before sending the API request to create an address book, we need to create 3 environment variables: **org_id, addressBookId** and **datacenter**. This is a required parameter to create an address book. On Postman, select **Environments** and then **Create Environment**.
 
@@ -465,7 +465,7 @@ You see the new collection and API request added.
 ![API60](https://webexcc-sa.github.io/partner-summit/assets/images/API/API60.jpg)
 
 
-**Step 23.** You can also list a specific address book. Use the same GET API and just add he address book id that you have previously copied in notepad and click Send.
+**Step 23.** You can also list a specific address book. Use the same GET API and just add the address book id that you have previously copied into notepad and click Send.
 
 for example: https://api.wxcc-{{datacenter}}.cisco.com/organization/{{orgid}}/address-book/8fd95b96-556d-49be-94b8-fabc1237054c
 
@@ -482,13 +482,64 @@ You see only the address book with that id.
 You see 204 No Content, which indicates that the address book was deleted but there is no content in the response body, which is expected.
 
 ![API64](https://webexcc-sa.github.io/partner-summit/assets/images/API/API64.jpg)
+
 **Step 25.** Execute the GET API for the specific address book, one more time. You see 404 Not Found since the address book no longer exist.
 
 ![API65](https://webexcc-sa.github.io/partner-summit/assets/images/API/API65.jpg)
 
 
+## Lab 4 – Tokens and Collections Importing
 
-### Task 3. Postman - WxCC Tasks Management vias APIs (Optional)
+### Objectives
+
+Access tokens tend to expire after 8-12 hours, while refresh tokens tend to expire in days. This lab demonstrates how to how to configure refresh token in your postman. Also Cisco provides you with preconfigured APIs that can be imported from the WxCC Developers Portal. 
+
+
+### Task 1. Import Collection APIs from Cisco Documentation
+
+You can import APIs collection from another Postman application or from any other exported file.
+
+Cisco TAC has created a document explaining WxCC API functionality and where you can download a set of APIs collection and then import it in your postman section.
+
+**Step 1.** Open Chrome web browser and navigate to this document:
+
+[https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html) [configure-webex-contact-center-apis-with.html](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html)
+
+![API90](https://webexcc-sa.github.io/partner-summit/assets/images/API/API90.jpg)
+
+**Step 2.** Scroll down to step 5 in the document and click on the Sample Postman APIs link.
+![API91](https://webexcc-sa.github.io/partner-summit/assets/images/API/API91.jpg)
+
+**Step 3.** On the new GitHub window, select New WebexCC OAuth2 APIs…
+![API92](https://webexcc-sa.github.io/partner-summit/assets/images/API/API92.jpg)
+
+**Step 4.** Select the icon to copy the API samples and past it to a notepad text (CTRL -V).
+![API93](https://webexcc-sa.github.io/partner-summit/assets/images/API/API93.jpg)
+
+![API94](https://webexcc-sa.github.io/partner-summit/assets/images/API/API94.jpg)
+
+**Step 5.** Save the file in the Downloads folder. By Default the name of the file is **New WebexCC OAuth2 APIs - v3.postman_collection.json**
+![API95](https://webexcc-sa.github.io/partner-summit/assets/images/API/API95.jpg)
+
+**Step 6.** On Postman, select Import.
+![API96](https://webexcc-sa.github.io/partner-summit/assets/images/API/API96.jpg)
+
+**Step 7.** On the import window, select files from the Drop section.
+![API97](https://webexcc-sa.github.io/partner-summit/assets/images/API/API97.jpg)
+
+**Step 8.** Navigate to the Downloads folder and click Open.
+![API98](https://webexcc-sa.github.io/partner-summit/assets/images/API/API98.jpg)
+
+**Step 9.** You will see a new collection created with all WxCC APIs.
+![API99](https://webexcc-sa.github.io/partner-summit/assets/images/API/API99.jpg)
+
+
+### Task 2. Getting Started with OAuth2 & Postman
+
+ Step 1. In Postman, in your Workspace, click on your new uploaded collection that you imported in previous Task. 
+ ![API99](https://webexcc-sa.github.io/partner-summit/assets/images/API/API99.jpg)
+# LAB 5 - Tasks, Queues, Activities and Search API (Optional)
+### Task 1. Postman - WxCC Tasks Management vias APIs
 
 The Task resource represents a request or demand for work from agents. Concretely, a **telephony** Task is an incoming call. For chat, a Task is a chat session. For email, a Task is an email chain. This API returns a list of Tasks (open or closed) within a date range. The data range is provided in epoch time format.
 
@@ -535,7 +586,7 @@ Since the token was added in previous steps, you will see the token already ther
 ![API73](https://webexcc-sa.github.io/partner-summit/assets/images/API/API73.jpg)
 
 
-### Task 4. Postman - WxCC Queue Statistics (Optional)
+### Task 2. Postman - WxCC Queue Statistics (Optional)
 
 The Queue resource is the waiting line which holds Tasks from the time they are created, to the time they are either assigned to an Agent or abandoned by the customer. A Queue is tied to a certain channel type e.g., email, chat, or telephony, and will be summarized by number and time statistics for how Tasks pass through. Queue statistics show only for 24 hours and use the epoch time format.
 
@@ -589,7 +640,7 @@ Since the token was added in previous steps, you will see the token already exis
 **Step 5.** Save this API in the WxCC APIs collection. Select Save As, then add the name of the request (List Queues statistics) and click save.
 ![API81](https://webexcc-sa.github.io/partner-summit/assets/images/API/API81.jpg)
 
-### Task 5. Postman - WxCC Agent Activities
+### Task 3. Postman - WxCC Agent Activities
 
 
 The Agent activities API allows you to retrieve agent activities. Sorted by start time ascending. The API is **/v1/agents/activities.**
@@ -641,51 +692,7 @@ Since the token was added in previous steps, you will see the token already ther
 
 ![API89](https://webexcc-sa.github.io/partner-summit/assets/images/API/API89.jpg)
 
-
-
-## Lab 4 – Import WxCC APIs to Postman
-
-### Objectives
-
-This lab demonstrates importing existing APIs from the WxCC Developers Portal or ones created by a third party or Cisco TAC.
-
-### Task 1. Import Collection APIs from Cisco Documentation
-
-You can import APIs collection from another Postman application or from any other exported file.
-
-Cisco TAC has created a document explaining WxCC API functionality and where you can download a set of APIs collection and then import it in your postman section.
-
-**Step 1.** Open Chrome web browser and navigate to this document:
-
-[https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html) [configure-webex-contact-center-apis-with.html](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html)
-
-![API90](https://webexcc-sa.github.io/partner-summit/assets/images/API/API90.jpg)
-
-**Step 2.** Scroll down to step 5 in the document and click on the Sample Postman APIs link.
-![API91](https://webexcc-sa.github.io/partner-summit/assets/images/API/API91.jpg)
-
-**Step 3.** On the new GitHub window, select New WebexCC OAuth2 APIs…
-![API92](https://webexcc-sa.github.io/partner-summit/assets/images/API/API92.jpg)
-
-**Step 4.** Select the icon to copy the API samples and past it to a notepad text (CTRL -V).
-![API93](https://webexcc-sa.github.io/partner-summit/assets/images/API/API93.jpg)
-
-![API94](https://webexcc-sa.github.io/partner-summit/assets/images/API/API94.jpg)
-
-**Step 5.** Save the file in the Downloads folder as Ciscolabuser001.json
-![API95](https://webexcc-sa.github.io/partner-summit/assets/images/API/API95.jpg)
-
-**Step 6.** On Postman, select Import.
-![API96](https://webexcc-sa.github.io/partner-summit/assets/images/API/API96.jpg)
-
-**Step 7.** On the import window, select files from the Drop section.
-![API97](https://webexcc-sa.github.io/partner-summit/assets/images/API/API97.jpg)
-
-**Step 8.** Navigate to the Downloads folder and click Open.
-![API98](https://webexcc-sa.github.io/partner-summit/assets/images/API/API98.jpg)
-
-**Step 9.** You will see a new collection created with all WxCC APIs.
-![API99](https://webexcc-sa.github.io/partner-summit/assets/images/API/API99.jpg)
+### Task 3. Postman - Working with Search API
 
 
 **Congratulations!! You have finished this lab.**
