@@ -759,33 +759,6 @@ Since the token was added in previous steps, you will see the token already ther
 ![API89](https://webexcc-sa.github.io/partner-summit/assets/images/API/API89.jpg)
 
 ### Task 4. Postman - Working with Search API (Optional)
-#### Objective
-
-In this lab we are going to retrieve custom Global Variable and it's value from reporting database by using Search API call.
-
-#### Prerequisites 
-We assume that you already have a working flow with configured queue on which you can dial in and accept the call as an agent.
-
-Step 1. Configure Global Variable in WxCC. Global Variable should be Boolean with Default set to False. Make it Reportable, Viewable and Editable by agent.
-
-Step 2. Use you existing working flow to add Global Variable. 
-
-Step 3. Make a call to an agent and while on the call turn the default toggle of Global Variable from  on Agent Desktop. Save the change
-
-Step 4. Finish the call and notice the time of the call. Example call happened at XX:XX and finished at XX:XX. We need this timings to convert From and To to epoch time format
-
-**Step 5.** Convert regular time to epoch time. Open a web browser and navigate to **https://www.epochconverter.com**.
-Specify the date that you want to convert and click **Human date to Timestamp.**
-
-
-**Step 6.** Copy the Timestamp in milliseconds for from and to
-from: 
-to: 
-
-And save it in a notepad; It'll be used later as a value for the "from" parameter in a Search API request testing.
-
-
-Step 5: Open Postman and click on 
 
 ...................To ADD..................
 
