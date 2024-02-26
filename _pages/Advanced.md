@@ -533,22 +533,22 @@ Cisco TAC has created a document explaining WxCC API functionality and where you
 
  **Step 1.** Locate the Postman icon at the bottom of the task bar and launch it.
  
-![Auth1](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth1.jpg)
+![OAuth1](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth1.jpg)
 
  **Step 2.**  Login with the your own Postman account or with account you created in Lab3:Task1. 
-![Auth2](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth2.jpg)
+![OAuth2](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth2.jpg)
 
 You will be redirected to your browser where you need to authenticate yourself
-![Auth3](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth3.jpg)
+![OAuth3](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth3.jpg)
 
 If login successful, Click on **Open Postman** if your browser asks you to do so.
-![Auth4](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth4.jpg)
+![OAuth4](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth4.jpg)
 
 **Note:** You will notice that everything you created in Web portal of Postman will be uploaded automatically once you login.
 
 
 **Step 3:** In your Workspace, click on Collections -> your new uploaded collection (that you imported in previous Task). Select Authorization and in Type drop down list select **OAuth2**
-![Auth5](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth5.jpg)
+![OAuth5](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth5.jpg)
  
 **Step 4**. Scroll down to **Configure New Token** section and complete configuration as follows, then click **Save**, **Clear cookies** and then **Get New Access Token**:
 
@@ -565,33 +565,33 @@ If login successful, Click on **Open Postman** if your browser asks you to do so
 - Client Authentication:  **Send Basic Auth Header**
 
 
-![Auth6](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth6.jpg)
+![OAuth6](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth6.jpg)
 
 
 **Note:** If you haven't saved Client ID and Client Secret go to https://developer.webex-cx.com/my-apps open your App, copy Client ID and **Regenerate Client Secret**. Do not disclose your production Client ID and Client Secret. 
 
-![Auth7](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth7.jpg)
+![OAuth7](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth7.jpg)
 
 
 **Step 5**. You need to authenticate yourself in the browser, after which you will see the following  
-![Auth8](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth8.jpg)
+![OAuth8](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth8.jpg)
 
 **Step 6**. In Postman click Proceed to finish the authentication
 
-![Auth9](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth9.jpg)
+![OAuth9](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth9.jpg)
 
 **Step 6**. Click on Use Token to apply this token for your collection.
 
-![Auth10](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth10.jpg)
+![OAuth10](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth10.jpg)
 
 **Step 6**. Verify if new token is being set correctly in **Current Token** section. Also set **Auto-refresh Token** toggle to **On** 
 
-![Auth11](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth11.jpg)
+![OAuth11](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth11.jpg)
 
 
 **Step 7**. To verify, go to your imported collection -> **Dial Number (Entry Point Mappings)**, Click on  **List Dial Numbers GET** request. Select **Authorization** tab and make sure the type set to **Inherit auth from parent**. Click **Send**. You should **Status: 200 OK** and list of configured dialed numbers with entry points and other data.
 
-![Auth12](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth12.jpg)
+![OAuth12](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth12.jpg)
 
 **Congratulations!! You have finished this lab.**
 
