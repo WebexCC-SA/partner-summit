@@ -528,7 +528,7 @@ Cisco TAC has created a document explaining WxCC API functionality and where you
 
 ### Task 2. Getting Started with OAuth2 & Postman
 
- ### **Note**: For this task you need to have pre-installed version of Postman. You can download it from postman web portal https://www.postman.com/downloads/
+ **Note**: For this task you need to have pre-installed version of Postman. You can download it from postman web portal https://www.postman.com/downloads/
 
 
  **Step 1.** Locate the Postman icon at the bottom of the task bar and launch it.
