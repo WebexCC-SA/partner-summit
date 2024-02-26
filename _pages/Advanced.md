@@ -164,7 +164,7 @@ You can see different sections on the left-hand sides, for example:
 
 **Step 3.** Navigate to the API reference and select Address Book
 
-![API23](https://webexcc-sa.github.io/partner-summit/assets/images/API/API23.jpg)
+![API23-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API23-1.jpg)
 
 **Step 4.** In this case, you want to first list the address books already created. So, select the GET request under “List Address Books Entries (v2 API)”
 
@@ -172,7 +172,7 @@ You can see different sections on the left-hand sides, for example:
 
 **Step 6.** On the right-hand side, you see how the API is executed. You can see the method; GET; the URL used with the variable (orgid) and the code language that is being used (you can use cURL, csharp, java, python, etc.)
 
-![API24](https://webexcc-sa.github.io/partner-summit/assets/images/API/API24.jpg)
+![API24-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API24-1.jpg)
 
 **Step 7.** Select the **Try Out** section. As you notice, this requires an authorization token. The token used by default, is the one automatically assigned when you log in with the admin credentials to the Developers portal. It also pulls the orgid from the organization the user you logged in is part of. **Click Run**.
 
@@ -336,7 +336,7 @@ Note, that after adding the URL, the parameter count was automatically added.
 
 **Step 7.** Since we want to create a new address book, we will use a POST request. Select this Post request on the Developers portal. Use v3 API for this. See screenshot.
 
-![API40](https://webexcc-sa.github.io/partner-summit/assets/images/API/API40.jpg)
+![API40-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API40-1.jpg)
 
 **Step 8.** Here you can see the required parameters that you need to provide in Postman:
 
@@ -350,12 +350,12 @@ Note, that after adding the URL, the parameter count was automatically added.
 
 
 Body:
-`**{`**
-  **`"name": "TechSummit_AddressBook",`**
-  **`"parentType": "ORGANIZATION",`**
-  **`"description": "TechSummit 2024",`**
-  **`"siteId": ""`**
-**`}**`
+	`**{`**
+	  **`"name": "TechSummit_AddressBook",`**
+	  **`"parentType": "ORGANIZATION",`**
+	  **`"description": "TechSummit 2024",`**
+	  **`"siteId": ""`**
+	**`}**`
 
 Click Run
 
@@ -415,10 +415,10 @@ Go to **Documentation** on the right hand top corner > Click on **Create An Addr
 
 **Step 17.** Copy the following request format and paste it into Postman body request.
 
-**{**
-  **"name": "John Doe1",**
-  **"number": "+61435144347"**
-**}**
+	**{**
+	  **"name": "John Doe1",**
+	  **"number": "+61435144347"**
+	**}**
 
 **Step 18.** Identify the media type sent in the API request. Select **Headers** and add **Content-Type** and the value **application/json**
 
@@ -528,69 +528,69 @@ Cisco TAC has created a document explaining WxCC API functionality and where you
 
 ### Task 2. Getting Started with OAuth2 & Postman
 
- ### **Note**: For this task you need to have pre-installed version of Postman. You can download it from postman web portal https://www.postman.com/downloads/
+ **Note**: For this task you need to have pre-installed version of Postman. You can download it from postman web portal https://www.postman.com/downloads/
 
 
  **Step 1.** Locate the Postman icon at the bottom of the task bar and launch it.
-![Auth1](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth1.jpg)
+ 
+![OAuth1](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth1.jpg)
 
  **Step 2.**  Login with the your own Postman account or with account you created in Lab3:Task1. 
-![Auth2](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth2.jpg)
+![OAuth2](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth2.jpg)
 
 You will be redirected to your browser where you need to authenticate yourself
-![Auth3](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth3.jpg)
+![OAuth3](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth3.jpg)
 
 If login successful, Click on **Open Postman** if your browser asks you to do so.
-![Auth4](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth4.jpg)
+![OAuth4](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth4.jpg)
 
 **Note:** You will notice that everything you created in Web portal of Postman will be uploaded automatically once you login.
 
 
 **Step 3:** In your Workspace, click on Collections -> your new uploaded collection (that you imported in previous Task). Select Authorization and in Type drop down list select **OAuth2**
-![Auth5](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth5.jpg)
+![OAuth5](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth5.jpg)
  
-**Step 4**. Scroll down to **Configure New Token** section and complete configuration as follows, then click  **Get New Access Token**:
+**Step 4**. Scroll down to **Configure New Token** section and complete configuration as follows, then click **Save**, **Clear cookies** and then **Get New Access Token**:
 
-Token Name:  << Your Name >>
-Grant type:  Authorization Code
-Callback URL:  << Leave as it is >>
-Set checkbox for **Authorize using browser**
-Auth URL:  **https://webexapis.com/v1/authorize** 
-Access Token URL:  **https://webexapis.com/v1/access_token**
-Client ID:  **<<Your client ID created in Lab2:Task2:Step4>>**
-Client Secret:  **<<Your Client Secret created in Lab2:Task2:Step4>>**
-Scope: **cjp:user cjp:config cjp:config_read cjp:config_write**
-State:  **New**
-Client Authentication:  **Send Basic Auth Header**
+- Token Name:  << Name >>
+- Grant type:  Authorization Code
+- Unset checkbox **Authorize using browser**
+- Callback URL:  https://oauth.pstmn.io/v1/callback
+- Auth URL:  **https://webexapis.com/v1/authorize** 
+- Access Token URL:  **https://webexapis.com/v1/access_token**
+- Client ID:  **<<Your client ID created in Lab2:Task2:Step4>>**
+- Client Secret:  **<<Your Client Secret created in Lab2:Task2:Step4>>**
+- Scope: **cjp:user cjp:config cjp:config_read cjp:config_write**
+- State:  **New**
+- Client Authentication:  **Send Basic Auth Header**
 
 
-![Auth6](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth6.jpg)
+![OAuth6](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth6.jpg)
 
 
 **Note:** If you haven't saved Client ID and Client Secret go to https://developer.webex-cx.com/my-apps open your App, copy Client ID and **Regenerate Client Secret**. Do not disclose your production Client ID and Client Secret. 
 
-![Auth7](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth7.jpg)
+![OAuth7](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth7.jpg)
 
 
-**Step 5**. You need to authenticate yourself in the browser, after which you will see the following  
-![Auth8](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth8.jpg)
+**Step 5**. You need to authenticate yourself in appeared window with your WxCC admin account.  
 
-**Step 6**. In Postman click Proceed to finish the authentication
+**Step 6**. After successful authentication, click **Proceed** in Postman to finish the authentication.
 
-![Auth9](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth9.jpg)
+![OAuth9](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth9.jpg)
 
 **Step 6**. Click on Use Token to apply this token for your collection.
 
-![Auth10](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth10.jpg)
+![OAuth10](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth10.jpg)
 
 **Step 6**. Verify if new token is being set correctly in **Current Token** section. Also set **Auto-refresh Token** toggle to **On** 
 
-![Auth11](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth11.jpg)
+![OAuth11](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth11.jpg)
 
 
 **Step 7**. To verify, go to your imported collection -> **Dial Number (Entry Point Mappings)**, Click on  **List Dial Numbers GET** request. Select **Authorization** tab and make sure the type set to **Inherit auth from parent**. Click **Send**. You should **Status: 200 OK** and list of configured dialed numbers with entry points and other data.
 
-![Auth12](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth12.jpg)
+![OAuth12](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth12.jpg)
 
 **Congratulations!! You have finished this lab.**
 
@@ -760,7 +760,7 @@ Since the token was added in previous steps, you will see the token already ther
 
 ### Task 4. Postman - Working with Search API (Optional)
 
-...................To ADD..................
+...................To ADD if I have time during the week...................
 
 
 **Congratulations!! You have finished this lab.**
@@ -768,7 +768,7 @@ Since the token was added in previous steps, you will see the token already ther
 ===============================================================
 # Part 2: JDS APIs & Use Cases 
 ### Lab Objective
-This lab is designed to teach you the concepts and functionalities of Customer Journey Data Services (JDS), both in regard to the JDS Widget that can be added in Agent Desktop as well as the API capabilities of the solution, since JDS remains an API-first solution today. You will learn how to use the JDS widget, how to add new customers (identities) to your JDS database as well as how to use the JDS APIs to extract information and act upon it. 
+This lab is designed to teach you the concepts and functionalities of Customer Journey Data Services (JDS), both in regard to the JDS Widget that can be added in Agent Deskpulltop as well as the API capabilities of the solution, since JDS remains an API-first solution today. You will learn how to use the JDS widget, how to add new customers (identities) to your JDS database as well as how to use the JDS APIs to extract information and act upon it. 
 
 
 ### Pre-requisites
