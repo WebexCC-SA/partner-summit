@@ -350,12 +350,12 @@ Note, that after adding the URL, the parameter count was automatically added.
 
 
 Body:
-`**{`**
-  **`"name": "TechSummit_AddressBook",`**
-  **`"parentType": "ORGANIZATION",`**
-  **`"description": "TechSummit 2024",`**
-  **`"siteId": ""`**
-**`}**`
+	`**{`**
+	  **`"name": "TechSummit_AddressBook",`**
+	  **`"parentType": "ORGANIZATION",`**
+	  **`"description": "TechSummit 2024",`**
+	  **`"siteId": ""`**
+	**`}**`
 
 Click Run
 
@@ -769,7 +769,7 @@ Since the token was added in previous steps, you will see the token already ther
 ===============================================================
 # Part 2: JDS APIs & Use Cases 
 ### Lab Objective
-This lab is designed to teach you the concepts and functionalities of Customer Journey Data Services (JDS), both in regard to the JDS Widget that can be added in Agent Desktop as well as the API capabilities of the solution, since JDS remains an API-first solution today. You will learn how to use the JDS widget, how to add new customers (identities) to your JDS database as well as how to use the JDS APIs to extract information and act upon it. 
+This lab is designed to teach you the concepts and functionalities of Customer Journey Data Services (JDS), both in regard to the JDS Widget that can be added in Agent Deskpulltop as well as the API capabilities of the solution, since JDS remains an API-first solution today. You will learn how to use the JDS widget, how to add new customers (identities) to your JDS database as well as how to use the JDS APIs to extract information and act upon it. 
 
 
 ### Pre-requisites
