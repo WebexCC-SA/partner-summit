@@ -444,14 +444,6 @@ This is a supportive videos that do not require any actions since your tenant is
 
 
 
-# BONUS - Part 5: Data analyst user experience
-## Analyzer stock reports 
-
-
-## Custom reports
-
-
-
 <p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>
 		
 <p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>	
