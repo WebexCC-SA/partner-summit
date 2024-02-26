@@ -164,7 +164,7 @@ You can see different sections on the left-hand sides, for example:
 
 **Step 3.** Navigate to the API reference and select Address Book
 
-![API23](https://webexcc-sa.github.io/partner-summit/assets/images/API/API23.jpg)
+![API23-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API23-1.jpg)
 
 **Step 4.** In this case, you want to first list the address books already created. So, select the GET request under “List Address Books Entries (v2 API)”
 
@@ -172,7 +172,7 @@ You can see different sections on the left-hand sides, for example:
 
 **Step 6.** On the right-hand side, you see how the API is executed. You can see the method; GET; the URL used with the variable (orgid) and the code language that is being used (you can use cURL, csharp, java, python, etc.)
 
-![API24](https://webexcc-sa.github.io/partner-summit/assets/images/API/API24.jpg)
+![API24-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API24-1.jpg)
 
 **Step 7.** Select the **Try Out** section. As you notice, this requires an authorization token. The token used by default, is the one automatically assigned when you log in with the admin credentials to the Developers portal. It also pulls the orgid from the organization the user you logged in is part of. **Click Run**.
 
