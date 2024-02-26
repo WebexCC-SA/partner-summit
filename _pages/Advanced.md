@@ -573,10 +573,9 @@ If login successful, Click on **Open Postman** if your browser asks you to do so
 ![OAuth7](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth7.jpg)
 
 
-**Step 5**. You need to authenticate yourself in the browser, after which you will see the following  
-![OAuth8](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth8.jpg)
+**Step 5**. You need to authenticate yourself in appeared window with your WxCC admin account.  
 
-**Step 6**. In Postman click Proceed to finish the authentication
+**Step 6**. After successful authentication, click **Proceed** in Postman to finish the authentication.
 
 ![OAuth9](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth9.jpg)
 
