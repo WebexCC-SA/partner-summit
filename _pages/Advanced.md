@@ -415,10 +415,10 @@ Go to **Documentation** on the right hand top corner > Click on **Create An Addr
 
 **Step 17.** Copy the following request format and paste it into Postman body request.
 
-**{**
-  **"name": "John Doe1",**
-  **"number": "+61435144347"**
-**}**
+	**{**
+	  **"name": "John Doe1",**
+	  **"number": "+61435144347"**
+	**}**
 
 **Step 18.** Identify the media type sent in the API request. Select **Headers** and add **Content-Type** and the value **application/json**
 
