@@ -62,8 +62,6 @@ This is a supportive videos that do not require any actions since your tenant is
 
 - Click on `+` sign and add the supervisor in the same way.
 
-- For consistency, verify that the Email addresses are same as in the table above and click Next.
-
 - Assign license for users **select Webex Calling (Professional) & Contact Center (Premium Agent)**.
 
 - On the next page, make sure that the Location is selected under Assign Numbers. The correct value should be already selected by default.
@@ -392,7 +390,7 @@ This is a supportive videos that do not require any actions since your tenant is
 
 ![Enable Supervisor](https://webexcc-sa.github.io/partner-summit/assets/images/EnableSupervisor.png)
 
-- On *Supervisor Settings*, you need to specify the ***Primary team***. This setting is just used to apply the *Desktop Layout* assigned to that team. **If a team is not selected, the global supervisor layout will be applied**.
+- On *Supervisor Settings*, you need to specify the ***Primary team***. This setting is just used to apply the *Desktop Layout* assigned to that team. **For this lab, leave that value empty**. If a team is not selected, the **global supervisor layout will be applied**.
 
 - In case you want to have double role and behave as Supervisor & Agent, you can define the agent related parameters on *Agent Settings*. In this case, you can leave most of the settings empty and you just need to set the followings:
 > **Site**: `TS_SupervisorProfile`
