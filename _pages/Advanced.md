@@ -336,7 +336,7 @@ Note, that after adding the URL, the parameter count was automatically added.
 
 **Step 7.** Since we want to create a new address book, we will use a POST request. Select this Post request on the Developers portal. Use v3 API for this. See screenshot.
 
-![API40](https://webexcc-sa.github.io/partner-summit/assets/images/API/API40.jpg)
+![API40-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API40-1.jpg)
 
 **Step 8.** Here you can see the required parameters that you need to provide in Postman:
 
@@ -532,6 +532,7 @@ Cisco TAC has created a document explaining WxCC API functionality and where you
 
 
  **Step 1.** Locate the Postman icon at the bottom of the task bar and launch it.
+ 
 ![Auth1](https://webexcc-sa.github.io/partner-summit/assets/images/API/Auth1.jpg)
 
  **Step 2.**  Login with the your own Postman account or with account you created in Lab3:Task1. 
@@ -760,7 +761,7 @@ Since the token was added in previous steps, you will see the token already ther
 
 ### Task 4. Postman - Working with Search API (Optional)
 
-...................To ADD..................
+...................To ADD if I have time during the week...................
 
 
 **Congratulations!! You have finished this lab.**
