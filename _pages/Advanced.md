@@ -483,7 +483,7 @@ You can import APIs collection from another Postman application or from any othe
 Cisco TAC has created a document explaining WxCC API functionality and where you can download a set of APIs collection and then import it in your postman section.
 
 **Step 1.** Open Chrome web browser and navigate to this document:
-[https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html) [configure-webex-contact-center-apis-with.html](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html)
+[https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html)
 
 ![API90](https://webexcc-sa.github.io/partner-summit/assets/images/API/API90.jpg)
 
