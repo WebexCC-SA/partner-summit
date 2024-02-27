@@ -166,11 +166,11 @@ You can see different sections on the left-hand sides, for example:
 
 ![API23-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API23-1.jpg)
 
-**Step 4.** In this case, you want to first list the address books already created. So, select the GET request under “List Address Books Entries (v2 API)”
+**Step 4.** In this case, you want to first list the address books already created. So, select the **GET** request under **“List Address Books”**
 
 **Step 5.** You can see all the parameters required, like **orgid** and optional parameters, like **page** or **page size,** and so on.
 
-**Step 6.** On the right-hand side, you see how the API is executed. You can see the method; GET; the URL used with the variable (orgid) and the code language that is being used (you can use cURL, csharp, java, python, etc.)
+**Step 6.** On the right-hand side, you see how the API is executed. You can see the method; **GET**; the URL used with the variable (orgid) and the code language that is being used (you can use cURL, csharp, java, python, etc.)
 
 ![API24-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API24-1.jpg)
 
@@ -178,13 +178,11 @@ You can see different sections on the left-hand sides, for example:
 
 You see the 200 Response, which indicates the request was successful. You also see the address books created in this org. You can scroll down in the response window to see the list of all address books.
 
-![API25](https://webexcc-sa.github.io/partner-summit/assets/images/API/API25.jpg)
+![API25-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API25-1.jpg)
 
-**Step 8.** Log in with the same user to WxCC Portal: [https://portal-v2.wxcc-anz1.cisco.com/portal/home](https://portal-v2.wxcc-anz1.cisco.com/portal/home) and navigate to Provisioning > Address Book
+**Step 8.** Log in with the same user to Control Hub https://admin.webex.com/, navigate to Contact Center > Address Book
 
-![API26](https://webexcc-sa.github.io/partner-summit/assets/images/API/API26.jpg)
-
-![API27](https://webexcc-sa.github.io/partner-summit/assets/images/API/API27.jpg)
+![API26-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API26-1.jpg)
 
 
 ### Task 2. Develop a Webex Application
@@ -224,8 +222,7 @@ Save Client ID and Secret ID into a text file. We will use it later in Lab 4.
 
 ![API34](https://webexcc-sa.github.io/partner-summit/assets/images/API/API34.jpg)
 
-More Information about creating a Webex application and using Postman in this document: [https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html)
-[configure-webex-contact-center-apis-with.html](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html)
+More Information about creating a Webex application and using Postman in this document: [https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html)
 
 
 ## Lab 3 – WxCC APIs - Postman
@@ -348,18 +345,21 @@ Note, that after adding the URL, the parameter count was automatically added.
 
 ![API41](https://webexcc-sa.github.io/partner-summit/assets/images/API/API41.jpg)
 
-
+**Example:**
 Body:
-	`**{`**
-	  **`"name": "TechSummit_AddressBook",`**
-	  **`"parentType": "ORGANIZATION",`**
-	  **`"description": "TechSummit 2024",`**
-	  **`"siteId": ""`**
-	**`}**`
+
+	{
+	  "name": "TechSummit_AddressBook_<YOUR ID from USERNAME>",
+	  "parentType": "ORGANIZATION",
+	  "description": "TechSummit 2024",
+	  "siteId": ""
+	}
 
 Click Run
 
-You should see
+**Note:** If you use shared lab tenant given by Cisco, use your given username as appendix for the address book name. Otherwise there are might be name conflicts in creation. Example: If username is wxcclabs+agent_ID100@gmail.com the address name should be  "name": "TechSummit_AddressBook_**ID100**".
+
+You should see:
 
 ![API42](https://webexcc-sa.github.io/partner-summit/assets/images/API/API42.jpg)
 
@@ -415,10 +415,10 @@ Go to **Documentation** on the right hand top corner > Click on **Create An Addr
 
 **Step 17.** Copy the following request format and paste it into Postman body request.
 
-	**{**
-	  **"name": "John Doe1",**
-	  **"number": "+61435144347"**
-	**}**
+	{
+	  "name": "John Doe1",
+	  "number": "+314351443"
+	}
 
 **Step 18.** Identify the media type sent in the API request. Select **Headers** and add **Content-Type** and the value **application/json**
 
