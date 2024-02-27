@@ -180,7 +180,7 @@ You see the 200 Response, which indicates the request was successful. You also s
 
 ![API25-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API25-1.jpg)
 
-**Step 8.** Log in with the same user to Control Hub https://admin.webex.com/, navigate to Contact Center > Address Book
+**Step 8.** Log in with the same user to Control Hub [https://admin.webex.com](https://admin.webex.com), navigate to Contact Center > Address Book
 
 ![API26-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API26-1.jpg)
 
@@ -357,7 +357,7 @@ Body:
 
 Click Run
 
-**Note:** If you use shared lab tenant given by Cisco, use your given username as appendix for the address book name. Otherwise there are might be name conflicts in creation. Example: If username is wxcclabs+agent_ID100@gmail.com the address name should be  "name": "TechSummit_AddressBook_**ID100**".
+**Note:** If you use shared lab tenant given by Cisco, use your given username as appendix for the address book name. Otherwise there are might be name conflicts in creation. Example: If username is **wxcclabs+agent_ID100@gmail.com** the address name should be  "name": "TechSummit_AddressBook_**ID100**".
 
 You should see:
 
