@@ -417,16 +417,14 @@ Go to **Documentation** on the right hand top corner > Click on **Create An Addr
 
 	{
 	  "name": "John Doe1",
-	  "number": "+314351443"
+	  "number": "+31435144347"
 	}
 
 **Step 18.** Identify the media type sent in the API request. Select **Headers** and add **Content-Type** and the value **application/json**
 
-![API53](https://webexcc-sa.github.io/partner-summit/assets/images/API/API53.jpg)
-
 **Step 19.** Click Send. You see the response 201 created and the id for the new address book. Copy this address book id and paste it in notepad because we will use it later.
 
-![API55](https://webexcc-sa.github.io/partner-summit/assets/images/API/API55.jpg)
+![API55-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API55-1.jpg)
 
 
 **Step 20.** Save this API request in a new collection. Select Save, then Save As.
@@ -434,33 +432,31 @@ Go to **Documentation** on the right hand top corner > Click on **Create An Addr
 ![API56](https://webexcc-sa.github.io/partner-summit/assets/images/API/API56.jpg)
 
 
-On the Save window, add the Request name (Create Address book). Click New Collection. Add the name of the collection and click Create, the click Save after the collection has been created.
+On the Save window, add the Request name (Create Address book). Select existing collection if any or Click on New Collection to create a new one. If new Collelction add the name of the collection and click Create, then click Save after the collection has been created.
 
-![API57](https://webexcc-sa.github.io/partner-summit/assets/images/API/API57.jpg)
+![API57-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API57-1.jpg)
 
 You see the new collection and API request added.
 
-![API58](https://webexcc-sa.github.io/partner-summit/assets/images/API/API58.jpg)
+![API58-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API58-1.jpg)
 
 **Step 21.** Using an API request verify that this address book exist in WxCC. This is very simple. Create a new tab in Postman and use this against the GET method https://api.wxcc-{{datacenter}}.cisco.com/organization/{{orgId}}/v3/address-book to list all the address books. Remember to use the Environment and the Authorization as Bearer token as described before.
 
-![API59](https://webexcc-sa.github.io/partner-summit/assets/images/API/API59.jpg)
+![API59-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API59-1.jpg)
 
 
 **Step 22.** Save this API in the collection. Click Save then Save As. On the Request name add **List Address books.** Click Save to save it on the WxCCAPIs collection.
 
-![API60](https://webexcc-sa.github.io/partner-summit/assets/images/API/API60.jpg)
+![API60-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API60-1.jpg)
 
 
 **Step 23.** You can also list a specific address book. Use the same GET API and just add the address book id that you have previously copied into notepad and click Send.
 
 for example: https://api.wxcc-{{datacenter}}.cisco.com/organization/{{orgid}}/address-book/8fd95b96-556d-49be-94b8-fabc1237054c
 
-![API61](https://webexcc-sa.github.io/partner-summit/assets/images/API/API61.jpg)
-
 You see only the address book with that id.
 
-![API62](https://webexcc-sa.github.io/partner-summit/assets/images/API/API62.jpg)
+![API62-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API62-1.jpg)
 
 **Step 24.** Delete the address book just created. Using the same GET API, we use in the previous step, change the method to DELETE and click Send.
 
