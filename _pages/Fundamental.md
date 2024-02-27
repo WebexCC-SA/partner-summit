@@ -1,7 +1,7 @@
 ---
 title: Lab 1 - Fundamental
 author: Gorka
-date: 2024-02-24
+date: 2021-01-01
 layout: post
 ---
 ```
