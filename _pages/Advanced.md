@@ -395,7 +395,7 @@ Developers Portal:
 
 **Step 14.** Under the collection you just created, click on Add Request. On the Untitled Request window (or the New Request), click on the 3 dots and rename it to “Address Book Entry”, change the method to POST (not GET) and on for the URI enter the  one provided in the Developers portal /organization/{orgId}/address-book/{addressBookId}/entry) plus the server address. Change orgId for the variable you created orgId and add {}:
 
-**https://api.wxcc-\{\{datacenter\}\}.cisco.com/organization/\{\{orgId\}\}/address-book/{{addressBookId}}/entry**
+**https://api.wxcc-\{\{datacenter\}\}.cisco.com/organization/\{\{orgId\}\}/address-book/\{\{addressBookId\}\}/entry**
 
 **Step 15.** Next step is to provide the authorization. In Postman click on the **Authorization** tab and select **Bearer Token**.
 
@@ -1275,7 +1275,7 @@ In order to achieve that use case, we will need to use 2 JDS APIs:
 - **Total_Requests** with the type Integer
 
 4b. Add the **HTTPRequest_1** activity with the following Settings:
-- Request URL: https://api-jds.prod-useast1.ciscowxdap.com/v1/api/person/workspace-id/65171e0682b7f52b9209b39d/aliases/{{NewPhoneContact.ANI}}
+- Request URL: https://api-jds.prod-useast1.ciscowxdap.com/v1/api/person/workspace-id/65171e0682b7f52b9209b39d/aliases/\{\{NewPhoneContact.ANI}}
 - Method: GET
 - HTTP Request Headers Key: Authorization
 - HTTP Request Headers Values: Bearer + Your access token from Postman
@@ -1285,7 +1285,7 @@ In order to achieve that use case, we will need to use 2 JDS APIs:
 - Parse Settings Path Expression: $.data[0].id
 
 4c. Add the **HTTPRequest_2** activity with the following Settings:
-- Request URL: https://api-jds.prod-useast1.ciscowxdap.com/v1/api/progressive-profile-view/workspace-id/65171e0682b7f52b9209b39d/person-id/{{Identity}}/template-name/journey-default-template1
+- Request URL: https://api-jds.prod-useast1.ciscowxdap.com/v1/api/progressive-profile-view/workspace-id/65171e0682b7f52b9209b39d/person-id/\{\{Identity\}\}/template-name/journey-default-template1
 - Method: GET
 - HTTP Request Headers Key: Authorization
 - HTTP Request Headers Values: Bearer + Your access token from Postman
