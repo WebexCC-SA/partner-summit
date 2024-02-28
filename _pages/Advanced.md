@@ -30,7 +30,7 @@ Let's dive in and unlock the potential of Contact Center API integration and JDS
 | – JDS Fundamental                                                                       |               |                  |                  |
 | – Use Case - Journey Based Queue Priority                                               |               |                  |                  |
 
-## Part 1: APIs on Webex Contact Center (WxCC)
+# Part 1: APIs on Webex Contact Center (WxCC)
 
 This is an **intermediate** level lab intended for engineers with prior **Webex Contact Center (WxCC)** experience.
 
