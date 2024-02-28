@@ -56,7 +56,7 @@ An API is a set of tools, definitions, and rules or protocols for building a sof
 
 APIs allow one component of software to easily communicate with another component of software. Cisco product designers determine the APIs that each Cisco product supports.
 
-Many of the Webex Customer Experience APIs are RESTful. Each resource is represented by a base URL and supports various methods for API usage. Refer to API Reference (https://developer.webex-cx.com/documentation/introduction-to-apis) for details.
+Many of the Webex Customer Experience APIs are RESTful. Each resource is represented by a base URL and supports various methods for API usage. Refer to API Reference [https://developer.webex-cx.com/documentation/introduction-to-apis](https://developer.webex-cx.com/documentation/introduction-to-apis) for details.
 
 #### Methods
 
@@ -101,14 +101,14 @@ In this example you will use deck of cards public API to simulate a game of card
 
 **Step 1.** Open a Web browser (Firefox or Edge recommended), execute this GET API and define the number of decks you want to use. The default is one. But change the parameter to 6 in order to play Blackjack.
 
-[https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=6](https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=6)
+**https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=6**
 
 You see the response in Json format:
 
 ![API03](https://webexcc-sa.github.io/partner-summit/assets/images/API/API03.jpg)
 
 **Step 2.** Change the parameter now to 1 and check the response.
-[https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1](https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1)
+**https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1**
 
 You see the remaining cards in one deck.
 
@@ -116,16 +116,15 @@ You see the remaining cards in one deck.
 
 **Step 3**. The count variable defines how many cards to draw from the deck. Be sure to replace _deck_id_ with the id obtain from the previous example. You can also replace it with “new” to create a new shuffle deck and draw cards from this new deck.
 
-https://deckofcardsapi.com/api/deck/<<deck_id>>/draw/?count=2
+**https://deckofcardsapi.com/api/deck/<<deck_id>>/draw/?count=2**
 
-Replace the deck_id with the id, you got from the previous response. For example: [https://deckofcardsapi.com/api/deck/58f7v8te5530/draw/?count=2](https://deckofcardsapi.com/api/deck/58f7v8te5530/draw/?count=2)
-
+Replace the deck_id with the id, you got from the previous response. For example: **https://deckofcardsapi.com/api/deck/58f7v8te5530/draw/?count=2**
 ![API1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API1.jpg)
 
 ![API2-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API2-1.jpg)
 
-or replace it with “new”.
-https://deckofcardsapi.com/api/deck/new/draw/?count=2
+or replace it with “new”
+**https://deckofcardsapi.com/api/deck/new/draw/?count=2**
 
 ![API3](https://webexcc-sa.github.io/partner-summit/assets/images/API/API3.jpg)
 ![API4](https://webexcc-sa.github.io/partner-summit/assets/images/API/API4.jpg)
@@ -142,7 +141,7 @@ The objective of the lab is to understand the benefits of the Cisco Developers P
 
 ### Task 1: Introduction to developer portal
 
-**Step 1.** Open a web browser and navigate to the developer portal: **developer.webex-cx.com.**
+**Step 1.** Open a web browser and navigate to the developer portal: [https://developer.webex-cx.com](https://developer.webex-cx.com)
 Sign in with the username and assigned to you and the password is your Gold Tenant admin credentials.
 
 ![API21](https://webexcc-sa.github.io/partner-summit/assets/images/API/API21.jpg)
@@ -195,7 +194,7 @@ This task shows you the configuration steps to create a Webex application. This 
 
 **Step 2.** Provide the name of your choice, description of your choice, the redirect URI and check the scopes (Config, write and read).
 
-For the URI, we are using Postman as a sample application so, use this URI: [https://oauth.pstmn.io/v1/callback](https://oauth.pstmn.io/v1/callback) and select the top 3 scopes as shown in the screenshot below.
+For the URI, we are using Postman as a sample application so, use this URI: **https://oauth.pstmn.io/v1/callback** and select the top 3 scopes as shown in the screenshot below.
 
 ![API29](https://webexcc-sa.github.io/partner-summit/assets/images/API/API29.jpg)
 
@@ -229,7 +228,7 @@ More Information about creating a Webex application and using Postman in this do
 
 Postman is an API platform for building and using APIs. It includes a comprehensive set of tools that help accelerate the API lifecycle—from design, testing, documentation, and mocking to the sharing and discoverability of your APIs.
 
-Postman can run on the Chrome browser. To use Postman, you will first need to install Google Chrome. As alternative you can also install free Postman application available on https://www.postman.com/downloads/. 
+Postman can run on the Chrome browser. To use Postman, you will first need to install Google Chrome. As alternative you can also install free Postman application available on [https://www.postman.com/downloads/](https://www.postman.com/downloads/)
 
 In this lab we will use Web based version of the Postman API client tool to define API requests and test them.
 
@@ -240,7 +239,7 @@ You should have your own Postman account in order to use the software or online 
 
 ### Task 1. Postman Account Creation (Optional in case you don't have your own account)
 
-**Step1.** Access https://www.postman.com/ and click on **Sign Up for Free**
+**Step1.** Access [https://www.postman.com/](https://www.postman.com/) and click on **Sign Up for Free**
 
 ![Postman1](https://webexcc-sa.github.io/partner-summit/assets/images/API/Postman1.jpg)
 
@@ -327,7 +326,7 @@ Note, that after adding the URL, the parameter count was automatically added.
 ![API38-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API38-1.jpg)
 
 
-**Step 6.** Open another browser window and log in to Developer Portal developer.webex-cx.com. Once logged in, click on Documentation link on top and select Address Book (under API REFERENCE)
+**Step 6.** Open another browser window and log in to Developer Portal [https://developer.webex-cx.com](https://developer.webex-cx.com). Once logged in, click on Documentation link on top and select Address Book (under API REFERENCE)
 
 ![API39](https://webexcc-sa.github.io/partner-summit/assets/images/API/API39.jpg)
 
@@ -396,7 +395,7 @@ Developers Portal:
 
 **Step 14.** Under the collection you just created, click on Add Request. On the Untitled Request window (or the New Request), click on the 3 dots and rename it to “Address Book Entry”, change the method to POST (not GET) and on for the URI enter the  one provided in the Developers portal /organization/{orgId}/address-book/{addressBookId}/entry) plus the server address. Change orgId for the variable you created orgId and add {}:
 
-https://api.wxcc-{{datacenter}}.cisco.com/organization/{{orgId}}/address-book/{{addressBookId}}/entry
+**https://api.wxcc-{{datacenter}}.cisco.com/organization/{{orgId}}/address-book/{{addressBookId}}/entry**
 
 **Step 15.** Next step is to provide the authorization. In Postman click on the **Authorization** tab and select **Bearer Token**.
 
@@ -440,7 +439,7 @@ You see the new collection and API request added.
 
 ![API58-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API58-1.jpg)
 
-**Step 21.** Using an API request verify that this address book exist in WxCC. This is very simple. Create a new tab in Postman and use this against the GET method https://api.wxcc-{{datacenter}}.cisco.com/organization/{{orgId}}/v3/address-book to list all the address books. Remember to use the Environment and the Authorization as Bearer token as described before.
+**Step 21.** Using an API request verify that this address book exist in WxCC. This is very simple. Create a new tab in Postman and use this against the GET method **https://api.wxcc-{{datacenter}}.cisco.com/organization/{{orgId}}/v3/address-book** to list all the address books. Remember to use the Environment and the Authorization as Bearer token as described before.
 
 ![API59-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API59-1.jpg)
 
@@ -452,7 +451,7 @@ You see the new collection and API request added.
 
 **Step 23.** You can also list a specific address book. Use the same GET API and just add the address book id that you have previously copied into notepad and click Send.
 
-for example: https://api.wxcc-{{datacenter}}.cisco.com/organization/{{orgid}}/address-book/8fd95b96-556d-49be-94b8-fabc1237054c
+for example: **https://api.wxcc-{{datacenter}}.cisco.com/organization/{{orgid}}/address-book/8fd95b96-556d-49be-94b8-fabc1237054c**
 
 You see only the address book with that id.
 
@@ -524,7 +523,7 @@ Cisco TAC has created a document explaining WxCC API functionality and where you
 
 ### Task 2. Getting Started with OAuth2 & Postman
 
- **Note**: For this task you need to have pre-installed version of Postman. You can download it from postman web portal https://www.postman.com/downloads/
+ **Note**: For this task you need to have pre-installed version of Postman. You can download it from postman web portal [https://www.postman.com/downloads/](https://www.postman.com/downloads/)
 
 
  **Step 1.** Locate the Postman icon at the bottom of the task bar and launch it.
@@ -541,7 +540,6 @@ If login successful, Click on **Open Postman** if your browser asks you to do so
 ![OAuth4](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth4.jpg)
 
 **Note:** You will notice that everything you created in Web portal of Postman will be uploaded automatically once you login.
-
 
 **Step 3:** In your Workspace, click on Collections -> your new uploaded collection (that you imported in previous Task). Select Authorization and in Type drop down list select **OAuth2**
 ![OAuth5](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth5.jpg)
@@ -564,7 +562,7 @@ If login successful, Click on **Open Postman** if your browser asks you to do so
 ![OAuth6](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth6.jpg)
 
 
-**Note:** If you haven't saved Client ID and Client Secret go to https://developer.webex-cx.com/my-apps open your App, copy Client ID and **Regenerate Client Secret**. Do not disclose your production Client ID and Client Secret. 
+**Note:** If you haven't saved Client ID and Client Secret go to [https://developer.webex-cx.com/my-apps](https://developer.webex-cx.com/my-apps) open your App, copy Client ID and **Regenerate Client Secret**. Do not disclose your production Client ID and Client Secret. 
 
 ![OAuth7](https://webexcc-sa.github.io/partner-summit/assets/images/API/OAuth7.jpg)
 
@@ -601,7 +599,7 @@ The API is: **/v1/tasks**
 
 And the required fields are f**rom** & to - filters tasks created between the given epoch timestamps (in milliseconds).
 
-**Step 1.** Convert regular time to epoch time. Open a web browser and navigate to **https://www.epochconverter.com**.
+**Step 1.** Convert regular time to epoch time. Open a web browser and navigate to[https://www.epochconverter.com](https://www.epochconverter.com).
 Specify the date that you want to convert and click **Human date to Timestamp.**
 
 **Note:** Change the date to today’s and time as 12:00 AM as in example shown in the screen shot below.
@@ -654,7 +652,7 @@ Required parameters are:
 **To**: End time for the query (in epoch milliseconds).
   
 
-**Step 1. ** Open a web browser and navigate to **https://www.epochconverter.com**
+**Step 1. ** Open a web browser and navigate to [https://www.epochconverter.com](https://www.epochconverter.com)
 
 Specify the date and time that you want to convert for **from** and **to** queue range. Click **Human date to Timestamp. Use 24 Nov 2023 as a date to return some data.**
 
@@ -711,7 +709,7 @@ And the required field is only:
 
 Parameter "**To**" is optional but if used, it needs to be within 24hrs (86400000 msec) of "from" parameter.
 
-**Step 1.** Convert regular time to epoch time. Open a web browser and navigate to **https://www.epochconverter.com**.
+**Step 1.** Convert regular time to epoch time. Open a web browser and navigate to [https://www.epochconverter.com](https://www.epochconverter.com).
 Specify the date that you want to convert and click **Human date to Timestamp.**
 
 ![API82](https://webexcc-sa.github.io/partner-summit/assets/images/API/API82.jpg)
