@@ -419,7 +419,7 @@ Go to **Documentation** on the right hand top corner > Click on **Create an Addr
 	  "number": "+31435144347"
 	}
 
-**Step 18.** Identify the media type sent in the API request. Select **Headers** and add **Content-Type** and the value **application/json**
+**Step 18.** Select **Headers** and add **Content-Type** and the value **application/json**
 
 **Step 19.** Click Send. You see the response 201 created and the id for the new address book. Copy this address book id and paste it in notepad because we will use it later.
 
