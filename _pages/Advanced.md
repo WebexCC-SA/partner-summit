@@ -395,7 +395,7 @@ Developers Portal:
 
 **Step 14.** Under the collection you just created, click on Add Request. On the Untitled Request window (or the New Request), click on the 3 dots and rename it to “Address Book Entry”, change the method to POST (not GET) and on for the URI enter the  one provided in the Developers portal /organization/{orgId}/address-book/{addressBookId}/entry) plus the server address. Change orgId for the variable you created orgId and add {}:
 
-**https://api.wxcc-\{\{datacenter\}\}.cisco.com/organization/{{orgId}}/address-book/{{addressBookId}}/entry**
+**https://api.wxcc-\{\{datacenter\}\}.cisco.com/organization/\{\{orgId\}\}/address-book/{{addressBookId}}/entry**
 
 **Step 15.** Next step is to provide the authorization. In Postman click on the **Authorization** tab and select **Bearer Token**.
 
@@ -439,7 +439,7 @@ You see the new collection and API request added.
 
 ![API58-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API58-1.jpg)
 
-**Step 21.** Using an API request verify that this address book exist in WxCC. This is very simple. Create a new tab in Postman and use this against the GET method **https://api.wxcc-{{datacenter}}.cisco.com/organization/{{orgId}}/v3/address-book** to list all the address books. Remember to use the Environment and the Authorization as Bearer token as described before.
+**Step 21.** Using an API request verify that this address book exist in WxCC. This is very simple. Create a new tab in Postman and use this against the GET method **https://api.wxcc-\{\{datacenter\}\}.cisco.com/organization/\{\{orgId\}\}/v3/address-book** to list all the address books. Remember to use the Environment and the Authorization as Bearer token as described before.
 
 ![API59-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API59-1.jpg)
 
@@ -451,7 +451,7 @@ You see the new collection and API request added.
 
 **Step 23.** You can also list a specific address book. Use the same GET API and just add the address book id that you have previously copied into notepad and click Send.
 
-for example: **https://api.wxcc-{{datacenter}}.cisco.com/organization/{{orgid}}/address-book/8fd95b96-556d-49be-94b8-fabc1237054c**
+for example: **https://api.wxcc-\{\{datacenter\}\}.cisco.com/organization/\{\{orgid\}\}/address-book/8fd95b96-556d-49be-94b8-fabc1237054c**
 
 You see only the address book with that id.
 
@@ -616,7 +616,7 @@ And save it in a notepad; It'll be used later in a GET API request testing.
 
 ![API68](https://webexcc-sa.github.io/partner-summit/assets/images/API/API68.jpg)
 
-For the URI add: https://api.wxcc-{{datacenter}}.cisco.com/v1/tasks?orgId={{orgId}}
+For the URI add: https://api.wxcc-\{\{datacenter\}\}.cisco.com/v1/tasks?orgId=\{\{orgId}} 
 and since from and to are required parameters, add a parameter "from" with the value of epoch time copied  earlier and “to” fields.
 
 ![API69](https://webexcc-sa.github.io/partner-summit/assets/images/API/API69.jpg)
@@ -676,7 +676,7 @@ And save it in a notepad; It'll be used later as a value for the "to" parameter 
 
 ![API76](https://webexcc-sa.github.io/partner-summit/assets/images/API/API76.jpg)
 
-On the URI add: https://api.wxcc-{{datacenter}}.cisco.com/v1/queues/statistics?orgId={{orgId}}
+On the URI add: https://api.wxcc-\{\{datacenter\}\}.cisco.com/v1/queues/statistics?orgId=\{\{orgId}}
 and since **from** and **to** are required parameters, add them with the epoch time you have copied before.
 
 ![API77](https://webexcc-sa.github.io/partner-summit/assets/images/API/API77.jpg)
@@ -724,7 +724,7 @@ And save it in a notepad; It'll be used later as a value for the "from" paramete
 
 ![API83](https://webexcc-sa.github.io/partner-summit/assets/images/API/API83.jpg)
 
-On the URI add: https://api.wxcc-{{datacenter}}.cisco.com/v1/agents/activities?orgId={{org_id}}
+On the URI add: https://api.wxcc-\{\{datacenter\}\}.cisco.com/v1/agents/activities?orgId=\{\{org_id}}
 and since from is a required parameter add the parameter from with the epoch time you have copied before.
 
 Example screenshot (remember to include to field below from) – not in screenshot.
