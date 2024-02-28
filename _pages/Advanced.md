@@ -1,4 +1,4 @@
-![image](https://github.com/WebexCC-SA/partner-summit/assets/43476977/609617a8-1bde-4222-81aa-5b18d19c55c0)![image](https://github.com/WebexCC-SA/partner-summit/assets/43476977/37c45650-895b-45f0-85e5-1a42c87d27a8)---
+---
 title: Lab 2 - Advanced
 author: Yaroslav & Dimitri
 date: 2022-02-02
