@@ -167,13 +167,13 @@ You can see different sections on the left-hand sides, for example:
 
 **Step 4.** In this case, you want to first list the address books already created. So, select the **GET** request under **“List Address Books”**
 
-**Step 5.** You can see all the parameters required, like **orgid** and optional parameters, like **page** or **page size,** and so on.
+**Step 5.** You can see all the parameters required, like **orgId** and optional parameters, like **page** or **page size,** and so on.
 
-**Step 6.** On the right-hand side, you see how the API is executed. You can see the method; **GET**; the URL used with the variable (orgid) and the code language that is being used (you can use cURL, csharp, java, python, etc.)
+**Step 6.** On the right-hand side, you see how the API is executed. You can see the method; **GET**; the URL used with the variable (orgId) and the code language that is being used (you can use cURL, csharp, java, python, etc.)
 
 ![API24-1](https://webexcc-sa.github.io/partner-summit/assets/images/API/API24-1.jpg)
 
-**Step 7.** Select the **Try Out** section. As you notice, this requires an authorization token. The token used by default, is the one automatically assigned when you log in with the admin credentials to the Developers portal. It also pulls the orgid from the organization the user you logged in is part of. **Click Run**.
+**Step 7.** Select the **Try Out** section. As you notice, this requires an authorization token. The token used by default, is the one automatically assigned when you log in with the admin credentials to the Developers portal. It also pulls the orgId from the organization the user you logged in is part of. **Click Run**.
 
 You see the 200 Response, which indicates the request was successful. You also see the address books created in this org. You can scroll down in the response window to see the list of all address books.
 
@@ -370,7 +370,7 @@ And verify that you can see this new address book created like this example:
 
 **Congratulations! You have run a simple API towards Webex CC and created an address book without logging into the portal.**
 
-**Step 10.** Switch back to your Postman browser tab. Before sending the API request to create an address book, we need to create 3 environment variables: **org_id, addressBookId** and **datacenter**. This is a required parameter to create an address book. On Postman, select **Environments** and then **Create Environment**.
+**Step 10.** Switch back to your Postman browser tab. Before sending the API request to create an address book, we need to create 3 environment variables: **orgId, addressBookId** and **datacenter**. This is a required parameter to create an address book. On Postman, select **Environments** and then **Create Environment**.
 
 ![API44](https://webexcc-sa.github.io/partner-summit/assets/images/API/API44.jpg)
 
@@ -380,7 +380,7 @@ And verify that you can see this new address book created like this example:
 
 **Step 12.** Add a new Variable called **datacenter** with the initial value of **us1**, if you use lab pods.
 **Note:** In case you're using your Gold Tenant use either **eu1**, **eu2**, **anz1**, **ca1** or jp1 (Check with lab proctor if you're not sure).
-Then add another variable with the name orgId (info in screenshot may be different – org_id) and copy the orgId value from the Developers portal to the initial value. Add a 3rd variable addressBookId and for the Initial value, obtain the Address Book ID from the Control Hub-> Contact Center -> Address Book. Verify that all Variables are set and click **Save**.
+Then add another variable with the name orgId (info in screenshot may be different – orgId) and copy the orgId value from the Developers portal to the initial value. Add a 3rd variable addressBookId and for the Initial value, obtain the Address Book ID from the Control Hub-> Contact Center -> Address Book. Verify that all Variables are set and click **Save**.
 
 ![API46](https://webexcc-sa.github.io/partner-summit/assets/images/API/API46.jpg)
 
@@ -451,7 +451,7 @@ You see the new collection and API request added.
 
 **Step 23.** You can also list a specific address book. Use the same GET API and just add the address book id that you have previously copied into notepad and click Send.
 
-for example: **https://api.wxcc-\{\{datacenter\}\}.cisco.com/organization/\{\{orgid\}\}/address-book/8fd95b96-556d-49be-94b8-fabc1237054c**
+for example: **https://api.wxcc-\{\{datacenter\}\}.cisco.com/organization/\{\{orgId\}\}/address-book/8fd95b96-556d-49be-94b8-fabc1237054c**
 
 You see only the address book with that id.
 
@@ -724,7 +724,7 @@ And save it in a notepad; It'll be used later as a value for the "from" paramete
 
 ![API83](https://webexcc-sa.github.io/partner-summit/assets/images/API/API83.jpg)
 
-On the URI add: https://api.wxcc-\{\{datacenter\}\}.cisco.com/v1/agents/activities?orgId=\{\{org_id}}
+On the URI add: https://api.wxcc-\{\{datacenter\}\}.cisco.com/v1/agents/activities?orgId=\{\{orgId}}
 and since from is a required parameter add the parameter from with the epoch time you have copied before.
 
 Example screenshot (remember to include to field below from) – not in screenshot.
