@@ -6,7 +6,7 @@ category: Jekyll
 layout: post
 ---
 ```
-Last modified: Tue, 20 Feb 2024
+Last modified: Tue, 27 Feb 2024
 ```
 
 ## Webex Contact Center API and Customer Journey Data Services (JDS)
@@ -44,7 +44,7 @@ Upon completion of this lab, you will be able to:
 
 **Disclaimer:** This lab is not designed for a production system, thus not all recommended features are implemented or enabled optimally. For implementation and design-related questions, please contact your representative at Cisco, or a Cisco partner.
 
-# Lab 1 – APIs Fundamental 
+## Lab 1 – APIs Fundamental 
 ### Objectives 
 The objective of the lab is to introduce you to concept of APIs and the way the Postman tool can be used to manage APIs.
 
@@ -590,7 +590,7 @@ If login successful, Click on **Open Postman** if your browser asks you to do so
 
 
 
-# LAB 5 - Tasks, Queues, Activities and Search API (Optional)
+## Lab 5 - Tasks, Queues, Activities and Search API (Optional)
 ### Task 1. Postman - WxCC Tasks Management vias APIs
 
 The Task resource represents a request or demand for work from agents. Concretely, a **telephony** Task is an incoming call. For chat, a Task is a chat session. For email, a Task is an email chain. This API returns a list of Tasks (open or closed) within a date range. The data range is provided in epoch time format.
@@ -783,7 +783,7 @@ JDS Desktop Widget provides agents with an interface that shows the end customer
 ## Task 1: Adding a new identity for the JDS project
 
 > Note 1: For this task, you must have an admin account with the **"Full admin"** permissions.\
-> Note 2: To save time, we will be skipping that exercise. Please read it and go to the next task.
+> Note 2: To save time, we will be skipping the below exercise. Please read it and go to the next task.
 {: .block-tip }
 
 1.	Add a new identity for yourself to JDS project. Navigate to Control Hub with your administrator credentials.
@@ -1072,13 +1072,13 @@ This video shows you how to use various API's to manage JDS profiles and templat
 
 > Note: We can create any kind of Event and add it to the customer’s journey (e.g. customer visited our webpage).
 
-7. Let's do a custom event by duplicating the existing API request. Click on `...` in front of **Create chat default events for journey-default-template**.
+7. Now let's do a custom event by duplicating the existing API request and customizing the body. Click on `...` in front of **Create chat default events for journey-default-template**.
 <img width="1007" alt="Screenshot 2024-02-22 at 15 47 08" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/fc612e3c-dff3-4c93-898c-1fa29e6fc94f">
 
 
-9. Once the copy is created, replace the body with the code below:
+9. As the result the new HTTP record is created. Now change the body by copying the code below and replacing in the created request:
 ```
-{  "id": "{{$guid}}",
+{  "id": "TEST",
   "specversion": "1.0",
   "type": "test",
   "source": "test",
@@ -1096,7 +1096,8 @@ This video shows you how to use various API's to manage JDS profiles and templat
 ```
 
 9. Click on **Send** button and check the new event at the agent desktop.
-<img width="1755" alt="Screenshot 2024-02-22 at 16 20 25" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/80bdd9ef-b053-4bb3-9be0-d9de3b18777a">
+<img width="1564" alt="image" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/79a0fc67-f015-49b4-9a5f-1a6164169a80">
+
 
 > Note: The `data.channelType` defines a particular icon of every incoming journey event.
 The entire mapping list can be found on GitHub: https://github.com/CiscoDevNet/cjaas-widgets/blob/jds-widget-9.0.0/CustomerJourney/README-VERSION-9.0.0.md
@@ -1271,7 +1272,7 @@ In order to achieve that use case, we will need to use 2 JDS APIs:
 
 4a. Click on the main canvas and add 2 Flow Variables:
 - **Identity** with type String
-- **Total_Requests** with eh type Integer
+- **Total_Requests** with the type Integer
 
 4b. Add the **HTTPRequest_1** activity with the following Settings:
 - Request URL: https://api-jds.prod-useast1.ciscowxdap.com/v1/api/person/workspace-id/65171e0682b7f52b9209b39d/aliases/{{NewPhoneContact.ANI}}
@@ -1288,17 +1289,17 @@ In order to achieve that use case, we will need to use 2 JDS APIs:
 - Method: GET
 - HTTP Request Headers Key: Authorization
 - HTTP Request Headers Values: Bearer + Your access token from Postman
-- Content Type: Application/JSON
-- Parse Settings Content Type: JSON
+- Content-Type: Application/JSON
+- Parse Settings Content-Type: JSON
 - Parse Settings Output Variable: Total_Requests
 - Parse Settings Path Expression: $.data[0].attributes[1].result
 
 4d. Add the **Condition** activity with the following Settings:
-- Expression: {{ Total_Requests > 2 }}
+- Expression: `{{ Total_Requests > 2 }}`
 
-4e: Add 2 queues with different priority (as it shown on a screenshot above)
+4e: Add 2 queue activities **Queue Contact** with different priorities in the General Settings (as shown in the screenshot above)
 
-4f: Publish the Flow by clicking on **Validation** toggle and **Publish Flow** button
+4f: Publish the Flow by clicking on **Validation** toggle, **Publish Flow** button and selecting the **Live** tag.
  
 ## Task 3: Making a test call and checking the restul
 1. Make your agent available for that queue

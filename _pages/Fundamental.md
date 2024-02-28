@@ -1,7 +1,7 @@
 ---
 title: Lab 1 - Fundamental
 author: Gorka
-date: 2024-02-24
+date: 2021-01-01
 layout: post
 ---
 ```
@@ -11,7 +11,7 @@ Last modified: Sat, 24 Feb 2024
 ## Webex Contact Center Provisioning
 This is a supportive videos that do not require any actions since your tenant is already provisioned. Videos demonstrate the initial provisioning tasks for New Webex Contact Center as well as applying production subscriptions to existing organizations.
 
-# Table of Contents
+## Table of Contents
 
 
 | Topic                                                                                    | Lab Type      | Difficulty Level | Estimated length |
@@ -24,7 +24,7 @@ This is a supportive videos that do not require any actions since your tenant is
 
 
 
-# Introduction
+## Introduction
 
 ## Lab Objective
 - This lab is designed to help you do the initial setup and configuration of the tenant.
