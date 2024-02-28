@@ -404,7 +404,7 @@ Developers Portal:
 
 Now, login to the Developers portal: [https://developer.webex-cx.com/documentation/address-book](https://developer.webex-cx.com/documentation/address-book)
 
-Go to **Documentation** on the right hand top corner > Click on **Create An Address Book Entry** and **Try Out** on the right – You can now copy your personal token and use it.
+Go to **Documentation** on the right hand top corner > Click on **Create an Address Book Entry** and **Try Out** on the right – You can now copy your personal token and use it.
 
 ![API51](https://webexcc-sa.github.io/partner-summit/assets/images/API/API51.jpg)
 ![API52](https://webexcc-sa.github.io/partner-summit/assets/images/API/API52.jpg)
