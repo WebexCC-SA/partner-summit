@@ -395,7 +395,7 @@ Developers Portal:
 
 **Step 14.** Under the collection you just created, click on Add Request. On the Untitled Request window (or the New Request), click on the 3 dots and rename it to “Address Book Entry”, change the method to POST (not GET) and on for the URI enter the  one provided in the Developers portal /organization/{orgId}/address-book/{addressBookId}/entry) plus the server address. Change orgId for the variable you created orgId and add {}:
 
-**https://api.wxcc-{{datacenter}}.cisco.com/organization/{{orgId}}/address-book/{{addressBookId}}/entry**
+**https://api.wxcc-\{\{datacenter\}\}.cisco.com/organization/{{orgId}}/address-book/{{addressBookId}}/entry**
 
 **Step 15.** Next step is to provide the authorization. In Postman click on the **Authorization** tab and select **Bearer Token**.
 
