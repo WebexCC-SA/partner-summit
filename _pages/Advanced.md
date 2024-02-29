@@ -1295,7 +1295,7 @@ In order to achieve that use case, we will need to use 2 JDS APIs:
 - Parse Settings Path Expression: $.data[0].attributes[1].result
 
 4d. Add the **Condition** activity with the following Settings:
-- Expression: `{{ Total_Requests > 2 }}`
+- Expression: ```{{ Total_Requests > 2 }}```
 
 4e: Add 2 queue activities **Queue Contact** with different priorities in the General Settings (as shown in the screenshot above)
 
