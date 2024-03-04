@@ -19,16 +19,16 @@ Let's dive in and unlock the potential of Contact Center API integration and JDS
 
 ## Table of Contents
 
-| Topic                                                                                   | Lab Type      | Difficulty Level | Estimated length |
-| --------------------------------------------------------------------------------------- | ------------- | ---------------- | ---------------- |
-| [**Part 1: APIs on Webex Contact Center (WxCC)**](#part-1-apis-on-webex-contact-center) | Practical Lab | MED              | 45 min           |
-| [Lab 1: APIs Fundamental](#lab-1-apis-fundamental)                                      | Self-learning |                  |                  |
-| [Lab 2: Developer Portal](lab-2-developer-portal)                                       |               |                  |                  |
-| [Lab 3: WxCC APIs on Postman](lab3-wxcc-apis-on-postman)                                |               |                  |                  |
-| [Lab 4: OAuth2 and Collections Importing](oauth2cand-collections-importing)             |               |                  |                  |
-| [**Part 2: JDS APIs & Use Case**](#part-2-jds-apis--use-cases)                          | Practical Lab | MED              | 45 min           |
-| – JDS Fundamental                                                                       |               |                  |                  |
-| – Use Case - Journey Based Queue Priority                                               |               |                  |                  |
+| Topic                                                                                    | Lab Type      | Difficulty Level | Estimated length |
+| ---------------------------------------------------------------------------------------- | ------------- | ---------------- | ---------------- |
+| [**Part 1: APIs on Webex Contact Center (WxCC)**](#part-1-apis-on-webex-contact-center)  | Practical Lab | MED              | 45 min           |
+| [Lab 1: APIs Fundamental](#lab-1-apis-fundamental)                                       | Self-learning |                  |                  |
+| [Lab 2: Developer Portal](lab-2-developer-portal)                                        |               |                  |                  |
+| [Lab 3: WxCC APIs on Postman](lab3-wxcc-apis-on-postman)                                 |               |                  |                  |
+| [Lab 4: OAuth2 and Collections Importing](oauth2cand-collections-importing)              |               |                  |                  |
+| [**Part 2: JDS APIs & Use Case**](#part-2-jds-apis--use-cases)                           | Practical Lab | MED              | 45 min           |
+| [Lab 1: Exploring JDSs APIs & Widget](labe1-exploring-jdss-apis-&-widget)                |               |                  |                  |
+| [Use Case - Journey Based Queue Priority](lab-2-use-case---journey-based-queue-priority) |               |                  |                  |
 
 # Part 1: APIs on Webex Contact Center (WxCC)
 
@@ -766,7 +766,7 @@ This lab is designed to teach you the concepts and functionalities of Customer J
 - You have completed [**Part 1: APIs on Webex Contact Center (WxCC)**](#APIs-on-Webex-Contact-Center)
 
 
-## Exploring JDSs APIs & Widget
+## Lab 1: Exploring JDSs APIs & Widget
 JDS Desktop Widget provides agents with an interface that shows the end customer’s complete journey with the agent’s business, aggregated metrics of their experience as well as the customer’s unique identifiers (aliases).
 <img width="1433" alt="image" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/e710de0e-e311-4e35-9599-6ae72aede7af">
 
@@ -1101,7 +1101,7 @@ The entire mapping list can be found on GitHub: https://github.com/CiscoDevNet/c
 
 
 
-## Use Case - Journey Based Queue Priority
+## Lab 2: Use Case - Journey Based Queue Priority
 A customer has contacted his travel service several times in the last couple of days. The next incoming call could be prioritized if a specific threshold is met (for example: the number of contacts on a particular reservation in the last 2 days greater than 2) 
 <img width="972" alt="Screenshot 2024-02-22 at 16 24 54" src="https://github.com/WebexCC-SA/partner-summit/assets/43476977/1b33f2d3-0aca-4432-8629-45367394958a">
 
