@@ -19,16 +19,16 @@ Let's dive in and unlock the potential of Contact Center API integration and JDS
 
 ## Table of Contents
 
-| Topic                                                                                    | Lab Type      | Difficulty Level | Estimated length |
-| ---------------------------------------------------------------------------------------- | ------------- | ---------------- | ---------------- |
-| [**Part 1: APIs on Webex Contact Center (WxCC)**](#part-1-apis-on-webex-contact-center)  | Practical Lab | MED              | 45 min           |
-| [Lab 1: APIs Fundamental](#lab-1-apis-fundamental)                                       | Self-learning |                  |                  |
-| [Lab 2: Developer Portal](lab-2-developer-portal)                                        |               |                  |                  |
-| [Lab 3: WxCC APIs on Postman](lab3-wxcc-apis-on-postman)                                 |               |                  |                  |
-| [Lab 4: OAuth2 and Collections Importing](oauth2cand-collections-importing)              |               |                  |                  |
-| [**Part 2: JDS APIs & Use Case**](#part-2-jds-apis--use-cases)                           | Practical Lab | MED              | 45 min           |
-| [Lab 1: Exploring JDSs APIs & Widget](labe1-exploring-jdss-apis-&-widget)                |               |                  |                  |
-| [Use Case - Journey Based Queue Priority](lab-2-use-case---journey-based-queue-priority) |               |                  |                  |
+| Topic                                                                                             | Lab Type      | Difficulty Level | Estimated length |
+| ------------------------------------------------------------------------------------------------- | ------------- | ---------------- | ---------------- |
+| [**Part 1: APIs on Webex Contact Center (WxCC)**](#part-1-apis-on-webex-contact-center)           | Practical Lab | MED              | 45 min           |
+| [Lab 1: APIs Fundamental](##lab-1-apis-fundamental)                                               | Self-learning |                  |                  |
+| [Lab 2: Developer Portal](##lab-2-developer-portal)                                               |               |                  |                  |
+| [Lab 3: WxCC APIs on Postman](##lab3-wxcc-apis-on-postman)                                        |               |                  |                  |
+| [Lab 4: OAuth2 and Collections Importing](##llab-4-oauth2cand-collections-importing)              |               |                  |                  |
+| [**Part 2: JDS APIs & Use Case**](#part-2-jds-apis--use-cases)                                    | Practical Lab | MED              | 45 min           |
+| [Lab 1: Exploring JDSs APIs & Widget](##lab 1-exploring-jdss-apis-&-widget)                       |               |                  |                  |
+| [Lab 2: Use Case - Journey Based Queue Priority](##lab-2-use-case---journey-based-queue-priority) |               |                  |                  |
 
 # Part 1: APIs on Webex Contact Center (WxCC)
 
