@@ -21,7 +21,7 @@ Let's dive in and unlock the potential of Contact Center API integration and JDS
 
 | Topic                                                                                         | Lab Type      | Difficulty Level | Estimated length |
 | --------------------------------------------------------------------------------------------- | ------------- | ---------------- | ---------------- |
-| [**Part 1: APIs on Webex Contact Center (WxCC)**](#part-1-apis-on-webex-contact-center)       | Practical Lab | MED              | 45 min           |
+| [**Part 1: APIs on Webex Contact Center**](#part-1-apis-on-webex-contact-center)              | Practical Lab | MED              | 45 min           |
 | [Lab 1: APIs Fundamental](#lab-1-apis-fundamental)                                            | Self-learning |                  |                  |
 | [Lab 2: Developer Portal](#lab-2-developer-portal)                                            |               |                  |                  |
 | [Lab 3: WxCC APIs on Postman](#lab-3-wxcc-apis-on-postman)                                    |               |                  |                  |
@@ -30,7 +30,7 @@ Let's dive in and unlock the potential of Contact Center API integration and JDS
 | [Lab 1: Exploring JDSs APIs & Widget](#lab-1-exploring-jdss-apis--widget)                     |               |                  |                  |
 | [Lab 2: Use Case: Journey Based Queue Priority](#lab-2-use-case-journey-based-queue-priority) |               |                  |                  |
 
-# Part 1: APIs on Webex Contact Center (WxCC)
+# Part 1: APIs on Webex Contact Center
 
 This is an **intermediate** level lab intended for engineers with prior **Webex Contact Center (WxCC)** experience.
 
@@ -471,7 +471,7 @@ You see 204 No Content, which indicates that the address book was deleted but th
 ![API65](https://webexcc-sa.github.io/partner-summit/assets/images/API/API65.jpg)
 
 
-## Lab 4 – OAuth2 and Collections Importing
+## Lab 4: OAuth2 and Collections Importing
 
 ### Objectives
 Access tokens tend to expire after 8-12 hours, while refresh tokens tend to expire in days. This lab demonstrates how to how to configure refresh token in your postman. Also Cisco provides you with preconfigured APIs that can be imported from the WxCC Developers Portal. 
