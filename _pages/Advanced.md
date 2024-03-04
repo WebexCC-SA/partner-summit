@@ -22,10 +22,10 @@ Let's dive in and unlock the potential of Contact Center API integration and JDS
 | Topic                                                                                   | Lab Type      | Difficulty Level | Estimated length |
 | --------------------------------------------------------------------------------------- | ------------- | ---------------- | ---------------- |
 | [**Part 1: APIs on Webex Contact Center (WxCC)**](#part-1-apis-on-webex-contact-center) | Practical Lab | MED              | 45 min           |
-| – APIs Fundamental                                                                      |               |                  |                  |
-| – Developer Portal                                                                      |               |                  |                  |
-| – WxCC APIs - Postman                                                                   |               |                  |                  |
-| – Auth2 and Collections Importing                                                       |               |                  |                  |
+| [Lab 1: APIs Fundamental](#lab-1-apis-fundamental)                                      | Self-learning |                  |                  |
+| [Lab 2: Developer Portal](lab-2-developer-portal)                                       |               |                  |                  |
+| [Lab 3: WxCC APIs on Postman](lab3-wxcc-apis-on-postman)                                |               |                  |                  |
+| [Lab 4: OAuth2 and Collections Importing](oauth2cand-collections-importing)             |               |                  |                  |
 | [**Part 2: JDS APIs & Use Case**](#part-2-jds-apis--use-cases)                          | Practical Lab | MED              | 45 min           |
 | – JDS Fundamental                                                                       |               |                  |                  |
 | – Use Case - Journey Based Queue Priority                                               |               |                  |                  |
@@ -44,7 +44,7 @@ Upon completion of this lab, you will be able to:
 
 **Disclaimer:** This lab is not designed for a production system, thus not all recommended features are implemented or enabled optimally. For implementation and design-related questions, please contact your representative at Cisco, or a Cisco partner.
 
-## Lab 1 – APIs Fundamental 
+## Lab 1: APIs Fundamental 
 ### Objectives 
 The objective of the lab is to introduce you to concept of APIs and the way the Postman tool can be used to manage APIs.
 
@@ -131,7 +131,7 @@ or replace it with “new”
 
 ***Note:** In these examples, you did not have to be authenticated and authorized because it is a public API.*
 
-## Lab 2 – Developer Portal
+## Lab 2: Developer Portal
 
 Developers can build, enhance, and customize their Customer Experience solution with the rich set of APIs, which includes Contact Center, AI, Journey, Orchestration and Experience Management. The Developers portal help you to get started with the APIs. The Developers portal provides detailed API reference docs as well as the Try Out functionality which help to familiarize you with WxCC APIs and learn quickly.
 
@@ -224,7 +224,7 @@ Save Client ID and Secret ID into a text file. We will use it later in Lab 4.
 More Information about creating a Webex application and using Postman in this document: [https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html)
 
 
-## Lab 3 – WxCC APIs - Postman
+## Lab 3: WxCC APIs on Postman
 
 Postman is an API platform for building and using APIs. It includes a comprehensive set of tools that help accelerate the API lifecycle—from design, testing, documentation, and mocking to the sharing and discoverability of your APIs.
 
@@ -247,6 +247,7 @@ You should have your own Postman account in order to use the software or online 
 	**Step2a.** (Alternatively) You can use your own Gmail account if you want.
 
 ![Postman2](https://webexcc-sa.github.io/partner-summit/assets/images/API/Postman2.jpg)
+**Note**: Email address provided on screenshot used as example. 
 
 **Step 3**. Provide additional details. Choose anything you like from drop down list.
 
@@ -589,7 +590,6 @@ If login successful, Click on **Open Postman** if your browser asks you to do so
 **Congratulations!! You have finished this lab.**
 
 
-
 ## Lab 5 - Tasks, Queues, Activities and Search API (Optional)
 ### Task 1. Postman - WxCC Tasks Management vias APIs
 
@@ -751,10 +751,6 @@ Since the token was added in previous steps, you will see the token already ther
 **Step 7.** Save this API in the WxCC APIs collection. Select Save As, then add the name of the request (List Agent activities) and click save.
 
 ![API89](https://webexcc-sa.github.io/partner-summit/assets/images/API/API89.jpg)
-
-### Task 4. Postman - Working with Search API (Optional)
-
-...................To ADD if I have time during the week...................
 
 
 **Congratulations!! You have finished this lab.**

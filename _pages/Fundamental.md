@@ -14,13 +14,13 @@ This is a supportive videos that do not require any actions since your tenant is
 ## Table of Contents
 
 
-| Topic                                                                                    | Lab Type      | Difficulty Level | Estimated length |
-| -------------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Part 0: Control Hub User Management Tasks](#part-0-control-hub-user-management-tasks) | Watch & Understand | EASY            | 5 min           |
-| [Part 1: Contact Center Provisioning](#part-1-contact-center-provisioning)                       | Practical | EASY            | 15 min            |
-| [Part 2: Basic Flow configuration](#part-2-basic-flow-configuration)                       | Practical | EASY            | 20 min            |
-| [Part 3: Agent user experience](#part-3-agent-user-experience)                       | Practical | EASY            | 20 min            |
-| [Part 4: Supervisor user experience](#part-4-supervisor-user-experience)                       | Practical | EASY            | 15 min            |
+| Topic                                                                                  | Lab Type           | Difficulty Level | Estimated length |
+| -------------------------------------------------------------------------------------- | ------------------ | ---------------- | ---------------- |
+| [Part 0: Control Hub User Management Tasks](#part-0-control-hub-user-management-tasks) | Watch & Understand | EASY             | 5 min            |
+| [Part 1: Contact Center Provisioning](#part-1-contact-center-provisioning)             | Practical          | EASY             | 15 min           |
+| [Part 2: Basic Flow configuration](#part-2-basic-flow-configuration)                   | Practical          | EASY             | 20 min           |
+| [Part 3: Agent user experience](#part-3-agent-user-experience)                         | Practical          | EASY             | 20 min           |
+| [Part 4: Supervisor user experience](#part-4-supervisor-user-experience)               | Practical          | EASY             | 15 min           |
 
 
 
