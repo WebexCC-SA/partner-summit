@@ -1309,5 +1309,5 @@ In order to achieve that use case, we will need to use 2 JDS APIs:
 
 <p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>
 		
-<p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>	
+<p style="text-align:center;"><img src="assets/gitbook/images/webex.png" width="100"></p>	
 

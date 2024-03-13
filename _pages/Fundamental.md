@@ -446,6 +446,6 @@ This is a supportive videos that do not require any actions since your tenant is
 
 <p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>
 		
-<p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>	
+<p style="text-align:center;"><img src="assets/gitbook/images/webex.png" width="100"></p>	
 	
 
