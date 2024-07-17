@@ -234,7 +234,7 @@ This is a supportive videos that do not require any actions since your tenant is
 
 - Open the ***Play Message*** node and **toggle `Enable Text-to-Speech` ON**. **Choose `LatamTechSummitTTS`** as Connector and choose any english option as Output Voice.
 
-- **Write the message you want to play** for the office closed hours. It can be something like: `We're sorry, but or offices are closed now. Please try to call in a different moment.`
+- **Write the message you want to play** for the office closed hours. It can be something like: `We're sorry, but our offices are closed now. Please try to call in a different moment.`
 
 - Link the *Play Message* node with a ***Disconnect Contact*** node.
 
